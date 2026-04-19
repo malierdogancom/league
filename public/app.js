@@ -22,52 +22,63 @@ const STAT_MAP = {
   PercentOmnivampMod: "Omnivamp",
 };
 
-// Riot description başında tekrar eden stat isimleri — bunları ve önlerindeki sayıları sileceğiz
-const STAT_NAMES = [
-  "Ability Power",
+// Stat kelimeleri — uzun olanlar önce gelsin (greedy match için)
+const STAT_WORDS = [
   "Attack Damage",
+  "Ability Power",
   "Critical Strike Chance",
   "Critical Strike Damage",
-  "Attack Speed",
   "Ultimate Ability Haste",
   "Ability Haste",
+  "Attack Speed",
   "Move Speed",
   "Movement Speed",
   "Magic Penetration",
   "Armor Penetration",
-  "Lethality",
   "Heal and Shield Power",
   "Base Mana Regen",
   "Base Health Regen",
   "Bonus Attack Damage",
   "Magic Resist",
+  "Life Steal",
+  "Omnivamp",
+  "Lethality",
+  "Tenacity",
   "Health",
   "Armor",
   "Mana",
-  "Life Steal",
-  "Omnivamp",
+  "Gold",
+  "Haste", // "Ability Haste" sildikten sonra kalan artık "Haste" için
+  "Regen", // artık
+  "Steal", // artık
+  "Power", // artık
+  "Speed", // artık
+  "Chance", // artık
+  "Resist", // artık
 ];
 
 function cleanDescription(text) {
   if (!text) return "";
 
   // HTML taglerini temizle
-  let clean = text.replace(/<[^>]*>/g, " ").trim();
+  let s = text.replace(/<[^>]*>/g, " ").trim();
 
-  // Başındaki "75 Attack Damage25% Critical Strike Chance15 Ability Haste" gibi
-  // stat bloklarını sil. Bilinen her stat ismini ve önündeki sayıyı tek tek sil.
-  const escaped = STAT_NAMES.map((s) =>
-    s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+  // 1. Tüm rakamları ve % işaretlerini sil (stat önekleri: "75", "25%", "333")
+  s = s.replace(/\d[\d.,]*\s*%?\s*/g, " ").trim();
+
+  // 2. Başından bilinen stat kelimelerini teker teker soy
+  const escaped = STAT_WORDS.map((w) =>
+    w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   ).join("|");
-  const statBlockRe = new RegExp(`\\d[\\d.]*\\s*%?\\s*(${escaped})`, "gi");
-  clean = clean.replace(statBlockRe, "");
+  const statRe = new RegExp(`^\\s*(${escaped})`, "i");
 
-  // Temizleme sonrası baştaki tek kelime artıklarını sil
-  // (örn: "Haste", "Steal", "Power", "Regen", "Chance" — passive isminin önüne yapışmış)
-  // Passive ismi daima 2+ büyük harfli kelimedir (PascalCase birleşik)
-  clean = clean.replace(/^[A-Z][a-z]+(?=[A-Z])/, "");
+  let prev = "";
+  while (prev !== s) {
+    prev = s;
+    s = s.replace(statRe, "").trim();
+  }
 
-  return clean.replace(/\s{2,}/g, " ").trim();
+  return s.replace(/\s{2,}/g, " ").trim();
 }
 
 function formatStatKey(key) {
@@ -83,6 +94,7 @@ function formatStatValue(key, v) {
   return `+${v}`;
 }
 
+// ── State ─────────────────────────────────────────────
 let appData = { SR: null, ARAM: null };
 let currentState = {
   map: "SR",
@@ -91,6 +103,7 @@ let currentState = {
   sort: "gold-desc",
 };
 
+// ── Init ──────────────────────────────────────────────
 async function init() {
   try {
     const [srRes, aramRes] = await Promise.all([
@@ -99,7 +112,6 @@ async function init() {
     ]);
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
-
     setupEventListeners();
     render();
   } catch (e) {
@@ -109,7 +121,9 @@ async function init() {
   }
 }
 
+// ── Events ────────────────────────────────────────────
 function setupEventListeners() {
+  // Map ve Category toggle butonları
   document.querySelectorAll(".toggle-buttons").forEach((group) => {
     group.addEventListener("click", (e) => {
       if (e.target.tagName !== "BUTTON") return;
@@ -125,11 +139,13 @@ function setupEventListeners() {
     });
   });
 
+  // Arama
   document.getElementById("search-input").addEventListener("input", (e) => {
     currentState.search = e.target.value.toLowerCase();
     render();
   });
 
+  // Sıralama
   document.getElementById("sort-select").addEventListener("change", (e) => {
     currentState.sort = e.target.value;
     render();
@@ -142,13 +158,14 @@ function setupEventListeners() {
   });
 }
 
+// ── Render ────────────────────────────────────────────
 function render() {
   const grid = document.getElementById("items-grid");
   grid.innerHTML = "";
 
   const source = appData[currentState.map];
   if (!source || !source.items) {
-    grid.innerHTML = `<p style="color:red">Veri bulunamadı: ${currentState.map}</p>`;
+    grid.innerHTML = `<p style="color:red;padding:20px">Veri bulunamadı: ${currentState.map}</p>`;
     return;
   }
 
@@ -162,7 +179,7 @@ function render() {
     return !item.isOrnn && !isBoots;
   });
 
-  // Arama
+  // Arama filtresi
   if (currentState.search) {
     items = items.filter((item) =>
       item.name.toLowerCase().includes(currentState.search),
