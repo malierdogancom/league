@@ -180,3 +180,7 @@ select:focus {
   border-top: 1px dotted #444;
   padding-top: 10px;
 }
+.stat-highlight {
+  color: #c8aa6e;
+  font-weight: bold;
+}
