@@ -1,9 +1,3 @@
-/**
- * LoL Item Explorer
- * HTML ile tam uyumlu — description yok, sadece statlar
- */
-
-// Tüm stat key → okunabilir isim eşleştirmesi
 const STAT_MAP = {
   FlatMagicDamageMod: "Ability Power",
   FlatPhysicalDamageMod: "Attack Damage",
@@ -29,20 +23,14 @@ function statLabel(key) {
 }
 
 function statValue(key, v) {
-  const isPercent = key.startsWith("Percent") || key === "FlatCritChanceMod";
-  return isPercent ? `+${(v * 100).toFixed(0)}%` : `+${v}`;
+  return key.startsWith("Percent") || key === "FlatCritChanceMod"
+    ? `+${(v * 100).toFixed(0)}%`
+    : `+${v}`;
 }
 
-// ── Uygulama durumu ───────────────────────────────────
 let appData = { SR: null, ARAM: null };
-let state = {
-  map: "SR",
-  category: "Normal",
-  search: "",
-  sort: "gold-desc",
-};
+let state = { map: "SR", category: "Normal", search: "", sort: "gold-desc" };
 
-// ── Başlangıç ────────────────────────────────────────
 async function init() {
   try {
     const [srRes, aramRes] = await Promise.all([
@@ -51,8 +39,6 @@ async function init() {
     ]);
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
-
-    // Sort dropdown'ı tüm stat'larla doldur
     buildSortOptions();
     setupListeners();
     render();
@@ -63,126 +49,99 @@ async function init() {
   }
 }
 
-// Sort seçeneklerini dinamik oluştur (HTML'deki hardcoded olanları değiştir)
 function buildSortOptions() {
   const sel = document.getElementById("sort-select");
   sel.innerHTML = `
-    <option value="gold-desc">Price: High → Low</option>
-    <option value="gold-asc">Price: Low → High</option>
+    <option value="gold-desc">Price: High to Low</option>
+    <option value="gold-asc">Price: Low to High</option>
   `;
   Object.entries(STAT_MAP).forEach(([key, label]) => {
     const opt = document.createElement("option");
     opt.value = key;
-    opt.textContent = label + ": High → Low";
+    opt.textContent = label + ": High to Low";
     sel.appendChild(opt);
   });
 }
 
-// ── Event Listener'lar ────────────────────────────────
 function setupListeners() {
-  // Map toggle — id="map-toggle"
   document.getElementById("map-toggle").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
-    setActiveButton("map-toggle", e.target);
+    document
+      .querySelectorAll("#map-toggle button")
+      .forEach((b) => b.classList.remove("active"));
+    e.target.classList.add("active");
     state.map = e.target.dataset.value;
     render();
   });
 
-  // Category toggle — id="category-toggle"
   document.getElementById("category-toggle").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
-    setActiveButton("category-toggle", e.target);
+    document
+      .querySelectorAll("#category-toggle button")
+      .forEach((b) => b.classList.remove("active"));
+    e.target.classList.add("active");
     state.category = e.target.dataset.value;
     render();
   });
 
-  // Arama — id="search-input"
   document.getElementById("search-input").addEventListener("input", (e) => {
     state.search = e.target.value.toLowerCase().trim();
     render();
   });
 
-  // Sıralama — id="sort-select"
   document.getElementById("sort-select").addEventListener("change", (e) => {
     state.sort = e.target.value;
     render();
   });
-
-  // Kart tıklama (expand/collapse) — id="items-grid"
-  document.getElementById("items-grid").addEventListener("click", (e) => {
-    const card = e.target.closest(".item-card");
-    if (card) card.classList.toggle("expanded");
-  });
 }
 
-function setActiveButton(groupId, clickedBtn) {
-  document
-    .querySelectorAll(`#${groupId} button`)
-    .forEach((b) => b.classList.remove("active"));
-  clickedBtn.classList.add("active");
-}
-
-// ── Render ────────────────────────────────────────────
 function render() {
   const grid = document.getElementById("items-grid");
   grid.innerHTML = "";
 
   const source = appData[state.map];
   if (!source || !Array.isArray(source.items)) {
-    grid.innerHTML = `<p style="color:#e74c3c;padding:20px">
-      "${state.map}" verisi bulunamadı.
-    </p>`;
+    grid.innerHTML = `<p style="color:#e74c3c;padding:20px">"${state.map}" verisi bulunamadı.</p>`;
     return;
   }
 
   let items = [...source.items];
 
-  // 1. Kategori filtresi
   items = items.filter((item) => {
     const tags = Array.isArray(item.tags) ? item.tags : [];
     const isOrnn = item.isOrnn === true;
     const isBoots = tags.includes("Boots");
-
     if (state.category === "Ornn") return isOrnn;
     if (state.category === "Boots") return isBoots && !isOrnn;
-    return !isOrnn && !isBoots; // Normal
+    return !isOrnn && !isBoots;
   });
 
-  // 2. Arama filtresi
   if (state.search) {
     items = items.filter((item) =>
       item.name.toLowerCase().includes(state.search),
     );
   }
 
-  // 3. Sıralama
   items.sort((a, b) => {
     if (state.sort === "gold-desc") return b.gold - a.gold;
     if (state.sort === "gold-asc") return a.gold - b.gold;
     return (b.stats?.[state.sort] ?? 0) - (a.stats?.[state.sort] ?? 0);
   });
 
-  // 4. Versiyon + sayı güncelle
   const version = source.version || "";
   document.getElementById("version-display").textContent =
-    (version ? "Patch " + version + "  ·  " : "") +
+    (version ? "Patch " + version + " · " : "") +
     items.length +
-    " items  ·  " +
+    " items · " +
     (state.map === "ARAM" ? "ARAM" : "Summoner's Rift");
 
-  // 5. Sonuç yoksa mesaj
   if (items.length === 0) {
-    grid.innerHTML = `<p style="color:#a09b8c;padding:20px">
-      Eşleşen item bulunamadı.
-    </p>`;
+    grid.innerHTML = `<p style="color:#a09b8c;padding:20px">Eşleşen item bulunamadı.</p>`;
     return;
   }
 
-  // 6. Kartları oluştur
   items.forEach((item) => {
     const stats = item.stats || {};
-
-    // Sıralama statını en üste al
     const entries = Object.entries(stats).sort(([a], [b]) => {
       if (a === state.sort) return -1;
       if (b === state.sort) return 1;
@@ -191,12 +150,11 @@ function render() {
 
     const statsHtml = entries
       .map(([k, v]) => {
-        const highlight = k === state.sort && !state.sort.includes("gold");
-        return `
-        <div class="stat-line${highlight ? " stat-highlight" : ""}">
-          <span>${statLabel(k)}</span>
-          <span class="stat-value">${statValue(k, v)}</span>
-        </div>`;
+        const hl = k === state.sort && !state.sort.includes("gold");
+        return `<div class="stat-line${hl ? " stat-highlight" : ""}">
+        <span>${statLabel(k)}</span>
+        <span class="stat-value">${statValue(k, v)}</span>
+      </div>`;
       })
       .join("");
 
@@ -204,8 +162,7 @@ function render() {
     card.className = "item-card";
     card.innerHTML = `
       <div class="card-header">
-        <img src="${item.image_url}" alt="${item.name}"
-             onerror="this.style.opacity='0.3'">
+        <img src="${item.image_url}" alt="${item.name}" onerror="this.style.opacity='0.3'">
         <div class="header-info">
           <h3>${item.name}</h3>
           <div class="gold-text">${item.gold} Gold</div>
@@ -215,7 +172,6 @@ function render() {
         <div class="stats-section">${statsHtml}</div>
       </div>
     `;
-
     grid.appendChild(card);
   });
 }
