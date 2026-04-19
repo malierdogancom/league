@@ -100,11 +100,9 @@ select:focus {
 /* Grid & Cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(280px, 1fr)
-  ); /* Responsive columns */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
 .item-card {
@@ -116,6 +114,8 @@ select:focus {
   transition:
     transform 0.2s,
     border-color 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-card:hover {
@@ -146,7 +146,6 @@ select:focus {
   font-weight: bold;
 }
 
-/* Expandable Section */
 .card-details {
   overflow: hidden;
   background-color: var(--panel-bg);
@@ -154,6 +153,7 @@ select:focus {
   color: var(--text-muted);
   padding: 15px;
   border-top: 1px solid #333;
+  flex: 1;
 }
 .item-card {
   align-self: start;
