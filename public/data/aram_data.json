@@ -22,7 +22,8 @@
       "stats": {
         "FlatMagicDamageMod": 55,
         "FlatCritChanceMod": 0.25,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "CriticalStrike",
@@ -39,7 +40,8 @@
       "gold": 2350,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatMagicDamageMod": 45
+        "FlatMagicDamageMod": 45,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -56,7 +58,9 @@
       "description": "Eminence Gain temporary AD based on champion kills on kill.",
       "gold": 2950,
       "stats": {
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -74,7 +78,8 @@
       "gold": 2200,
       "stats": {
         "FlatMagicDamageMod": 50,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -94,7 +99,8 @@
       "stats": {
         "FlatSpellBlockMod": 80,
         "FlatHPPoolMod": 1000,
-        "FlatArmorMod": 100
+        "FlatArmorMod": 100,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "Health",
@@ -115,7 +121,8 @@
       "gold": 6000,
       "stats": {
         "FlatMagicDamageMod": 300,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Armor",
@@ -146,7 +153,8 @@
       "gold": 2800,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -163,7 +171,8 @@
       "gold": 2800,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 80
+        "FlatMagicDamageMod": 80,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "SpellDamage",
@@ -197,7 +206,8 @@
       "stats": {
         "FlatHPPoolMod": 350,
         "FlatMagicDamageMod": 70,
-        "PercentAttackSpeedMod": 0.25
+        "PercentAttackSpeedMod": 0.25,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -232,7 +242,9 @@
       "description": "Famine Gain Ability Haste. Feast When a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds.",
       "gold": 3100,
       "stats": {
-        "FlatPhysicalDamageMod": 65
+        "FlatPhysicalDamageMod": 65,
+        "PercentOmnivampMod": 0.05,
+        "PercentTenacityMod": 0.2
       },
       "tags": [
         "Damage",
@@ -250,7 +262,8 @@
       "gold": 2800,
       "stats": {
         "FlatMPPoolMod": 300,
-        "FlatMagicDamageMod": 90
+        "FlatMagicDamageMod": 90,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -282,7 +295,8 @@
       "stats": {
         "FlatSpellBlockMod": 20,
         "FlatHPPoolMod": 200,
-        "FlatArmorMod": 20
+        "FlatArmorMod": 20,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -301,6 +315,7 @@
       "gold": 2500,
       "stats": {
         "FlatHPPoolMod": 600,
+        "FlatAbilityHaste": 20,
         "PercentTenacityMod": 0.25
       },
       "tags": [
@@ -335,7 +350,8 @@
       "gold": 2900,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 70
+        "FlatMagicDamageMod": 70,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "SpellDamage",
@@ -351,7 +367,8 @@
       "gold": 2900,
       "stats": {
         "FlatMPPoolMod": 500,
-        "FlatPhysicalDamageMod": 35
+        "FlatPhysicalDamageMod": 35,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Damage",
@@ -396,7 +413,8 @@
       "description": "",
       "gold": 1100,
       "stats": {
-        "FlatMovementSpeedMod": 45
+        "FlatMovementSpeedMod": 45,
+        "FlatMagicPenetrationMod": 12
       },
       "tags": [
         "Boots",
@@ -411,7 +429,8 @@
       "gold": 3500,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 75
+        "FlatPhysicalDamageMod": 75,
+        "PercentCritDamageMod": 0.3
       },
       "tags": [
         "CriticalStrike",
@@ -442,7 +461,8 @@
       "gold": 3000,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 35
+        "FlatPhysicalDamageMod": 35,
+        "PercentArmorPenetrationMod": 0.3
       },
       "tags": [
         "Damage",
@@ -458,7 +478,8 @@
       "gold": 3300,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 35
+        "FlatPhysicalDamageMod": 35,
+        "PercentArmorPenetrationMod": 0.35
       },
       "tags": [
         "Damage",
@@ -474,7 +495,8 @@
       "gold": 2900,
       "stats": {
         "FlatHPPoolMod": 700,
-        "FlatCritChanceMod": 0.2
+        "FlatCritChanceMod": 0.2,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -522,7 +544,8 @@
       "stats": {
         "FlatSpellBlockMod": 25,
         "FlatHPPoolMod": 300,
-        "FlatArmorMod": 25
+        "FlatArmorMod": 25,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -538,7 +561,8 @@
       "description": "The Claws that Catch Gain bonus Attack Damage . Lifeline Taking damage that would reduce your Health below 30% grants a decaying Shield for 4.5 seconds.",
       "gold": 3200,
       "stats": {
-        "FlatHPPoolMod": 400
+        "FlatHPPoolMod": 400,
+        "PercentTenacityMod": 0.2
       },
       "tags": [
         "Health",
@@ -554,7 +578,8 @@
       "gold": 2700,
       "stats": {
         "FlatSpellBlockMod": 50,
-        "FlatHPPoolMod": 400
+        "FlatHPPoolMod": 400,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -572,7 +597,8 @@
       "gold": 2700,
       "stats": {
         "FlatHPPoolMod": 350,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -589,7 +615,8 @@
       "gold": 3000,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatPhysicalDamageMod": 40
+        "FlatPhysicalDamageMod": 40,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -644,7 +671,8 @@
       "gold": 3300,
       "stats": {
         "FlatPhysicalDamageMod": 65,
-        "PercentLifeStealMod": 0.12
+        "PercentLifeStealMod": 0.12,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Damage",
@@ -678,7 +706,8 @@
       "stats": {
         "FlatHPPoolMod": 333,
         "FlatPhysicalDamageMod": 36,
-        "PercentAttackSpeedMod": 0.3
+        "PercentAttackSpeedMod": 0.3,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -775,7 +804,8 @@
       "gold": 2800,
       "stats": {
         "FlatSpellBlockMod": 45,
-        "PercentAttackSpeedMod": 0.5
+        "PercentAttackSpeedMod": 0.5,
+        "PercentTenacityMod": 0.2
       },
       "tags": [
         "SpellBlock",
@@ -827,7 +857,8 @@
       "gold": 2900,
       "stats": {
         "FlatMagicDamageMod": 100,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -858,7 +889,8 @@
       "description": "Intervention Restore 150 - 350 Health to allied units and deal 10% max Health true damage to enemy champions after 2.5 seconds.",
       "gold": 2300,
       "stats": {
-        "FlatMagicDamageMod": 30
+        "FlatMagicDamageMod": 30,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -875,7 +907,8 @@
       "gold": 2300,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatArmorMod": 40
+        "FlatArmorMod": 40,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -895,7 +928,8 @@
       "gold": 2500,
       "stats": {
         "FlatMPPoolMod": 400,
-        "FlatArmorMod": 75
+        "FlatArmorMod": 75,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Armor",
@@ -913,7 +947,8 @@
       "gold": 1250,
       "stats": {
         "FlatSpellBlockMod": 20,
-        "FlatMovementSpeedMod": 45
+        "FlatMovementSpeedMod": 45,
+        "PercentTenacityMod": 0.3
       },
       "tags": [
         "Boots",
@@ -929,7 +964,8 @@
       "gold": 2900,
       "stats": {
         "FlatMagicDamageMod": 80,
-        "PercentAttackSpeedMod": 0.5
+        "PercentAttackSpeedMod": 0.5,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "AttackSpeed",
@@ -962,7 +998,8 @@
       "gold": 2700,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 90
+        "FlatMagicDamageMod": 90,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -978,7 +1015,8 @@
       "gold": 2400,
       "stats": {
         "FlatMPPoolMod": 500,
-        "FlatHPPoolMod": 550
+        "FlatHPPoolMod": 550,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1011,7 +1049,8 @@
       "description": "",
       "gold": 3000,
       "stats": {
-        "FlatMagicDamageMod": 95
+        "FlatMagicDamageMod": 95,
+        "PercentMagicPenetrationMod": 0.4
       },
       "tags": [
         "MagicPenetration",
@@ -1025,7 +1064,9 @@
       "description": "Life from Death When a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals .",
       "gold": 3000,
       "stats": {
-        "FlatMagicDamageMod": 75
+        "FlatMagicDamageMod": 75,
+        "FlatAbilityHaste": 20,
+        "PercentMagicPenetrationMod": 0.3
       },
       "tags": [
         "SpellDamage",
@@ -1061,7 +1102,8 @@
       "gold": 2800,
       "stats": {
         "FlatPhysicalDamageMod": 55,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1095,7 +1137,8 @@
       "gold": 3000,
       "stats": {
         "FlatMagicDamageMod": 80,
-        "FlatPhysicalDamageMod": 40
+        "FlatPhysicalDamageMod": 40,
+        "PercentOmnivampMod": 0.1
       },
       "tags": [
         "Damage",
@@ -1113,7 +1156,8 @@
       "gold": 2650,
       "stats": {
         "FlatHPPoolMod": 300,
-        "FlatMagicDamageMod": 70
+        "FlatMagicDamageMod": 70,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -1151,7 +1195,8 @@
       "gold": 3100,
       "stats": {
         "FlatSpellBlockMod": 40,
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellBlock",
@@ -1184,7 +1229,8 @@
       "description": "Ionian Insight Gain 10 Summoner Spell Haste.",
       "gold": 900,
       "stats": {
-        "FlatMovementSpeedMod": 45
+        "FlatMovementSpeedMod": 45,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Boots",
@@ -1215,7 +1261,8 @@
       "gold": 2850,
       "stats": {
         "FlatHPPoolMod": 350,
-        "FlatMagicDamageMod": 75
+        "FlatMagicDamageMod": 75,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1231,7 +1278,9 @@
       "description": "Nightstalker After being unseen by enemies briefly, your next attack against a champion deals an additional true damage . Blackout When you are near enemy Stealth Wards and traps, reveal them briefly. While revealing wards, your attacks deal bonus damage to them.",
       "gold": 2800,
       "stats": {
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1267,7 +1316,8 @@
       "stats": {
         "FlatSpellBlockMod": 25,
         "FlatHPPoolMod": 200,
-        "FlatArmorMod": 25
+        "FlatArmorMod": 25,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -1286,7 +1336,8 @@
       "description": "Purify Remove all crowd control debuffs (excluding Airborne and Suppression ) from an ally champion and restore 100 - 250 Health .",
       "gold": 2300,
       "stats": {
-        "FlatHPPoolMod": 250
+        "FlatHPPoolMod": 250,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1341,7 +1392,8 @@
       "gold": 3050,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 50
+        "FlatPhysicalDamageMod": 50,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Damage",
@@ -1395,7 +1447,8 @@
       "gold": 3000,
       "stats": {
         "FlatHPPoolMod": 250,
-        "FlatPhysicalDamageMod": 50
+        "FlatPhysicalDamageMod": 50,
+        "FlatPhysicalLethality": 15
       },
       "tags": [
         "Health",
@@ -1411,7 +1464,8 @@
       "gold": 2800,
       "stats": {
         "FlatPhysicalDamageMod": 50,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatPhysicalLethality": 15
       },
       "tags": [
         "Damage",
@@ -1426,7 +1480,8 @@
       "description": "Coordinated Fire (0s) per target Slowing or Immobilizing an enemy champion marks them for 5 seconds. Ally champion damage detonates the mark, dealing magic damage equal to 10% of current health .",
       "gold": 2250,
       "stats": {
-        "FlatMagicDamageMod": 60
+        "FlatMagicDamageMod": 60,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "SpellDamage",
@@ -1459,7 +1514,8 @@
       "description": "Hypershot Dealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. Focus When Hypershot is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
       "gold": 2700,
       "stats": {
-        "FlatMagicDamageMod": 75
+        "FlatMagicDamageMod": 75,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "SpellDamage",
@@ -1475,7 +1531,8 @@
       "stats": {
         "FlatHPPoolMod": 350,
         "FlatMagicDamageMod": 70,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "Health",
@@ -1492,7 +1549,8 @@
       "gold": 3100,
       "stats": {
         "FlatHPPoolMod": 350,
-        "FlatMagicDamageMod": 70
+        "FlatMagicDamageMod": 70,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1508,7 +1566,8 @@
       "description": "Cinderbloom Magic and true damage Critically Strikes enemies below 40% Health, dealing 20% increased damage.",
       "gold": 3200,
       "stats": {
-        "FlatMagicDamageMod": 110
+        "FlatMagicDamageMod": 110,
+        "FlatMagicPenetrationMod": 15
       },
       "tags": [
         "SpellDamage",
@@ -1523,7 +1582,8 @@
       "gold": 2800,
       "stats": {
         "FlatMagicDamageMod": 90,
-        "PercentMovementSpeedMod": 0.06
+        "PercentMovementSpeedMod": 0.06,
+        "FlatMagicPenetrationMod": 15
       },
       "tags": [
         "SpellDamage",
@@ -1540,7 +1600,8 @@
       "gold": 3300,
       "stats": {
         "FlatArmorMod": 50,
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Armor",
@@ -1556,7 +1617,8 @@
       "gold": 3000,
       "stats": {
         "FlatHPPoolMod": 450,
-        "FlatPhysicalDamageMod": 45
+        "FlatPhysicalDamageMod": 45,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1573,7 +1635,8 @@
       "gold": 3100,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatPhysicalDamageMod": 45
+        "FlatPhysicalDamageMod": 45,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -1589,7 +1652,8 @@
       "description": "Rapids Healing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
       "gold": 2250,
       "stats": {
-        "FlatMagicDamageMod": 35
+        "FlatMagicDamageMod": 35,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -1606,7 +1670,8 @@
       "gold": 2200,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatMagicDamageMod": 25
+        "FlatMagicDamageMod": 25,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -1624,7 +1689,8 @@
       "gold": 2200,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatMagicDamageMod": 35
+        "FlatMagicDamageMod": 35,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -1689,7 +1755,8 @@
       "gold": 2750,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 100
+        "FlatMagicDamageMod": 100,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -1725,7 +1792,8 @@
       "gold": 2900,
       "stats": {
         "FlatHPPoolMod": 300,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1744,7 +1812,8 @@
       "gold": 2800,
       "stats": {
         "FlatSpellBlockMod": 40,
-        "FlatHPPoolMod": 400
+        "FlatHPPoolMod": 400,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -1831,7 +1900,8 @@
       "gold": 3000,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 50
+        "FlatPhysicalDamageMod": 50,
+        "FlatPhysicalLethality": 10
       },
       "tags": [
         "Damage",
@@ -1846,7 +1916,8 @@
       "description": "Ever Rising Moon Hitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a Shield for 2 seconds.",
       "gold": 2900,
       "stats": {
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Damage",
@@ -1861,7 +1932,9 @@
       "description": "Bitter Cold Damaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
       "gold": 3000,
       "stats": {
-        "FlatPhysicalDamageMod": 45
+        "FlatPhysicalDamageMod": 45,
+        "FlatAbilityHaste": 15,
+        "PercentArmorPenetrationMod": 0.35
       },
       "tags": [
         "Damage",
@@ -1877,7 +1950,8 @@
       "description": "Shield Reaver Damaging an enemy champion reduces Shields they gain by % for 3 seconds. If they were not already affected by Shield Reaver , reduce Shields on them by %.",
       "gold": 2500,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatPhysicalLethality": 15
       },
       "tags": [
         "Damage",
@@ -1891,7 +1965,9 @@
       "description": "Flux When a champion that you damaged within 3 seconds dies, refund some of your Ultimate Ability's total cooldown.",
       "gold": 2750,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatAbilityHaste": 20,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1906,7 +1982,9 @@
       "description": "Cleave Attacks deal physical damage to nearby enemies. Heretical Cleave Deal physical damage around you.",
       "gold": 2850,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatAbilityHaste": 10,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1923,7 +2001,9 @@
       "description": "Galvanize Dashes and Stealth stack Energized 75% faster. Firmament Your Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
       "gold": 3000,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatAbilityHaste": 10,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1940,7 +2020,8 @@
       "description": "Preparation After being out of combat with Champions for 8 seconds gain Lethality . This Lethality lasts for 3 seconds after dealing damage to champions. Extraction When a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.",
       "gold": 2700,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1957,7 +2038,8 @@
       "gold": 2900,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatMagicDamageMod": 65
+        "FlatMagicDamageMod": 65,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1974,7 +2056,8 @@
       "gold": 2650,
       "stats": {
         "FlatSpellBlockMod": 45,
-        "FlatHPPoolMod": 350
+        "FlatHPPoolMod": 350,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -2000,7 +2083,8 @@
         "FlatPhysicalDamageMod": 90,
         "PercentAttackSpeedMod": 0.4,
         "PercentLifeStealMod": 0.1,
-        "PercentMovementSpeedMod": 0.1
+        "PercentMovementSpeedMod": 0.1,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",

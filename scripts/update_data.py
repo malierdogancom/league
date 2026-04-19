@@ -93,8 +93,10 @@ def process_items():
 
         raw_description = item["description"]
         clean_desc = clean_description(raw_description)
+        # Ham HTML'den stat çıkar (<stats> bloğu henüz silinmemiş)
+        raw_text_for_stats = re.sub(r'<[^>]+>', ' ', raw_description)
         base_stats = item.get("stats", {})
-        extra_stats = extract_missing_stats(clean_desc, base_stats)
+        extra_stats = extract_missing_stats(raw_text_for_stats, base_stats)
         merged_stats = {**base_stats, **extra_stats}
 
         processed_item = {
