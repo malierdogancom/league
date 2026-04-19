@@ -127,7 +127,7 @@ function initEffTooltip() {
       Life Steal 53.57g/1% · Armor Pen% 41.67g/1% · Magic Pen% 46.15g/1%
     </div>
     <div class="eff-tip-omnivamp">⚠ Omnivamp: No official reference — Life Steal value used (estimate).</div>
-    <a class="eff-tip-link" href="https://wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency" target="_blank" rel="noopener">→ LoL Wiki: Gold Efficiency</a>
+    <a class="eff-tip-link" href="https://wiki.leagueoflegends.com/en-us/Gold_efficiency" target="_blank" rel="noopener">→ LoL Wiki: Gold Efficiency</a>
   `;
   document.body.appendChild(tip);
 
@@ -143,7 +143,10 @@ function initEffTooltip() {
       tip.style.display = "block";
       const tipW = tip.offsetWidth || 300;
       const tipH = tip.offsetHeight || 220;
-      const left = Math.max(8, Math.min(rect.left, window.innerWidth - tipW - 8));
+      const left = Math.max(
+        8,
+        Math.min(rect.left, window.innerWidth - tipW - 8),
+      );
       const top = rect.top - tipH - 8;
       tip.style.left = left + "px";
       tip.style.top = (top < 8 ? rect.bottom + 8 : top) + "px";
