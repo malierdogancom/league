@@ -1,6 +1,6 @@
 /**
- * LoL Item Explorer - Final Master Logic
- * Professional Mapping & Role Filtering
+ * LoL Item Explorer - Final Master Pro Logic
+ * Features: Market Roles, Multi-Stat Filtering, Lethality/Pen Merge
  */
 
 const STAT_MAP = {
@@ -23,12 +23,18 @@ const STAT_MAP = {
   PercentOmnivampMod: "Omnivamp",
 };
 
-const ROLE_MAP = {
-  Mage: ["SpellDamage", "Mana", "SpellBlock"],
-  Tank: ["Health", "Armor", "SpellBlock", "HealthRegen"],
-  Assassin: ["Lethality", "PhysicalDamage"],
-  Marksman: ["AttackSpeed", "CriticalStrike", "PhysicalDamage"],
-  Support: ["ManaRegen", "Active"],
+// Market Rolleri ve Stat Grupları
+const FILTERS = {
+  roles: ["Fighter", "Marksman", "Assassin", "Mage", "Tank", "Support"],
+  stats: [
+    "AbilityHaste",
+    "ArmorPenetration",
+    "CriticalStrike",
+    "LifeSteal",
+    "Mana",
+    "MovementSpeed",
+    "SpellVamp",
+  ],
 };
 
 let appData = { SR: null, ARAM: null };
@@ -36,6 +42,7 @@ let currentState = {
   map: "ARAM",
   category: "Legendary",
   role: "All",
+  statFilter: "All",
   search: "",
   sort: "gold-desc",
 };
@@ -51,42 +58,41 @@ async function init() {
     setupEventListeners();
     render();
   } catch (e) {
-    console.error("Data error:", e);
+    console.error("Load Error:", e);
   }
 }
 
-// DDragon'un kirli description metnini temizleyen fonksiyon
-function cleanRiotDescription(text, stats) {
+// Metin Temizleme Motoru (Gelişmiş)
+function cleanDescription(text) {
   if (!text) return "";
-  let clean = text;
-  // 1. Statların description içindeki tekrarlarını sil (Örn: "100 Health" kısmını metinden çıkar)
-  Object.values(STAT_MAP).forEach((s) => {
-    const regex = new RegExp(`[0-9%\\+.]+\\s*${s}`, "gi");
-    clean = clean.replace(regex, "");
-  });
-  // 2. HTML etiketlerini ve gereksiz boşlukları temizle
-  clean = clean
-    .replace(/<[^>]*>/g, " ")
-    .replace(/\s\s+/g, " ")
-    .trim();
+  // Riot'un iç içe geçmiş stat metinlerini ve taglerini siler
+  let clean = text.replace(/<stats>.*?<\/stats>/gi, ""); // Önce stat bloğunu at
+  clean = clean.replace(/<[^>]*>/g, " "); // Tüm HTML taglerini sil
+  clean = clean.replace(/\s\s+/g, " ").trim(); // Boşlukları temizle
   return clean;
 }
 
 function setupEventListeners() {
-  // Map & Category
-  document.querySelectorAll(".filter-group button").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const group = e.target.parentElement.id;
-      const val = e.target.dataset.value;
-      document
-        .querySelectorAll(`#${group} button`)
-        .forEach((b) => b.classList.remove("active"));
-      e.target.classList.add("active");
+  // Tüm buton grupları için (Map, Role, Stat, Category)
+  document.querySelectorAll(".filter-group").forEach((group) => {
+    group.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        const parent = e.target.parentElement;
+        const type = parent.dataset.type;
+        const val = e.target.dataset.value;
 
-      if (group === "map-toggle") currentState.map = val;
-      if (group === "category-toggle") currentState.category = val;
-      if (group === "role-toggle") currentState.role = val;
-      render();
+        parent
+          .querySelectorAll("button")
+          .forEach((b) => b.classList.remove("active"));
+        e.target.classList.add("active");
+
+        if (type === "map") currentState.map = val;
+        if (type === "category") currentState.category = val;
+        if (type === "role") currentState.role = val;
+        if (type === "stat") currentState.statFilter = val;
+
+        render();
+      }
     });
   });
 
@@ -106,8 +112,9 @@ function render() {
   grid.innerHTML = "";
   let items = appData[currentState.map].items;
 
-  // Filter: Category & Role
+  // --- FILTRELEME ---
   items = items.filter((item) => {
+    // 1. Kategori (Legendary/Boots/Ornn)
     const isBoots = item.tags.includes("Boots");
     const catMatch =
       currentState.category === "Ornn"
@@ -115,14 +122,31 @@ function render() {
         : currentState.category === "Boots"
           ? isBoots
           : !item.isOrnn && !isBoots;
+
+    // 2. Rol (Fighter, Tank vb.)
     const roleMatch =
-      currentState.role === "All" ||
-      item.tags.some((tag) => currentState.role.includes(tag));
+      currentState.role === "All" || item.tags.includes(currentState.role);
+
+    // 3. Stat Filtresi (Haste, Pen vb.)
+    // ArmorPen ve Lethality tek sekmede birleştirildi
+    let statMatch = true;
+    if (currentState.statFilter !== "All") {
+      if (currentState.statFilter === "ArmorPenetration") {
+        statMatch =
+          item.tags.includes("ArmorPenetration") ||
+          item.tags.includes("Lethality");
+      } else {
+        statMatch = item.tags.includes(currentState.statFilter);
+      }
+    }
+
+    // 4. Arama
     const searchMatch = item.name.toLowerCase().includes(currentState.search);
-    return catMatch && roleMatch && searchMatch;
+
+    return catMatch && roleMatch && statMatch && searchMatch;
   });
 
-  // Sort
+  // --- SIRALAMA ---
   items.sort((a, b) => {
     if (currentState.sort.includes("gold")) {
       return currentState.sort === "gold-desc"
@@ -134,6 +158,7 @@ function render() {
     );
   });
 
+  // --- BASMA ---
   items.forEach((item) => {
     const card = document.createElement("div");
     card.className = "item-card";
@@ -141,18 +166,10 @@ function render() {
     let statsHtml = "";
     for (const [key, value] of Object.entries(item.stats)) {
       const rawKey = key.replace("Flat", "").replace("Mod", "");
-      const cleanName = STAT_MAP[key] || rawKey;
       const displayVal =
         value < 1 && value > 0 ? `+${(value * 100).toFixed(0)}%` : `+${value}`;
-
-      statsHtml += `
-                <div class="stat-line">
-                    <span class="raw-label">${rawKey}</span>
-                    <span class="raw-value">${displayVal}</span>
-                </div>`;
+      statsHtml += `<div class="stat-line"><span class="stat-name">${rawKey}</span><span class="stat-value">${displayVal}</span></div>`;
     }
-
-    const cleanDesc = cleanRiotDescription(item.description, item.stats);
 
     card.innerHTML = `
             <div class="card-header">
@@ -163,8 +180,8 @@ function render() {
                 </div>
             </div>
             <div class="stats-preview">${statsHtml}</div>
-            <div class="card-details">
-                <p class="description">${cleanDesc}</p>
+            <div class="card-description">
+                <p>${cleanDescription(item.description)}</p>
             </div>
         `;
     grid.appendChild(card);
