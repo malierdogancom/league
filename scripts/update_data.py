@@ -16,9 +16,12 @@ def get_latest_version():
     return response.json()[0]
 
 def clean_description(text):
-    # Riot'un description alanındaki HTML taglerini (<stats>, <mainText> vb.) temizler
-    clean_html = re.compile('<.*?>')
-    return re.sub(clean_html, '', text)
+    # Stat bloğunu (<stats>...</stats>) tamamen kaldır, sadece pasif metin kalsın
+    text = re.sub(r'<stats>.*?</stats>', '', text, flags=re.DOTALL)
+    # Kalan etiketleri boşlukla değiştir (kelimeler birleşmesin)
+    text = re.sub(r'<[^>]+>', ' ', text)
+    # Fazla boşlukları temizle
+    return re.sub(r'\s+', ' ', text).strip()
 
 MISSING_STAT_PATTERNS = [
     # Ability Haste: "15 Ability Haste" — "Ultimate/Basic Ability Haste" eşleşmez çünkü araya kelime girer

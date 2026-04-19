@@ -153,20 +153,20 @@ select:focus {
   color: var(--text-muted);
   padding: 15px;
   border-top: 1px solid #333;
-  flex: 1;
-  display: flex;
-  align-items: center;
 }
 
 .stats-section {
   width: 100%;
 }
-.item-card {
-  align-self: start;
+.stat-empty {
+  height: 21px;
 }
 
 .stats-extra {
   display: none;
+  border-top: 1px dotted #333;
+  margin-top: 6px;
+  padding-top: 6px;
 }
 .item-card.expanded .stats-extra {
   display: block;
@@ -184,17 +184,6 @@ select:focus {
 }
 .item-card.expanded .desc-text {
   display: block;
-}
-
-.expand-hint {
-  margin-left: auto;
-  color: var(--text-muted);
-  font-size: 0.8em;
-  transition: transform 0.2s;
-  flex-shrink: 0;
-}
-.item-card.expanded .expand-hint {
-  transform: rotate(180deg);
 }
 
 .stat-line {

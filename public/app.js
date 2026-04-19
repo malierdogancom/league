@@ -157,9 +157,17 @@ function render() {
       </div>`;
     };
 
-    const previewHtml = entries.slice(0, PREVIEW_COUNT).map(toStatLine).join("");
-    const extraHtml = entries.slice(PREVIEW_COUNT).map(toStatLine).join("");
-    const hasMore = entries.length > PREVIEW_COUNT || !!item.description;
+    const previewEntries = entries.slice(0, PREVIEW_COUNT);
+    const extraEntries = entries.slice(PREVIEW_COUNT);
+
+    // Her zaman 4 satır göster — eksik olanları boş placeholder ile doldur
+    const emptyLines = Array(Math.max(0, PREVIEW_COUNT - previewEntries.length))
+      .fill(`<div class="stat-line stat-empty"></div>`)
+      .join("");
+
+    const previewHtml = previewEntries.map(toStatLine).join("") + emptyLines;
+    const extraHtml = extraEntries.map(toStatLine).join("");
+    const hasMore = extraEntries.length > 0 || !!item.description;
 
     const card = document.createElement("div");
     card.className = "item-card";
@@ -170,7 +178,6 @@ function render() {
           <h3>${item.name}</h3>
           <div class="gold-text">${item.gold} Gold</div>
         </div>
-        ${hasMore ? `<span class="expand-hint">▼</span>` : ""}
       </div>
       <div class="card-details">
         <div class="stats-section">
