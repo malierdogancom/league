@@ -38,13 +38,29 @@
           />
         </div>
 
+        <div class="control-group tag-group">
+          <label>Tags: <button id="clear-tags" class="clear-btn" style="display:none">× Clear</button></label>
+          <div id="tag-filter" class="tag-filter"></div>
+        </div>
+
         <div class="control-group sort-group">
-          <label>Sort by stat:</label>
+          <label>Sort by stat: <button id="clear-stats" class="clear-btn" style="display:none">× Clear</button></label>
           <div id="sort-icons" class="sort-icons"></div>
         </div>
       </div>
 
       <div id="items-grid" class="grid"></div>
+    </div>
+
+    <div id="build-panel" class="build-panel">
+      <div class="build-header">
+        <span class="build-title">Build (<span id="build-count">0</span>/6)</span>
+        <div id="build-slots" class="build-slots"></div>
+        <span id="build-total-gold" class="build-total-gold"></span>
+        <button id="build-toggle-stats" class="clear-btn">Stats ▼</button>
+        <button id="clear-build" class="clear-btn">× Clear</button>
+      </div>
+      <div id="build-stats-panel" class="build-stats-panel"></div>
     </div>
 
     <script src="app.js"></script>

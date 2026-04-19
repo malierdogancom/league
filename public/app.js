@@ -46,6 +46,65 @@ const STAT_ICON_MAP = {
   PercentCritDamageMod:       CDN_MINI       + "scalecritmult.png",
 };
 
+const TAG_LABELS = {
+  Damage: "Damage",
+  SpellDamage: "Magic Dmg",
+  CriticalStrike: "Crit",
+  AttackSpeed: "Atk Speed",
+  LifeSteal: "Life Steal",
+  Health: "Health",
+  Armor: "Armor",
+  SpellBlock: "Magic Res",
+  HealthRegen: "HP Regen",
+  Mana: "Mana",
+  ManaRegen: "Mana Regen",
+  CooldownReduction: "Ability Haste",
+  Jungle: "Jungle",
+  Lane: "Lane",
+  Tenacity: "Tenacity",
+  NonbootsMovement: "Movement",
+  Slow: "Slow",
+  OnHit: "On-Hit",
+  Active: "Active",
+  Aura: "Aura",
+  Vision: "Vision",
+  Stealth: "Stealth",
+};
+
+// Gold value per raw unit (Percent stats stored 0–1, so 1% crit = 0.01 * 4000 = 40g)
+const GOLD_VALUES = {
+  FlatMagicDamageMod:    21.3,
+  FlatPhysicalDamageMod: 35,
+  FlatCritChanceMod:     4000,
+  PercentAttackSpeedMod: 3330,
+  FlatMagicPenetrationMod:  31.25,
+  FlatPhysicalLethality:    31.25,
+  FlatHPPoolMod:   2.67,
+  FlatArmorMod:    20,
+  FlatSpellBlockMod: 18,
+  FlatMPPoolMod:   1.5,
+  FlatAbilityHaste: 26.67,
+  FlatMovementSpeedMod: 31.25,
+  PercentLifeStealMod:  3750,
+  PercentOmnivampMod:   3000,
+};
+
+function calcGoldEfficiency(item) {
+  const rawValue = Object.entries(item.stats || {}).reduce(
+    (sum, [k, v]) => sum + (GOLD_VALUES[k] || 0) * v,
+    0
+  );
+  if (!item.gold || rawValue === 0) return null;
+  return Math.round((rawValue / item.gold) * 100);
+}
+
+function effBadge(item) {
+  const eff = calcGoldEfficiency(item);
+  if (eff === null) return "";
+  const cls = eff >= 85 ? "eff-high" : eff >= 60 ? "eff-mid" : "eff-low";
+  return `<span class="efficiency ${cls}">${eff}%</span>`;
+}
+
 function statLabel(key) {
   return STAT_MAP[key] || key;
 }
@@ -57,7 +116,16 @@ function statValue(key, v) {
 }
 
 let appData = { SR: null, ARAM: null };
-let state = { map: "SR", category: "Normal", search: "", goldSort: "gold-desc", selectedStats: [] };
+let state = {
+  map: "SR",
+  category: "Normal",
+  search: "",
+  goldSort: "gold-desc",
+  selectedStats: [],
+  selectedTags: [],
+  build: [],
+  buildStatsOpen: false,
+};
 
 async function init() {
   try {
@@ -68,12 +136,12 @@ async function init() {
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
     buildSortIcons();
+    buildTagFilter();
     setupListeners();
     render();
   } catch (err) {
     console.error("Veri yüklenemedi:", err);
-    document.getElementById("version-display").textContent =
-      "Veri yüklenemedi!";
+    document.getElementById("version-display").textContent = "Veri yüklenemedi!";
   }
 }
 
@@ -100,22 +168,40 @@ function buildSortIcons() {
   });
 }
 
+function buildTagFilter() {
+  const source = appData[state.map];
+  if (!source) return;
+
+  const tagSet = new Set();
+  source.items.forEach((item) => (item.tags || []).forEach((t) => tagSet.add(t)));
+  tagSet.delete("Boots");
+
+  const container = document.getElementById("tag-filter");
+  container.innerHTML = "";
+
+  [...tagSet].sort().forEach((tag) => {
+    const btn = document.createElement("button");
+    btn.className = "tag-btn" + (state.selectedTags.includes(tag) ? " active" : "");
+    btn.dataset.value = tag;
+    btn.textContent = TAG_LABELS[tag] || tag;
+    container.appendChild(btn);
+  });
+}
+
 function setupListeners() {
   document.getElementById("map-toggle").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
-    document
-      .querySelectorAll("#map-toggle button")
-      .forEach((b) => b.classList.remove("active"));
+    document.querySelectorAll("#map-toggle button").forEach((b) => b.classList.remove("active"));
     e.target.classList.add("active");
     state.map = e.target.dataset.value;
+    state.selectedTags = [];
+    buildTagFilter();
     render();
   });
 
   document.getElementById("category-toggle").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
-    document
-      .querySelectorAll("#category-toggle button")
-      .forEach((b) => b.classList.remove("active"));
+    document.querySelectorAll("#category-toggle button").forEach((b) => b.classList.remove("active"));
     e.target.classList.add("active");
     state.category = e.target.dataset.value;
     render();
@@ -144,9 +230,112 @@ function setupListeners() {
         state.selectedStats.push(val);
         btn.classList.add("active");
       }
+      document.getElementById("clear-stats").style.display =
+        state.selectedStats.length > 0 ? "inline-block" : "none";
     }
     render();
   });
+
+  document.getElementById("clear-stats").addEventListener("click", () => {
+    state.selectedStats = [];
+    document.querySelectorAll("#sort-icons .sort-btn").forEach((b) => {
+      if (b.dataset.value !== "gold-desc" && b.dataset.value !== "gold-asc") {
+        b.classList.remove("active");
+      }
+    });
+    document.getElementById("clear-stats").style.display = "none";
+    render();
+  });
+
+  document.getElementById("tag-filter").addEventListener("click", (e) => {
+    const btn = e.target.closest(".tag-btn");
+    if (!btn) return;
+    const val = btn.dataset.value;
+    if (state.selectedTags.includes(val)) {
+      state.selectedTags = state.selectedTags.filter((t) => t !== val);
+      btn.classList.remove("active");
+    } else {
+      state.selectedTags.push(val);
+      btn.classList.add("active");
+    }
+    document.getElementById("clear-tags").style.display =
+      state.selectedTags.length > 0 ? "inline-block" : "none";
+    render();
+  });
+
+  document.getElementById("clear-tags").addEventListener("click", () => {
+    state.selectedTags = [];
+    document.querySelectorAll("#tag-filter .tag-btn").forEach((b) => b.classList.remove("active"));
+    document.getElementById("clear-tags").style.display = "none";
+    render();
+  });
+
+  document.getElementById("clear-build").addEventListener("click", () => {
+    state.build = [];
+    updateBuildPanel();
+    render();
+  });
+
+  document.getElementById("build-toggle-stats").addEventListener("click", () => {
+    state.buildStatsOpen = !state.buildStatsOpen;
+    const panel = document.getElementById("build-stats-panel");
+    const btn = document.getElementById("build-toggle-stats");
+    panel.style.display = state.buildStatsOpen ? "flex" : "none";
+    btn.textContent = state.buildStatsOpen ? "Stats ▲" : "Stats ▼";
+  });
+}
+
+function updateBuildPanel() {
+  const panel = document.getElementById("build-panel");
+  const hasBuild = state.build.length > 0;
+  panel.style.display = hasBuild ? "block" : "none";
+  document.body.classList.toggle("has-build", hasBuild);
+
+  if (!hasBuild) return;
+
+  document.getElementById("build-count").textContent = state.build.length;
+
+  // Slots
+  const slotsEl = document.getElementById("build-slots");
+  slotsEl.innerHTML = "";
+  for (let i = 0; i < 6; i++) {
+    const slot = document.createElement("div");
+    slot.className = "build-slot";
+    if (state.build[i]) {
+      slot.innerHTML = `<img src="${state.build[i].image_url}" alt="${state.build[i].name}" title="${state.build[i].name}">`;
+      const idx = i;
+      slot.addEventListener("click", () => {
+        state.build.splice(idx, 1);
+        updateBuildPanel();
+        render();
+      });
+      slot.classList.add("filled");
+    }
+    slotsEl.appendChild(slot);
+  }
+
+  // Total gold
+  const totalGold = state.build.reduce((s, item) => s + (item.gold || 0), 0);
+  document.getElementById("build-total-gold").textContent = totalGold.toLocaleString() + " Gold";
+
+  // Combined stats
+  const totals = {};
+  state.build.forEach((item) => {
+    Object.entries(item.stats || {}).forEach(([k, v]) => {
+      totals[k] = (totals[k] || 0) + v;
+    });
+  });
+
+  const statsEl = document.getElementById("build-stats-panel");
+  statsEl.innerHTML = Object.entries(totals)
+    .sort(([a], [b]) => (STAT_MAP[a] || a).localeCompare(STAT_MAP[b] || b))
+    .map(([k, v]) => {
+      const iconUrl = STAT_ICON_MAP[k];
+      const icon = iconUrl ? `<img class="stat-icon" src="${iconUrl}" alt="">` : "";
+      return `<div class="build-stat-row">${icon}<span>${statLabel(k)}</span><span class="stat-value">${statValue(k, v)}</span></div>`;
+    })
+    .join("");
+  statsEl.style.display = state.buildStatsOpen ? "flex" : "none";
 }
 
 function render() {
@@ -161,6 +350,7 @@ function render() {
 
   let items = [...source.items];
 
+  // Category filter (boots vs normal)
   items = items.filter((item) => {
     const tags = Array.isArray(item.tags) ? item.tags : [];
     const isBoots = tags.includes("Boots");
@@ -168,7 +358,14 @@ function render() {
     return !isBoots;
   });
 
-  // Filter: item must have ALL selected stats
+  // Tag filter (OR — item has at least one selected tag)
+  if (state.selectedTags.length > 0) {
+    items = items.filter((item) =>
+      (item.tags || []).some((t) => state.selectedTags.includes(t))
+    );
+  }
+
+  // Stat filter (AND — item must have all selected stats)
   if (state.selectedStats.length > 0) {
     items = items.filter((item) =>
       state.selectedStats.every((stat) => item.stats?.[stat] != null)
@@ -177,11 +374,11 @@ function render() {
 
   if (state.search) {
     items = items.filter((item) =>
-      item.name.toLowerCase().includes(state.search),
+      item.name.toLowerCase().includes(state.search)
     );
   }
 
-  // Sort: by first selected stat, or by gold if none selected
+  // Sort
   if (state.selectedStats.length > 0) {
     const primary = state.selectedStats[0];
     items.sort((a, b) => (b.stats?.[primary] ?? 0) - (a.stats?.[primary] ?? 0));
@@ -202,6 +399,7 @@ function render() {
     grid.innerHTML = `<p style="color:#a09b8c;padding:20px">Eşleşen item bulunamadı.</p>`;
     return;
   }
+
   const PREVIEW_COUNT = 4;
 
   items.forEach((item) => {
@@ -234,6 +432,11 @@ function render() {
     const extraHtml = extraEntries.map(toStatLine).join("");
     const hasMore = extraEntries.length > 0 || !!item.description;
 
+    const inBuild = state.build.some((b) => b.id === item.id);
+    const buildFull = state.build.length >= 6;
+    const addBtnClass = "add-btn" + (inBuild ? " in-build" : buildFull ? " disabled" : "");
+    const addBtnText = inBuild ? "✓" : "+";
+
     const card = document.createElement("div");
     card.className = "item-card";
     card.innerHTML = `
@@ -241,8 +444,9 @@ function render() {
         <img src="${item.image_url}" alt="${item.name}" onerror="this.style.opacity='0.3'">
         <div class="header-info">
           <h3>${item.name}</h3>
-          <div class="gold-text">${item.gold} Gold</div>
+          <div class="gold-text">${item.gold} Gold ${effBadge(item)}</div>
         </div>
+        <button class="${addBtnClass}" title="${inBuild ? "Remove from build" : "Add to build"}">${addBtnText}</button>
       </div>
       <div class="card-details">
         <div class="stats-section">
@@ -257,8 +461,22 @@ function render() {
       card.addEventListener("click", () => card.classList.toggle("expanded"));
     }
 
+    card.querySelector(".add-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      const nowInBuild = state.build.some((b) => b.id === item.id);
+      if (nowInBuild) {
+        state.build = state.build.filter((b) => b.id !== item.id);
+      } else if (state.build.length < 6) {
+        state.build.push(item);
+      }
+      updateBuildPanel();
+      render();
+    });
+
     grid.appendChild(card);
   });
+
+  updateBuildPanel();
 }
 
 init();
