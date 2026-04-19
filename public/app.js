@@ -1,6 +1,6 @@
 /**
  * LoL Item Explorer - Final Master Logic
- * Created for: league.malierdogan.com
+ * Professional Mapping & Role Filtering
  */
 
 const STAT_MAP = {
@@ -23,10 +23,19 @@ const STAT_MAP = {
   PercentOmnivampMod: "Omnivamp",
 };
 
-let appData = { SR: null, ARAM: null, currentVersion: "" };
+const ROLE_MAP = {
+  Mage: ["SpellDamage", "Mana", "SpellBlock"],
+  Tank: ["Health", "Armor", "SpellBlock", "HealthRegen"],
+  Assassin: ["Lethality", "PhysicalDamage"],
+  Marksman: ["AttackSpeed", "CriticalStrike", "PhysicalDamage"],
+  Support: ["ManaRegen", "Active"],
+};
+
+let appData = { SR: null, ARAM: null };
 let currentState = {
-  map: "SR",
-  category: "Normal",
+  map: "ARAM",
+  category: "Legendary",
+  role: "All",
   search: "",
   sort: "gold-desc",
 };
@@ -39,37 +48,46 @@ async function init() {
     ]);
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
-    appData.currentVersion = appData.SR.version;
-    document.getElementById("version-display").innerText =
-      `Patch: ${appData.currentVersion}`;
     setupEventListeners();
     render();
-  } catch (error) {
-    console.error("Initialization error:", error);
+  } catch (e) {
+    console.error("Data error:", e);
   }
 }
 
-function setupEventListeners() {
-  document.getElementById("map-toggle").addEventListener("click", (e) => {
-    if (e.target.tagName === "BUTTON") {
-      document
-        .querySelectorAll("#map-toggle button")
-        .forEach((b) => b.classList.remove("active"));
-      e.target.classList.add("active");
-      currentState.map = e.target.dataset.value;
-      render();
-    }
+// DDragon'un kirli description metnini temizleyen fonksiyon
+function cleanRiotDescription(text, stats) {
+  if (!text) return "";
+  let clean = text;
+  // 1. Statların description içindeki tekrarlarını sil (Örn: "100 Health" kısmını metinden çıkar)
+  Object.values(STAT_MAP).forEach((s) => {
+    const regex = new RegExp(`[0-9%\\+.]+\\s*${s}`, "gi");
+    clean = clean.replace(regex, "");
   });
+  // 2. HTML etiketlerini ve gereksiz boşlukları temizle
+  clean = clean
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s\s+/g, " ")
+    .trim();
+  return clean;
+}
 
-  document.getElementById("category-toggle").addEventListener("click", (e) => {
-    if (e.target.tagName === "BUTTON") {
+function setupEventListeners() {
+  // Map & Category
+  document.querySelectorAll(".filter-group button").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const group = e.target.parentElement.id;
+      const val = e.target.dataset.value;
       document
-        .querySelectorAll("#category-toggle button")
+        .querySelectorAll(`#${group} button`)
         .forEach((b) => b.classList.remove("active"));
       e.target.classList.add("active");
-      currentState.category = e.target.dataset.value;
+
+      if (group === "map-toggle") currentState.map = val;
+      if (group === "category-toggle") currentState.category = val;
+      if (group === "role-toggle") currentState.role = val;
       render();
-    }
+    });
   });
 
   document.getElementById("search-input").addEventListener("input", (e) => {
@@ -86,60 +104,55 @@ function setupEventListeners() {
 function render() {
   const grid = document.getElementById("items-grid");
   grid.innerHTML = "";
-
   let items = appData[currentState.map].items;
 
-  // Category Filter
+  // Filter: Category & Role
   items = items.filter((item) => {
     const isBoots = item.tags.includes("Boots");
-    if (currentState.category === "Ornn") return item.isOrnn;
-    if (currentState.category === "Boots") return isBoots;
-    return !item.isOrnn && !isBoots;
+    const catMatch =
+      currentState.category === "Ornn"
+        ? item.isOrnn
+        : currentState.category === "Boots"
+          ? isBoots
+          : !item.isOrnn && !isBoots;
+    const roleMatch =
+      currentState.role === "All" ||
+      item.tags.some((tag) => currentState.role.includes(tag));
+    const searchMatch = item.name.toLowerCase().includes(currentState.search);
+    return catMatch && roleMatch && searchMatch;
   });
-
-  // Search Filter
-  if (currentState.search) {
-    items = items.filter((item) =>
-      item.name.toLowerCase().includes(currentState.search),
-    );
-  }
 
   // Sort
   items.sort((a, b) => {
-    if (currentState.sort === "gold-desc") return b.gold - a.gold;
-    if (currentState.sort === "gold-asc") return a.gold - b.gold;
-    const statA = a.stats[currentState.sort] || 0;
-    const statB = b.stats[currentState.sort] || 0;
-    return statB - statA;
+    if (currentState.sort.includes("gold")) {
+      return currentState.sort === "gold-desc"
+        ? b.gold - a.gold
+        : a.gold - b.gold;
+    }
+    return (
+      (b.stats[currentState.sort] || 0) - (a.stats[currentState.sort] || 0)
+    );
   });
 
   items.forEach((item) => {
-    if (currentState.sort !== "gold-desc" && currentState.sort !== "gold-asc") {
-      if ((item.stats[currentState.sort] || 0) === 0) return;
-    }
-
     const card = document.createElement("div");
     card.className = "item-card";
 
-    let rawStatsHtml = "";
-    let mappedStatsHtml = "";
-
+    let statsHtml = "";
     for (const [key, value] of Object.entries(item.stats)) {
       const rawKey = key.replace("Flat", "").replace("Mod", "");
       const cleanName = STAT_MAP[key] || rawKey;
+      const displayVal =
+        value < 1 && value > 0 ? `+${(value * 100).toFixed(0)}%` : `+${value}`;
 
-      // Format Values (Handle Decimals like 0.03 -> 3%)
-      let displayVal =
-        value < 1 && value > 0 ? `${(value * 100).toFixed(0)}%` : `+${value}`;
-      if (key.includes("AttackSpeed") && value < 1)
-        displayVal = `+${(value * 100).toFixed(0)}%`;
-
-      // Top Section (Raw-ish look)
-      rawStatsHtml += `<div class="stat-line raw"><span>${rawKey}</span> <span>${displayVal}</span></div>`;
-
-      // Expanded Section (Clean look)
-      mappedStatsHtml += `<div class="stat-line mapped"><strong>${value}${value < 1 ? "%" : ""} ${cleanName}</strong></div>`;
+      statsHtml += `
+                <div class="stat-line">
+                    <span class="raw-label">${rawKey}</span>
+                    <span class="raw-value">${displayVal}</span>
+                </div>`;
     }
+
+    const cleanDesc = cleanRiotDescription(item.description, item.stats);
 
     card.innerHTML = `
             <div class="card-header">
@@ -149,16 +162,11 @@ function render() {
                     <div class="gold-text">${item.gold} Gold</div>
                 </div>
             </div>
-            <div class="card-body-preview">
-                ${rawStatsHtml}
-            </div>
+            <div class="stats-preview">${statsHtml}</div>
             <div class="card-details">
-                <div class="mapped-stats">${mappedStatsHtml}</div>
-                <div class="desc-text">${item.description}</div>
+                <p class="description">${cleanDesc}</p>
             </div>
         `;
-
-    card.addEventListener("click", () => card.classList.toggle("expanded"));
     grid.appendChild(card);
   });
 }
