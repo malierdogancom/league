@@ -137,7 +137,10 @@ function render() {
     grid.innerHTML = `<p style="color:#a09b8c;padding:20px">Eşleşen item bulunamadı.</p>`;
     return;
   }
-
+  // Sıralama sonrası, items.forEach'tan önce ekle:
+  const MAX_STATS = Math.max(
+    ...items.map((item) => Object.keys(item.stats || {}).length),
+  );
   items.forEach((item) => {
     const stats = item.stats || {};
     const entries = Object.entries(stats).sort(([a], [b]) => {
@@ -146,15 +149,18 @@ function render() {
       return 0;
     });
 
-    const statsHtml = entries
-      .map(([k, v]) => {
+    const statsHtml = [
+      ...entries.map(([k, v]) => {
         const hl = k === state.sort && !state.sort.includes("gold");
         return `<div class="stat-line${hl ? " stat-highlight" : ""}">
-        <span>${statLabel(k)}</span>
-        <span class="stat-value">${statValue(k, v)}</span>
-      </div>`;
-      })
-      .join("");
+      <span>${statLabel(k)}</span>
+      <span class="stat-value">${statValue(k, v)}</span>
+    </div>`;
+      }),
+      ...Array(Math.max(0, MAX_STATS - entries.length)).fill(
+        `<div class="stat-line stat-empty"></div>`,
+      ),
+    ].join("");
 
     const card = document.createElement("div");
     card.className = "item-card";

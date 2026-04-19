@@ -148,13 +148,21 @@ select:focus {
 }
 
 .card-details {
-  overflow: hidden;
   background-color: var(--panel-bg);
   font-size: 0.9em;
   color: var(--text-muted);
   padding: 15px;
   border-top: 1px solid #333;
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.stats-section {
+  width: 100%;
+}
+.stat-empty {
+  height: 21px;
 }
 .item-card {
   align-self: start;
