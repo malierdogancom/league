@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoL Item Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>LoL Item Explorer</h1>
+        <p id="version-display" class="version-text">Loading patch data...</p>
+      </header>
+
+      <div class="controls">
+        <div class="control-group">
+          <label>Map:</label>
+          <div class="toggle-buttons" id="map-toggle">
+            <button class="active" data-value="SR">Summoner's Rift</button>
+            <button data-value="ARAM">ARAM</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Category:</label>
+          <div class="toggle-buttons" id="category-toggle">
+            <button class="active" data-value="Normal">Legendary/Epic</button>
+            <button data-value="Boots">Boots</button>
+            <button data-value="Ornn">Ornn Items</button>
+          </div>
+        </div>
+
+        <div class="control-group search-sort">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search item name..."
+          />
+          <select id="sort-select">
+            <option value="gold-desc">Price (High to Low)</option>
+            <option value="gold-asc">Price (Low to High)</option>
+            <option value="FlatMagicDamageMod">Ability Power (AP)</option>
+            <option value="FlatPhysicalDamageMod">Attack Damage (AD)</option>
+            <option value="FlatHPPoolMod">Health (HP)</option>
+            <option value="FlatArmorMod">Armor</option>
+            <option value="FlatSpellBlockMod">Magic Resist (MR)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="items-grid" class="grid"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

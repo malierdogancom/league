@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "league-site",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

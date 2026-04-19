@@ -1,0 +1,2739 @@
+{
+  "version": "16.8.1",
+  "items": [
+    {
+      "id": "1001",
+      "name": "Boots",
+      "description": "25 Move Speed",
+      "gold": 300,
+      "stats": {
+        "FlatMovementSpeedMod": 25
+      },
+      "tags": [
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/1001.png"
+    },
+    {
+      "id": "2065",
+      "name": "Shurelya's Battlesong",
+      "description": "50 Ability Power15 Ability Haste4% Move Speed125% Base Mana RegenInspiring SpeechGrant nearby allies 30% Move Speed for 4 seconds.",
+      "gold": 2200,
+      "stats": {
+        "FlatMagicDamageMod": 50,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2065.png"
+    },
+    {
+      "id": "2501",
+      "name": "Overlord's Bloodmail",
+      "description": "30 Attack Damage550 HealthTyrannyGain 2.5% of your bonus Health as Attack Damage. RetributionGain up to 12% increased Attack Damage based on your percent missing Health. ",
+      "gold": 3300,
+      "stats": {
+        "FlatHPPoolMod": 550,
+        "FlatPhysicalDamageMod": 30
+      },
+      "tags": [
+        "Health",
+        "Damage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2501.png"
+    },
+    {
+      "id": "2502",
+      "name": "Unending Despair",
+      "description": "400 Health50 Armor15 Ability HasteAnguishEvery 4 seconds while in combat with champions, deal magic damage to nearby enemy champions and heal for 250% of the damage dealt.",
+      "gold": 2800,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatArmorMod": 50
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2502.png"
+    },
+    {
+      "id": "2503",
+      "name": "Blackfire Torch",
+      "description": "80 Ability Power600 Mana20 Ability HasteBaleful BlazeDamaging Abilities deals bonus magic damage for 3 seconds.BlackfireFor each enemy champion, epic and large monster affected by your Baleful Blaze, gain 4% Ability Power. ",
+      "gold": 2800,
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 80
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2503.png"
+    },
+    {
+      "id": "2504",
+      "name": "Kaenic Rookern",
+      "description": "400 Health80 Magic Resist100% Base Health RegenMagebaneAfter not taking magic damage for 15 seconds, gain a magic shield. ",
+      "gold": 2900,
+      "stats": {
+        "FlatSpellBlockMod": 80,
+        "FlatHPPoolMod": 400
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2504.png"
+    },
+    {
+      "id": "2510",
+      "name": "Dusk and Dawn",
+      "description": "350 Health70 Ability Power20 Ability Haste25% Attack SpeedSpellblade (0s)After using an Ability, your next Attack deals  bonus magic damage On-Hit and applies On-Hit effects an additional time.",
+      "gold": 3100,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatMagicDamageMod": 70,
+        "PercentAttackSpeedMod": 0.25
+      },
+      "tags": [
+        "Health",
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2510.png"
+    },
+    {
+      "id": "2512",
+      "name": "Fiendhunter Bolts",
+      "description": "45% Attack Speed25% Critical Strike Chance4% Move SpeedNight VigilGain 30 Ultimate Ability Haste.Opening BarrageAfter casting your Ultimate, your next 3 basic attacks gain 50% Attack Speed and Critically Strike for 80% of your normal Critical Strike damage for 8 seconds. If an attack would already Critically Strike, instead it deals 15% bonus true damage.",
+      "gold": 2650,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "PercentAttackSpeedMod": 0.45,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2512.png"
+    },
+    {
+      "id": "2517",
+      "name": "Endless Hunger",
+      "description": "65 Attack Damage5% Omnivamp20% TenacityFamineGain  Ability Haste.FeastWhen a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds. ",
+      "gold": 3100,
+      "stats": {
+        "FlatPhysicalDamageMod": 65
+      },
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "SpellVamp",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2517.png"
+    },
+    {
+      "id": "2520",
+      "name": "Bastionbreaker",
+      "description": "55 Attack Damage22 Lethality15 Ability HasteShaped Charge (0s)Dealing Ability damage to a Champion or Epic Monster deals an additional  true damage.SabotageTaking down a champion within 3 seconds of damaging them grants Sabotage for 90 seconds. While you have Sabotage, your next Attack against an Epic Monster or Turret deals an additional  true damage over 3 seconds. ",
+      "gold": 3200,
+      "stats": {
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2520.png"
+    },
+    {
+      "id": "2522",
+      "name": "Actualizer",
+      "description": "90 Ability Power300 Mana10 Ability HasteMana Made Real (0s)For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
+      "gold": 2800,
+      "stats": {
+        "FlatMPPoolMod": 300,
+        "FlatMagicDamageMod": 90
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2522.png"
+    },
+    {
+      "id": "2523",
+      "name": "Hexoptics C44",
+      "description": "55 Attack Damage25% Critical Strike ChanceMagnificationDeal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).Arcane AimWhen a champion that you damaged within 3 seconds dies, gain 100 additional attack range for 8 seconds. ",
+      "gold": 2800,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2523.png"
+    },
+    {
+      "id": "2524",
+      "name": "Bandlepipes",
+      "description": "200 Health15 Ability Haste20 Armor20 Magic ResistFanfareSlowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you 20 Move Speed. While you have Fanfare, nearby allies, including yourself, gain  Attack Speed.",
+      "gold": 2300,
+      "stats": {
+        "FlatSpellBlockMod": 20,
+        "FlatHPPoolMod": 200,
+        "FlatArmorMod": 20
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "AttackSpeed",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2524.png"
+    },
+    {
+      "id": "2525",
+      "name": "Protoplasm Harness",
+      "description": "600 Health20 Ability HasteLifeline (0s)Taking damage that would reduce your Health below 30% causes you to gain  maximum Health for 5 seconds, then heal  Health over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
+      "gold": 2500,
+      "stats": {
+        "FlatHPPoolMod": 600
+      },
+      "tags": [
+        "Health",
+        "NonbootsMovement",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2525.png"
+    },
+    {
+      "id": "3002",
+      "name": "Trailblazer",
+      "description": "250 Health40 Armor4% Move SpeedLead the WayWhile moving, build up to 20 bonus Move Speed. At max speed:Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.",
+      "gold": 2400,
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatArmorMod": 40,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3002.png"
+    },
+    {
+      "id": "3003",
+      "name": "Archangel's Staff",
+      "description": "70 Ability Power600 Mana25 Ability HasteAweGain Ability Power equal to 1% bonus Mana.Manaflow (8s, max 5 charges)Landing Abilities grants 5 max Mana (doubled vs. champions).Transforms into Seraph's Embrace at 360 max Mana.",
+      "gold": 2900,
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 70
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3003.png"
+    },
+    {
+      "id": "3004",
+      "name": "Manamune",
+      "description": "35 Attack Damage500 Mana15 Ability HasteAweGain  bonus Attack Damage.Manaflow (8s, max 4 charges)Landing Attacks and Abilities grants 3 max Mana (doubled vs. champions).Transforms into Muramana at 360 max Mana.",
+      "gold": 2900,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatPhysicalDamageMod": 35
+      },
+      "tags": [
+        "Damage",
+        "Mana",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3004.png"
+    },
+    {
+      "id": "3006",
+      "name": "Berserker's Greaves",
+      "description": "25% Attack Speed45 Move Speed",
+      "gold": 1100,
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "PercentAttackSpeedMod": 0.25
+      },
+      "tags": [
+        "AttackSpeed",
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3006.png"
+    },
+    {
+      "id": "3009",
+      "name": "Boots of Swiftness",
+      "description": "55 Move SpeedFleetfootedReduce the effectiveness of Slows by 25%.",
+      "gold": 1000,
+      "stats": {
+        "FlatMovementSpeedMod": 55
+      },
+      "tags": [
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3009.png"
+    },
+    {
+      "id": "3020",
+      "name": "Sorcerer's Shoes",
+      "description": "12 Magic Penetration45 Move Speed",
+      "gold": 1100,
+      "stats": {
+        "FlatMovementSpeedMod": 45
+      },
+      "tags": [
+        "Boots",
+        "MagicPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3020.png"
+    },
+    {
+      "id": "3026",
+      "name": "Guardian Angel",
+      "description": "55 Attack Damage45 ArmorRebirthUpon taking lethal damage, restores 50% base Health and 100% max Mana after 4 seconds of Stasis.",
+      "gold": 3200,
+      "stats": {
+        "FlatArmorMod": 45,
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Armor",
+        "Damage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3026.png"
+    },
+    {
+      "id": "3031",
+      "name": "Infinity Edge",
+      "description": "75 Attack Damage25% Critical Strike Chance30% Critical Strike Damage",
+      "gold": 3500,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 75
+      },
+      "tags": [
+        "CriticalStrike",
+        "Damage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3031.png"
+    },
+    {
+      "id": "3032",
+      "name": "Yun Tal Wildarrows",
+      "description": "50 Attack Damage40% Attack Speed0% Critical Strike ChancePractice Makes LethalOn-Attack, gain Critical Strike Chance permanently up to 25%.FlurryOn-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). Attacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
+      "gold": 3100,
+      "stats": {
+        "FlatPhysicalDamageMod": 50,
+        "PercentAttackSpeedMod": 0.4
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3032.png"
+    },
+    {
+      "id": "3033",
+      "name": "Mortal Reminder",
+      "description": "35 Attack Damage30% Armor Penetration25% Critical Strike ChanceGrievous WoundsDealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
+      "gold": 3000,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 35
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3033.png"
+    },
+    {
+      "id": "3036",
+      "name": "Lord Dominik's Regards",
+      "description": "35 Attack Damage35% Armor Penetration25% Critical Strike ChanceGiant SlayerDeal up to 15% bonus damage against champions based on their bonus Health. Maximum damage bonus reached at 1500 bonus Health.",
+      "gold": 3300,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 35
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3036.png"
+    },
+    {
+      "id": "3041",
+      "name": "Mejai's Soulstealer",
+      "description": "20 Ability Power100 HealthGloryTakedowns grant Glory, up to 25. 10 Glory is lost on death.Gain 5 Ability Power per Glory and 10% Move Speed at 10 or higher Glory.",
+      "gold": 1500,
+      "stats": {
+        "FlatHPPoolMod": 100,
+        "FlatMagicDamageMod": 20
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3041.png"
+    },
+    {
+      "id": "3046",
+      "name": "Phantom Dancer",
+      "description": "65% Attack Speed25% Critical Strike Chance10% Move SpeedSpectral WaltzBecome Ghosted.",
+      "gold": 2650,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "PercentAttackSpeedMod": 0.65,
+        "PercentMovementSpeedMod": 0.1
+      },
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3046.png"
+    },
+    {
+      "id": "3047",
+      "name": "Plated Steelcaps",
+      "description": "25 Armor45 Move SpeedPlatingReduces incoming damage from Attacks by 10%.",
+      "gold": 1200,
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "FlatArmorMod": 25
+      },
+      "tags": [
+        "Armor",
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3047.png"
+    },
+    {
+      "id": "3050",
+      "name": "Zeke's Convergence",
+      "description": "300 Health25 Armor25 Magic Resist10 Ability HasteFrostfire TempestCasting your Ultimate summons a storm around you for 5 seconds. The storm deals 30 magic damage per second to enemy champions and Slows them by 30%.",
+      "gold": 2200,
+      "stats": {
+        "FlatSpellBlockMod": 25,
+        "FlatHPPoolMod": 300,
+        "FlatArmorMod": 25
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3050.png"
+    },
+    {
+      "id": "3053",
+      "name": "Sterak's Gage",
+      "description": "400 Health20% TenacityThe Claws that CatchGain bonus Attack Damage.LifelineTaking damage that would reduce your Health below 30% grants a decaying Shield for 4.5 seconds.",
+      "gold": 3200,
+      "stats": {
+        "FlatHPPoolMod": 400
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "Tenacity"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3053.png"
+    },
+    {
+      "id": "3065",
+      "name": "Spirit Visage",
+      "description": "400 Health50 Magic Resist10 Ability Haste100% Base Health RegenBoundless VitalityHeals and Shields on you are increased by 25%.",
+      "gold": 2700,
+      "stats": {
+        "FlatSpellBlockMod": 50,
+        "FlatHPPoolMod": 400
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3065.png"
+    },
+    {
+      "id": "3068",
+      "name": "Sunfire Aegis",
+      "description": "350 Health50 Armor10 Ability HasteImmolateAfter taking or dealing damage, deal magic damage per second to nearby enemies for 3 seconds. ",
+      "gold": 2700,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatArmorMod": 50
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "Aura",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3068.png"
+    },
+    {
+      "id": "3071",
+      "name": "Black Cleaver",
+      "description": "40 Attack Damage400 Health20 Ability HasteCarveDealing physical damage to champions reduces their Armor by 6% for 6 seconds. (stacks 5 times).FervorDealing physical damage grants 20 Move Speed for 2 seconds.",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatPhysicalDamageMod": 40
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "CooldownReduction",
+        "OnHit",
+        "NonbootsMovement",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3071.png"
+    },
+    {
+      "id": "3072",
+      "name": "Bloodthirster",
+      "description": "80 Attack Damage15% Life StealIchorshieldConvert excess healing from your Lifesteal to a Shield.",
+      "gold": 3400,
+      "stats": {
+        "FlatPhysicalDamageMod": 80,
+        "PercentLifeStealMod": 0.15
+      },
+      "tags": [
+        "Damage",
+        "LifeSteal"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3072.png"
+    },
+    {
+      "id": "3073",
+      "name": "Experimental Hexplate",
+      "description": "40 Attack Damage20% Attack Speed450 HealthHexchargedGain 30 Ultimate Ability Haste.OverdriveAfter casting your Ultimate, gain 50% Attack Speed and 20% Move Speed for 8 seconds. ",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 450,
+        "FlatPhysicalDamageMod": 40,
+        "PercentAttackSpeedMod": 0.2
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "AttackSpeed",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3073.png"
+    },
+    {
+      "id": "3074",
+      "name": "Ravenous Hydra",
+      "description": "65 Attack Damage15 Ability Haste12% Life StealCleaveAttacks deal physical damage to nearby enemies.Ravenous CrescentDeal physical damage to enemies around you. Your Life Steal applies to this damage.",
+      "gold": 3300,
+      "stats": {
+        "FlatPhysicalDamageMod": 65,
+        "PercentLifeStealMod": 0.12
+      },
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3074.png"
+    },
+    {
+      "id": "3075",
+      "name": "Thornmail",
+      "description": "150 Health75 ArmorThornsWhen struck by an Attack, deal magic damage to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
+      "gold": 2450,
+      "stats": {
+        "FlatHPPoolMod": 150,
+        "FlatArmorMod": 75
+      },
+      "tags": [
+        "Health",
+        "Armor"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3075.png"
+    },
+    {
+      "id": "3078",
+      "name": "Trinity Force",
+      "description": "36 Attack Damage30% Attack Speed333 Health15 Ability HasteSpellbladeAfter using an Ability, your next Attack deals bonus physical damage On-Hit. QuickenAttacking grants 20 Move Speed for 2 seconds.",
+      "gold": 3333,
+      "stats": {
+        "FlatHPPoolMod": 333,
+        "FlatPhysicalDamageMod": 36,
+        "PercentAttackSpeedMod": 0.3
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "AttackSpeed",
+        "CooldownReduction",
+        "OnHit",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3078.png"
+    },
+    {
+      "id": "3083",
+      "name": "Warmog's Armor",
+      "description": "1000 Health100% Base Health RegenWarmog's Heart If you have 2000 bonus Health and have not taken damage within 8 seconds, restore  Health per second.Warmog's VitalityGain bonus Health equal to 12% of your Item Health (0).",
+      "gold": 3100,
+      "stats": {
+        "FlatHPPoolMod": 1000
+      },
+      "tags": [
+        "Health",
+        "HealthRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3083.png"
+    },
+    {
+      "id": "3084",
+      "name": "Heartsteel",
+      "description": "900 Health100% Base Health RegenColossal Consumption (0s) per targetIf an enemy champion is nearby for a few seconds, your next Attack against them deals 70 plus 6% of your max Health as bonus physical damage and grants 8% of the damage as max Health.GoliathFor each 1000 max Health, gain 3% increased size, up to 30%. ",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 900
+      },
+      "tags": [
+        "Health",
+        "HealthRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3084.png"
+    },
+    {
+      "id": "3085",
+      "name": "Runaan's Hurricane",
+      "description": "40% Attack Speed25% Critical Strike Chance4% Move SpeedWind's FuryAttacks fire bolts at 2 additional enemies near the target.Each bolt deals physical damage and applies On-Hit effects.",
+      "gold": 2650,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "PercentAttackSpeedMod": 0.4,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "OnHit",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3085.png"
+    },
+    {
+      "id": "3087",
+      "name": "Statikk Shiv",
+      "description": "45 Attack Damage30% Attack Speed4% Move SpeedElectrosparkAttacks trigger chain lightning On-Hit, dealing magic damage with a cooldown.Electroshock Takedowns within 3 seconds of damaging the target reset Electrospark's cooldown.",
+      "gold": 2700,
+      "stats": {
+        "FlatPhysicalDamageMod": 45,
+        "PercentAttackSpeedMod": 0.3,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "OnHit",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3087.png"
+    },
+    {
+      "id": "3089",
+      "name": "Rabadon's Deathcap",
+      "description": "130 Ability PowerMagical OpusIncreases your total Ability Power by 30%.",
+      "gold": 3500,
+      "stats": {
+        "FlatMagicDamageMod": 130
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3089.png"
+    },
+    {
+      "id": "3091",
+      "name": "Wit's End",
+      "description": "50% Attack Speed45 Magic Resist20% TenacityFrayAttacks deal bonus magic damage On-Hit.",
+      "gold": 2800,
+      "stats": {
+        "FlatSpellBlockMod": 45,
+        "PercentAttackSpeedMod": 0.5
+      },
+      "tags": [
+        "SpellBlock",
+        "AttackSpeed",
+        "OnHit",
+        "Tenacity"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3091.png"
+    },
+    {
+      "id": "3094",
+      "name": "Rapid Firecannon",
+      "description": "35% Attack Speed25% Critical Strike Chance4% Move SpeedSharpshooterYour Energized Attack deals 40 bonus magic damage and gains 35% bonus Attack Range.",
+      "gold": 2650,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "PercentAttackSpeedMod": 0.35,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3094.png"
+    },
+    {
+      "id": "3097",
+      "name": "Stormrazor",
+      "description": "50 Attack Damage20% Attack Speed25% Critical Strike ChanceEnergizedMoving and Attacking generates an Energized Attack.BoltYour Energized Attack applies  bonus magic damage and grants 45% Movement Speed for 1.5 seconds.",
+      "gold": 3200,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 50,
+        "PercentAttackSpeedMod": 0.2
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3097.png"
+    },
+    {
+      "id": "3100",
+      "name": "Lich Bane",
+      "description": "100 Ability Power4% Move Speed10 Ability HasteSpellbladeAfter using an Ability, your next Attack deals bonus magic damage On-Hit.",
+      "gold": 2900,
+      "stats": {
+        "FlatMagicDamageMod": 100,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "SpellDamage",
+        "OnHit",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3100.png"
+    },
+    {
+      "id": "3102",
+      "name": "Banshee's Veil",
+      "description": "105 Ability Power40 Magic ResistAnnulGrants a Spell Shield that blocks the next enemy Ability.",
+      "gold": 3000,
+      "stats": {
+        "FlatSpellBlockMod": 40,
+        "FlatMagicDamageMod": 105
+      },
+      "tags": [
+        "SpellBlock",
+        "SpellDamage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3102.png"
+    },
+    {
+      "id": "3107",
+      "name": "Redemption",
+      "description": "30 Ability Power15 Ability Haste100% Base Mana Regen10% Heal and Shield PowerInterventionRestore 150 - 350 Health to allied units and deal 10% max Health true damage to enemy champions after 2.5 seconds.",
+      "gold": 2300,
+      "stats": {
+        "FlatMagicDamageMod": 30
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3107.png"
+    },
+    {
+      "id": "3109",
+      "name": "Knight's Vow",
+      "description": "200 Health40 Armor10 Ability Haste100% Base Health RegenSacrificeWhile near your Worthy ally, take 12% of the damage they receive and heal for 10% of the damage they deal to champions.Pledge (0s)Designate an ally as Worthy.",
+      "gold": 2300,
+      "stats": {
+        "FlatHPPoolMod": 200,
+        "FlatArmorMod": 40
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Armor",
+        "Aura",
+        "Active",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3109.png"
+    },
+    {
+      "id": "3110",
+      "name": "Frozen Heart",
+      "description": "75 Armor400 Mana20 Ability HasteWinter's CaressReduce the Attack Speed of nearby champions by 20%.",
+      "gold": 2500,
+      "stats": {
+        "FlatMPPoolMod": 400,
+        "FlatArmorMod": 75
+      },
+      "tags": [
+        "Armor",
+        "Mana",
+        "Aura",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3110.png"
+    },
+    {
+      "id": "3111",
+      "name": "Mercury's Treads",
+      "description": "20 Magic Resist45 Move Speed30% Tenacity",
+      "gold": 1250,
+      "stats": {
+        "FlatSpellBlockMod": 20,
+        "FlatMovementSpeedMod": 45
+      },
+      "tags": [
+        "Boots",
+        "SpellBlock",
+        "Tenacity"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3111.png"
+    },
+    {
+      "id": "3115",
+      "name": "Nashor's Tooth",
+      "description": "80 Ability Power50% Attack Speed15 Ability HasteIcathian BiteAttacks deal bonus magic damage On-Hit.",
+      "gold": 2900,
+      "stats": {
+        "FlatMagicDamageMod": 80,
+        "PercentAttackSpeedMod": 0.5
+      },
+      "tags": [
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3115.png"
+    },
+    {
+      "id": "3116",
+      "name": "Rylai's Crystal Scepter",
+      "description": "65 Ability Power400 HealthRimefrostDamaging Abilities Slow enemies by 30% for 1 second.",
+      "gold": 2600,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatMagicDamageMod": 65
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Slow"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3116.png"
+    },
+    {
+      "id": "3118",
+      "name": "Malignance",
+      "description": "90 Ability Power600 Mana15 Ability HasteScornGain 20 Ultimate Ability Haste.HatefogDamaging a champion with your Ultimate burns the ground beneath them for 3s, dealing magic damage per second and reducing their Magic Resist. ",
+      "gold": 2700,
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 90
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3118.png"
+    },
+    {
+      "id": "3119",
+      "name": "Winter's Approach",
+      "description": "550 Health500 Mana15 Ability HasteAweGain  Health.Manaflow (8s, max 4 charges)Landing Attacks and Abilities grant 3 max Mana (doubled vs. champions).Transforms into Fimbulwinter at 360 max Mana.",
+      "gold": 2400,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatHPPoolMod": 550
+      },
+      "tags": [
+        "Health",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3119.png"
+    },
+    {
+      "id": "3124",
+      "name": "Guinsoo's Rageblade",
+      "description": "30 Attack Damage30 Ability Power25% Attack SpeedWrathAttacks deal 30 bonus magic damage On-Hit.Seething StrikeAttacks grant 8% Attack Speed for 3 seconds. (stacks 4 times). While fully stacked, every third Attack applies On-Hit effects twice.",
+      "gold": 3000,
+      "stats": {
+        "FlatMagicDamageMod": 30,
+        "FlatPhysicalDamageMod": 30,
+        "PercentAttackSpeedMod": 0.25
+      },
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3124.png"
+    },
+    {
+      "id": "3135",
+      "name": "Void Staff",
+      "description": "95 Ability Power40% Magic Penetration",
+      "gold": 3000,
+      "stats": {
+        "FlatMagicDamageMod": 95
+      },
+      "tags": [
+        "MagicPenetration",
+        "SpellDamage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3135.png"
+    },
+    {
+      "id": "3137",
+      "name": "Cryptbloom",
+      "description": "75 Ability Power30% Magic Penetration20 Ability HasteLife from DeathWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
+      "gold": 3000,
+      "stats": {
+        "FlatMagicDamageMod": 75
+      },
+      "tags": [
+        "SpellDamage",
+        "MagicPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3137.png"
+    },
+    {
+      "id": "3139",
+      "name": "Mercurial Scimitar",
+      "description": "50 Attack Damage35 Magic Resist10% Life StealACTIVEQuicksilverRemoves all crowd control debuffs (excluding Airborne) and grants Move Speed.",
+      "gold": 3200,
+      "stats": {
+        "FlatSpellBlockMod": 35,
+        "FlatPhysicalDamageMod": 50,
+        "PercentLifeStealMod": 0.1
+      },
+      "tags": [
+        "SpellBlock",
+        "Damage",
+        "LifeSteal",
+        "Active",
+        "NonbootsMovement",
+        "Tenacity"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3139.png"
+    },
+    {
+      "id": "3142",
+      "name": "Youmuu's Ghostblade",
+      "description": "55 Attack Damage18 Lethality4% Move SpeedHaunt Gain  Move Speed while out of combat.Wraith StepGain Move Speed and Ghosting for  seconds.",
+      "gold": 2800,
+      "stats": {
+        "FlatPhysicalDamageMod": 55,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Damage",
+        "Active",
+        "NonbootsMovement",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3142.png"
+    },
+    {
+      "id": "3143",
+      "name": "Randuin's Omen",
+      "description": "350 Health75 ArmorResilienceReceive 30% less damage from Critical Strikes.HumilitySlow nearby enemies by 70% for 2 seconds.",
+      "gold": 2700,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatArmorMod": 75
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "Active",
+        "Slow"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3143.png"
+    },
+    {
+      "id": "3146",
+      "name": "Hextech Gunblade",
+      "description": "80 Ability Power40 Attack Damage10% OmnivampACTIVE (0s)Lightning BoltShocks the target enemy champion, dealing  magic damage and slowing them by 25% for 1.5 seconds.",
+      "gold": 3000,
+      "stats": {
+        "FlatMagicDamageMod": 80,
+        "FlatPhysicalDamageMod": 40
+      },
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "SpellDamage",
+        "Active",
+        "SpellVamp"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3146.png"
+    },
+    {
+      "id": "3152",
+      "name": "Hextech Rocketbelt",
+      "description": "70 Ability Power300 Health20 Ability HasteSupersonicDash in target direction, unleashing missiles that deal magic damage.",
+      "gold": 2650,
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 70
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3152.png"
+    },
+    {
+      "id": "3153",
+      "name": "Blade of The Ruined King",
+      "description": "40 Attack Damage25% Attack Speed10% Life StealMist's EdgeAttacks deal a percentage of enemy's current Health as bonus physical damage On-Hit.Clawing ShadowsAttacking a champion 3 times Slows them by 30% for 1 second.",
+      "gold": 3200,
+      "stats": {
+        "FlatPhysicalDamageMod": 40,
+        "PercentAttackSpeedMod": 0.25,
+        "PercentLifeStealMod": 0.1
+      },
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "LifeSteal",
+        "Slow",
+        "OnHit"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3153.png"
+    },
+    {
+      "id": "3156",
+      "name": "Maw of Malmortius",
+      "description": "60 Attack Damage15 Ability Haste40 Magic ResistLifelineTaking magic damage that would reduce your Health below 30% grants a magic damage Shield for 3 seconds and 10% Omnivamp until end of combat.",
+      "gold": 3100,
+      "stats": {
+        "FlatSpellBlockMod": 40,
+        "FlatPhysicalDamageMod": 60
+      },
+      "tags": [
+        "SpellBlock",
+        "Damage",
+        "LifeSteal",
+        "SpellVamp",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3156.png"
+    },
+    {
+      "id": "3157",
+      "name": "Zhonya's Hourglass",
+      "description": "105 Ability Power50 ArmorTime StopEnter Stasis for 2.5 seconds.",
+      "gold": 3250,
+      "stats": {
+        "FlatMagicDamageMod": 105,
+        "FlatArmorMod": 50
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3157.png"
+    },
+    {
+      "id": "3158",
+      "name": "Ionian Boots of Lucidity",
+      "description": "10 Ability Haste45 Move SpeedIonian InsightGain 10 Summoner Spell Haste.",
+      "gold": 900,
+      "stats": {
+        "FlatMovementSpeedMod": 45
+      },
+      "tags": [
+        "Boots",
+        "CooldownReduction"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3158.png"
+    },
+    {
+      "id": "3161",
+      "name": "Spear of Shojin",
+      "description": "45 Attack Damage450 HealthDragonforce Gain 25 Basic Ability Haste.Focused Will Dealing damage with Abilities increases your Champion's Ability and Passive damage by 3% for 6 seconds. (stacks 4 times).",
+      "gold": 3100,
+      "stats": {
+        "FlatHPPoolMod": 450,
+        "FlatPhysicalDamageMod": 45
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3161.png"
+    },
+    {
+      "id": "3165",
+      "name": "Morellonomicon",
+      "description": "75 Ability Power350 Health15 Ability HasteGrievous WoundsDealing magic damage to champions applies 40% Wounds for 3 seconds.",
+      "gold": 2850,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatMagicDamageMod": 75
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3165.png"
+    },
+    {
+      "id": "3170",
+      "name": "Swiftmarch",
+      "description": "65 Move SpeedFleetfootedReduce the effectiveness of Slows by 40%.Noxian FervorGain 5% of your Move Speed as Adaptive Force.",
+      "gold": 1000,
+      "stats": {
+        "FlatMovementSpeedMod": 65
+      },
+      "tags": [
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3170.png"
+    },
+    {
+      "id": "3171",
+      "name": "Crimson Lucidity",
+      "description": "20 Ability Haste45 Move SpeedIonian InsightGain 20 Summoner Spell Haste.Noxian HasteEmpowering or protecting allies with abilities, dealing damage to enemy Champions with abilities, or casting a Summoner Spell grants  Move Speed for 4 seconds.Noxian Haste can only be triggered once per Ability cast.",
+      "gold": 900,
+      "stats": {
+        "FlatMovementSpeedMod": 45
+      },
+      "tags": [
+        "CooldownReduction",
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3171.png"
+    },
+    {
+      "id": "3173",
+      "name": "Chainlaced Crushers",
+      "description": "30 Magic Resist45 Move Speed30% TenacityNoxian Persistence (0s)After taking magic damage from a Champion, gain a  magic shield for 5 seconds.",
+      "gold": 1250,
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatMovementSpeedMod": 45
+      },
+      "tags": [
+        "SpellBlock",
+        "Boots",
+        "Tenacity",
+        "MagicResist"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3173.png"
+    },
+    {
+      "id": "3174",
+      "name": "Armored Advance",
+      "description": "35 Armor45 Move SpeedPlatingReduces incoming damage from Attacks by 10%.Noxian Endurance (0s)After taking physical damage from a Champion, gain a  physical shield for 5 seconds.",
+      "gold": 1200,
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "FlatArmorMod": 35
+      },
+      "tags": [
+        "Armor",
+        "Boots"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3174.png"
+    },
+    {
+      "id": "3175",
+      "name": "Spellslinger's Shoes",
+      "description": "18 Magic Penetration8% Magic Penetration45 Move Speed",
+      "gold": 1100,
+      "stats": {
+        "FlatMovementSpeedMod": 45
+      },
+      "tags": [
+        "Boots",
+        "MagicPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3175.png"
+    },
+    {
+      "id": "3179",
+      "name": "Umbral Glaive",
+      "description": "60 Attack Damage18 Lethality15 Ability HasteNightstalkerAfter being unseen by enemies briefly, your next attack against a champion deals an additional true damage.BlackoutWhen you are near enemy Stealth Wards and traps, reveal them briefly. While revealing wards, your attacks deal bonus damage to them.",
+      "gold": 2800,
+      "stats": {
+        "FlatPhysicalDamageMod": 60
+      },
+      "tags": [
+        "Damage",
+        "Vision",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3179.png"
+    },
+    {
+      "id": "3181",
+      "name": "Hullbreaker",
+      "description": "40 Attack Damage500 Health4% Move SpeedSkipperEvery fifth Attack against champions and epic monsters deals bonus physical damage, increased against Structures.Boarding PartyNearby allied siege and super minions gain Armor and Magic Resist.",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 500,
+        "FlatPhysicalDamageMod": 40,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3181.png"
+    },
+    {
+      "id": "3190",
+      "name": "Locket of the Iron Solari",
+      "description": "200 Health25 Armor25 Magic Resist10 Ability HasteDevotionGrant nearby allies a 290 - 360 Shield that decays over 2.5 seconds.",
+      "gold": 2200,
+      "stats": {
+        "FlatSpellBlockMod": 25,
+        "FlatHPPoolMod": 200,
+        "FlatArmorMod": 25
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "Aura",
+        "Active",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3190.png"
+    },
+    {
+      "id": "322065",
+      "name": "Shurelya's Battlesong",
+      "description": "65 Ability Power15 Ability Haste6% Move Speed150% Base Mana RegenInspiring SpeechGrant nearby allies 30% Move Speed for 4 seconds.",
+      "gold": 2600,
+      "stats": {
+        "FlatMagicDamageMod": 65,
+        "PercentMovementSpeedMod": 0.06
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/322065.png"
+    },
+    {
+      "id": "3222",
+      "name": "Mikael's Blessing",
+      "description": "250 Health100% Base Mana Regen12% Heal and Shield Power15 Ability HastePurifyRemove all crowd control debuffs (excluding Airborne and Suppression) from an ally champion and restore 100 - 250 Health.",
+      "gold": 2300,
+      "stats": {
+        "FlatHPPoolMod": 250
+      },
+      "tags": [
+        "Health",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3222.png"
+    },
+    {
+      "id": "323002",
+      "name": "Trailblazer",
+      "description": "300 Health45 Armor6% Move SpeedLead the WayWhile moving, build up to 20 bonus Move Speed. At max speed:Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.",
+      "gold": 2600,
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatArmorMod": 45,
+        "PercentMovementSpeedMod": 0.06
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323002.png"
+    },
+    {
+      "id": "323003",
+      "name": "Archangel's Staff",
+      "description": "70 Ability Power600 Mana25 Ability HasteAweGain Ability Power equal to 1% bonus Mana.Manaflow (8s, max 5 charges)Landing Abilities grants 9.5 max Mana (doubled vs. champions).Transforms into Seraph's Embrace at 360 max Mana.",
+      "gold": 2900,
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 70
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323003.png"
+    },
+    {
+      "id": "323004",
+      "name": "Manamune",
+      "description": "35 Attack Damage500 Mana15 Ability HasteAweGain  bonus Attack Damage.Manaflow (8s, max 4 charges)Landing Attacks and Abilities grants 6.5 max Mana (doubled vs. champions).Transforms into Muramana at 360 max Mana.",
+      "gold": 2900,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatPhysicalDamageMod": 35
+      },
+      "tags": [
+        "Damage",
+        "Mana",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323004.png"
+    },
+    {
+      "id": "323050",
+      "name": "Zeke's Convergence",
+      "description": "350 Health30 Armor30 Magic Resist10 Ability HasteFrostfire TempestCasting your Ultimate summons a storm around you for 5 seconds. The storm deals 30 magic damage per second to enemy champions and Slows them by 30%.",
+      "gold": 2300,
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatHPPoolMod": 350,
+        "FlatArmorMod": 30
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323050.png"
+    },
+    {
+      "id": "323075",
+      "name": "Thornmail",
+      "description": "200 Health85 ArmorThornsWhen struck by an Attack, deal magic damage to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
+      "gold": 2650,
+      "stats": {
+        "FlatHPPoolMod": 200,
+        "FlatArmorMod": 85
+      },
+      "tags": [
+        "Health",
+        "Armor"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323075.png"
+    },
+    {
+      "id": "323107",
+      "name": "Redemption",
+      "description": "30 Ability Power15 Ability Haste100% Base Mana Regen10% Heal and Shield PowerInterventionRestore 150 - 350 Health to allied units and deal 10% max Health true damage to enemy champions after 2.5 seconds.",
+      "gold": 2800,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatMagicDamageMod": 30
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323107.png"
+    },
+    {
+      "id": "323109",
+      "name": "Knight's Vow",
+      "description": "300 Health50 Armor10 Ability Haste150% Base Health RegenSacrificeWhile near your Worthy ally, take 12% of the damage they receive and heal for 10% of the damage they deal to champions.Pledge (0s)Designate an ally as Worthy.",
+      "gold": 2900,
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatArmorMod": 50
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Armor",
+        "Aura",
+        "Active",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323109.png"
+    },
+    {
+      "id": "323110",
+      "name": "Frozen Heart",
+      "description": "75 Armor500 Mana25 Ability HasteWinter's CaressReduce the Attack Speed of nearby champions by 20%.",
+      "gold": 2700,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatArmorMod": 75
+      },
+      "tags": [
+        "Armor",
+        "Mana",
+        "Aura",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323110.png"
+    },
+    {
+      "id": "323119",
+      "name": "Winter's Approach",
+      "description": "550 Health500 Mana15 Ability HasteAweGain  Health.Manaflow (8s, max 4 charges)Landing Attacks and Abilities grant 6.5 max Mana (doubled vs. champions).Transforms into Fimbulwinter at 360 max Mana.",
+      "gold": 2400,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatHPPoolMod": 550
+      },
+      "tags": [
+        "Health",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323119.png"
+    },
+    {
+      "id": "323190",
+      "name": "Locket of the Iron Solari",
+      "description": "250 Health30 Armor30 Magic Resist10 Ability HasteDevotionGrant nearby allies a 290 - 360 Shield that decays over 2.5 seconds.",
+      "gold": 2600,
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatHPPoolMod": 250,
+        "FlatArmorMod": 30
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "Aura",
+        "Active",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323190.png"
+    },
+    {
+      "id": "323222",
+      "name": "Mikael's Blessing",
+      "description": "400 Health100% Base Mana Regen15% Heal and Shield Power15 Ability HastePurifyRemove all crowd control debuffs (excluding Airborne and Suppression) from an ally champion and restore 100 - 250 Health.",
+      "gold": 2800,
+      "stats": {
+        "FlatHPPoolMod": 400
+      },
+      "tags": [
+        "Health",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323222.png"
+    },
+    {
+      "id": "323504",
+      "name": "Ardent Censer",
+      "description": "55 Ability Power10% Heal and Shield Power150% Base Mana Regen6% Move SpeedSanctifyHealing or Shielding an ally enhances you both for 6 seconds, granting 25% Attack Speed and 20 magic damage On-Hit.",
+      "gold": 2600,
+      "stats": {
+        "FlatMagicDamageMod": 55,
+        "PercentMovementSpeedMod": 0.06
+      },
+      "tags": [
+        "AttackSpeed",
+        "SpellDamage",
+        "ManaRegen",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323504.png"
+    },
+    {
+      "id": "324005",
+      "name": "Imperial Mandate",
+      "description": "65 Ability Power20 Ability Haste150% Base Mana RegenCoordinated Fire (0s) per targetSlowing or Immobilizing an enemy champion marks them for 5 seconds. Ally champion damage detonates the mark, dealing magic damage equal to 10% of current health. ",
+      "gold": 2750,
+      "stats": {
+        "FlatMagicDamageMod": 65
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/324005.png"
+    },
+    {
+      "id": "326616",
+      "name": "Staff of Flowing Water",
+      "description": "45 Ability Power10% Heal and Shield Power150% Base Mana Regen15 Ability HasteRapidsHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
+      "gold": 2600,
+      "stats": {
+        "FlatMagicDamageMod": 45
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326616.png"
+    },
+    {
+      "id": "326617",
+      "name": "Moonstone Renewer",
+      "description": "35 Ability Power400 Health20 Ability Haste150% Base Mana RegenStarlit GraceHealing or shielding an ally chains the effect to another ally (excluding yourself), healing 30% or shielding 35% of the original amount.",
+      "gold": 2900,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatMagicDamageMod": 35
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326617.png"
+    },
+    {
+      "id": "326620",
+      "name": "Echoes of Helia",
+      "description": "35 Ability Power250 Health20 Ability Haste150% Base Mana RegenSoul SiphonGain 35% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all Soul Charges to restore Health.",
+      "gold": 2600,
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatMagicDamageMod": 35
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326620.png"
+    },
+    {
+      "id": "326621",
+      "name": "Dawncore",
+      "description": "50 Ability Power20% Heal and Shield Power150% Base Mana RegenFirst LightGain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
+      "gold": 2900,
+      "stats": {
+        "FlatMagicDamageMod": 50
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326621.png"
+    },
+    {
+      "id": "326657",
+      "name": "Rod of Ages",
+      "description": "45 Ability Power350 Health500 ManaTimelessThis item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.EternityTaking damage from champions restores 10% of the damage as Mana. Casting an ability heals for 25% of Mana spent.",
+      "gold": 2600,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatHPPoolMod": 350,
+        "FlatMagicDamageMod": 45
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326657.png"
+    },
+    {
+      "id": "328020",
+      "name": "Abyssal Mask",
+      "description": "350 Health50 Magic Resist15 Ability HasteUnmakeNearby enemy champions take 12% more magic damage.",
+      "gold": 2850,
+      "stats": {
+        "FlatSpellBlockMod": 50,
+        "FlatHPPoolMod": 350
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "CooldownReduction",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/328020.png"
+    },
+    {
+      "id": "3302",
+      "name": "Terminus",
+      "description": "30 Attack Damage35% Attack SpeedShadowAttacks deal 30 bonus magic damage On-Hit.JuxtapositionAlternate between Light and Dark Attacks against champions: Light Attacks grant Armor and Magic Resist for 5s. Dark Attacks grant 10% Armor Penetration and Magic Penetration for 5s. ",
+      "gold": 3000,
+      "stats": {
+        "FlatPhysicalDamageMod": 30,
+        "PercentAttackSpeedMod": 0.35
+      },
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "OnHit",
+        "MagicPenetration",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3302.png"
+    },
+    {
+      "id": "3504",
+      "name": "Ardent Censer",
+      "description": "45 Ability Power10% Heal and Shield Power125% Base Mana Regen4% Move SpeedSanctifyHealing or Shielding an ally enhances you both for 6 seconds, granting 25% Attack Speed and 20 magic damage On-Hit.",
+      "gold": 2200,
+      "stats": {
+        "FlatMagicDamageMod": 45,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "AttackSpeed",
+        "SpellDamage",
+        "ManaRegen",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3504.png"
+    },
+    {
+      "id": "3508",
+      "name": "Essence Reaver",
+      "description": "50 Attack Damage20 Ability Haste25% Critical Strike ChanceSpellbladeAfter using an Ability, your next Attack deals bonus physical damage and grants Mana On-Hit.",
+      "gold": 3050,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 50
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ManaRegen",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3508.png"
+    },
+    {
+      "id": "3742",
+      "name": "Dead Man's Plate",
+      "description": "350 Health55 Armor4% Move SpeedShipwreckerWhile moving, build up to 20 bonus Move Speed. Your next Attack discharges built up Move Speed to deal bonus physical damage.UnsinkableReduce the effectiveness of Slows by 15%.",
+      "gold": 2900,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatArmorMod": 55,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "Slow",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3742.png"
+    },
+    {
+      "id": "3748",
+      "name": "Titanic Hydra",
+      "description": "40 Attack Damage600 HealthCleaveAttacks deal physical damage on-hit and to enemies behind the target.Titanic CrescentEmpower your next Cleave to deal bonus physical damage On-Hit and deal bonus physical damage to enemies behind the target.",
+      "gold": 3300,
+      "stats": {
+        "FlatHPPoolMod": 600,
+        "FlatPhysicalDamageMod": 40
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Damage",
+        "OnHit"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3748.png"
+    },
+    {
+      "id": "3814",
+      "name": "Edge of Night",
+      "description": "50 Attack Damage15 Lethality250 HealthAnnulGrants a Spell Shield that blocks the next enemy Ability.",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatPhysicalDamageMod": 50
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3814.png"
+    },
+    {
+      "id": "4005",
+      "name": "Imperial Mandate",
+      "description": "60 Ability Power20 Ability Haste125% Base Mana RegenCoordinated Fire (0s) per targetSlowing or Immobilizing an enemy champion marks them for 5 seconds. Ally champion damage detonates the mark, dealing magic damage equal to 10% of current health. ",
+      "gold": 2250,
+      "stats": {
+        "FlatMagicDamageMod": 60
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4005.png"
+    },
+    {
+      "id": "4401",
+      "name": "Force of Nature",
+      "description": "400 Health55 Magic Resist4% Move SpeedSteadfastGain 70 Magic Resist and 6% bonus Move Speed after taking magic damage from Champions 8 times.",
+      "gold": 2800,
+      "stats": {
+        "FlatSpellBlockMod": 55,
+        "FlatHPPoolMod": 400,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4401.png"
+    },
+    {
+      "id": "4628",
+      "name": "Horizon Focus",
+      "description": "75 Ability Power25 Ability HasteHypershotDealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. FocusWhen Hypershot is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
+      "gold": 2700,
+      "stats": {
+        "FlatMagicDamageMod": 75
+      },
+      "tags": [
+        "SpellDamage",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4628.png"
+    },
+    {
+      "id": "4629",
+      "name": "Cosmic Drive",
+      "description": "70 Ability Power350 Health25 Ability Haste4% Move SpeedSpelldanceDealing magic or true damage to champions grants Move Speed for 4 seconds. ",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatMagicDamageMod": 70,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4629.png"
+    },
+    {
+      "id": "4633",
+      "name": "Riftmaker",
+      "description": "70 Ability Power350 Health15 Ability HasteVoid CorruptionFor each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strength, gain Omnivamp.Void InfusionGain 2% of your bonus Health as Ability Power.",
+      "gold": 3100,
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatMagicDamageMod": 70
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "SpellVamp"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4633.png"
+    },
+    {
+      "id": "4645",
+      "name": "Shadowflame",
+      "description": "110 Ability Power15 Magic PenetrationCinderbloomMagic and true damage Critically Strikes enemies below 40% Health, dealing 20% increased damage. ",
+      "gold": 3200,
+      "stats": {
+        "FlatMagicDamageMod": 110
+      },
+      "tags": [
+        "SpellDamage",
+        "MagicPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4645.png"
+    },
+    {
+      "id": "4646",
+      "name": "Stormsurge",
+      "description": "90 Ability Power15 Magic Penetration6% Move SpeedStormraiderDealing 25% of a champion's maximum Health within 2.5s applies Squall to them.SquallAfter 2 seconds, deal magic damage. If the target dies before Squall triggers, it damages nearby enemies.",
+      "gold": 2800,
+      "stats": {
+        "FlatMagicDamageMod": 90,
+        "PercentMovementSpeedMod": 0.06
+      },
+      "tags": [
+        "SpellDamage",
+        "GoldPer",
+        "NonbootsMovement",
+        "MagicPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4646.png"
+    },
+    {
+      "id": "6333",
+      "name": "Death's Dance",
+      "description": "60 Attack Damage50 Armor15 Ability HasteIgnore PainA percentage of damage taken is dealt to you over 3 seconds instead.DefyWhen a champion that you damaged within 3 seconds dies, cleanse Ignore Pain's remaining damage and restore Health over 2 seconds.",
+      "gold": 3300,
+      "stats": {
+        "FlatArmorMod": 50,
+        "FlatPhysicalDamageMod": 60
+      },
+      "tags": [
+        "Armor",
+        "Damage",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6333.png"
+    },
+    {
+      "id": "6609",
+      "name": "Chempunk Chainsword",
+      "description": "45 Attack Damage450 Health15 Ability HasteHackshornDealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 450,
+        "FlatPhysicalDamageMod": 45
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6609.png"
+    },
+    {
+      "id": "6610",
+      "name": "Sundered Sky",
+      "description": "45 Attack Damage400 Health10 Ability HasteLightshield StrikeYour first Attack against a champion Critically Strikes and restores Health.",
+      "gold": 3100,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatPhysicalDamageMod": 45
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6610.png"
+    },
+    {
+      "id": "6616",
+      "name": "Staff of Flowing Water",
+      "description": "35 Ability Power10% Heal and Shield Power125% Base Mana Regen15 Ability HasteRapidsHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
+      "gold": 2250,
+      "stats": {
+        "FlatMagicDamageMod": 35
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6616.png"
+    },
+    {
+      "id": "6617",
+      "name": "Moonstone Renewer",
+      "description": "25 Ability Power200 Health20 Ability Haste125% Base Mana RegenStarlit GraceHealing or shielding an ally chains the effect to another ally (excluding yourself), healing 30% or shielding 35% of the original amount.",
+      "gold": 2200,
+      "stats": {
+        "FlatHPPoolMod": 200,
+        "FlatMagicDamageMod": 25
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6617.png"
+    },
+    {
+      "id": "6620",
+      "name": "Echoes of Helia",
+      "description": "35 Ability Power200 Health20 Ability Haste125% Base Mana RegenSoul SiphonGain 35% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all Soul Charges to restore Health.",
+      "gold": 2200,
+      "stats": {
+        "FlatHPPoolMod": 200,
+        "FlatMagicDamageMod": 35
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6620.png"
+    },
+    {
+      "id": "6621",
+      "name": "Dawncore",
+      "description": "45 Ability Power16% Heal and Shield Power100% Base Mana RegenFirst LightGain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
+      "gold": 2500,
+      "stats": {
+        "FlatMagicDamageMod": 45
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6621.png"
+    },
+    {
+      "id": "663039",
+      "name": "Atma's Reckoning",
+      "description": "500 Health20% Critical Strike ChanceBig HandsGain 0-30% Critical Strike Chance, scaling with your bonus Health.",
+      "gold": 2500,
+      "stats": {
+        "FlatHPPoolMod": 500,
+        "FlatCritChanceMod": 0.2
+      },
+      "tags": [
+        "Health",
+        "CriticalStrike",
+        "Lane"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663039.png"
+    },
+    {
+      "id": "663056",
+      "name": "Demon King's Crown",
+      "description": "SupremacyIncreases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 20%, increased by 0% perTakedown and -3% per Death after acquiring this item.",
+      "gold": 2500,
+      "stats": {},
+      "tags": [
+        "Health",
+        "Armor",
+        "Damage",
+        "AttackSpeed",
+        "SpellDamage",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663056.png"
+    },
+    {
+      "id": "663058",
+      "name": "Shield of Molten Stone",
+      "description": "250 Health80 ArmorImmovable as the EarthIncrease your armor by 20%, and gain Block Chance based on your Armor.",
+      "gold": 2500,
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatArmorMod": 80
+      },
+      "tags": [
+        "Health",
+        "Armor"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663058.png"
+    },
+    {
+      "id": "663059",
+      "name": "Cloak of Starry Night",
+      "description": "250 Health60 Magic ResistLimitless as the StarsIncrease your Magic Resist by 10%. Reduce all damage you take from non-Basic Attack sources by a percentage, scaling with your Magic Resist up to a cap of 25%.",
+      "gold": 2500,
+      "stats": {
+        "FlatSpellBlockMod": 60,
+        "FlatHPPoolMod": 250
+      },
+      "tags": [
+        "Health",
+        "SpellBlock"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663059.png"
+    },
+    {
+      "id": "663060",
+      "name": "Sword of the Divine",
+      "description": "90 Adaptive Force50% Critical Strike ChanceExcoriateEach Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.",
+      "gold": 2500,
+      "stats": {
+        "FlatCritChanceMod": 0.5
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "SpellDamage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663060.png"
+    },
+    {
+      "id": "6631",
+      "name": "Stridebreaker",
+      "description": "40 Attack Damage25% Attack Speed450 HealthCleaveAttacks deal physical damage to nearby enemies.Breaking ShockwaveDeal physical damage and Slow nearby enemies by 35%.Gain 35% decaying Move Speed per champion hit for 3 seconds.",
+      "gold": 3300,
+      "stats": {
+        "FlatHPPoolMod": 450,
+        "FlatPhysicalDamageMod": 40,
+        "PercentAttackSpeedMod": 0.25
+      },
+      "tags": [
+        "Health",
+        "Damage",
+        "AttackSpeed",
+        "Slow"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6631.png"
+    },
+    {
+      "id": "663146",
+      "name": "Hextech Gunblade",
+      "description": "90 Ability Power45 Attack Damage15% OmnivampACTIVE (0s)Lightning BoltShocks the target enemy champion, dealing  magic damage and slowing them by 40% for 2 seconds.",
+      "gold": 2500,
+      "stats": {
+        "FlatMagicDamageMod": 90,
+        "FlatPhysicalDamageMod": 45
+      },
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "SpellDamage",
+        "Active",
+        "SpellVamp"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663146.png"
+    },
+    {
+      "id": "663172",
+      "name": "Zephyr",
+      "description": "40% Attack Speed8% Move Speed25 Ability Haste20% TenacityLike the WindGain 5% Move Speed On-Hit for 6 seconds, stacking up to 25% Move Speed.Tenacity reduces the duration of Stun, Slow, Taunt, Fear, Silence, Blind, Polymorph and Immobilizing effects. It has no effect on Airborne or Suppression.",
+      "gold": 2500,
+      "stats": {
+        "PercentAttackSpeedMod": 0.4,
+        "PercentMovementSpeedMod": 0.08
+      },
+      "tags": [
+        "AttackSpeed",
+        "CooldownReduction",
+        "OnHit",
+        "NonbootsMovement",
+        "Tenacity"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663172.png"
+    },
+    {
+      "id": "663193",
+      "name": "Gargoyle Stoneplate",
+      "description": "55 Armor55 Magic Resist10 Ability Haste8% Move SpeedActive - Unbreakable: Gain a Shield that decays and grow in size.",
+      "gold": 2500,
+      "stats": {
+        "FlatSpellBlockMod": 55,
+        "FlatArmorMod": 55,
+        "PercentMovementSpeedMod": 0.08
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Active",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663193.png"
+    },
+    {
+      "id": "664011",
+      "name": "Sword of Blossoming Dawn",
+      "description": "35 Ability Power150 Health10% Heal and Shield Power10 Ability HasteEffervescenceGain +1% Attack Speed for every 1% Heal and Shield Power you have. PeppermintOn-Hit, heal the lowest health ally champion near you for , prioritizing lower health allies.",
+      "gold": 2500,
+      "stats": {
+        "FlatHPPoolMod": 150,
+        "FlatMagicDamageMod": 35
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/664011.png"
+    },
+    {
+      "id": "664644",
+      "name": "Crown of the Shattered Queen",
+      "description": "65 Ability Power250 Health600 Mana15 Ability HasteSafeguardYou are Safeguarded, reducing incoming champion damage by 40%. Safeguard persists for 3 seconds after taking champion damage. (0s). Item Cooldown is restarted when damage is taken from champions.",
+      "gold": 2500,
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatHPPoolMod": 250,
+        "FlatMagicDamageMod": 65
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/664644.png"
+    },
+    {
+      "id": "6653",
+      "name": "Liandry's Torment",
+      "description": "60 Ability Power300 HealthTormentDamaging Abilities burn enemies for 2% max Health magic damage per second for 3 seconds.SufferingFor each second in combat with enemy champions, deal 2% bonus damage, up to 6%.",
+      "gold": 3000,
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 60
+      },
+      "tags": [
+        "Health",
+        "SpellDamage"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6653.png"
+    },
+    {
+      "id": "6655",
+      "name": "Luden's Echo",
+      "description": "100 Ability Power600 Mana10 Ability HasteEchoDamaging Abilities fire 6 Echoes that deal bonus magic damage to the target and nearby enemies. Remaining Echoes fire on the primary target, dealing 20% damage.",
+      "gold": 2750,
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 100
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6655.png"
+    },
+    {
+      "id": "6657",
+      "name": "Rod of Ages",
+      "description": "45 Ability Power350 Health500 ManaTimelessThis item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.EternityTaking damage from champions restores 10% of the damage as Mana. Casting an ability heals for 25% of Mana spent.",
+      "gold": 2600,
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatHPPoolMod": 350,
+        "FlatMagicDamageMod": 45
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6657.png"
+    },
+    {
+      "id": "6662",
+      "name": "Iceborn Gauntlet",
+      "description": "300 Health50 Armor15 Ability HasteSpellbladeAfter using an Ability, your next Attack deals bonus physical damage On-Hit and creates a frost field for 2s that Slows.",
+      "gold": 2900,
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatArmorMod": 50
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "CooldownReduction",
+        "Slow",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6662.png"
+    },
+    {
+      "id": "6664",
+      "name": "Hollow Radiance",
+      "description": "400 Health40 Magic Resist10 Ability Haste100% Base Health RegenImmolateAfter taking or dealing damage, deal magic damage per second to nearby enemies for 3 seconds. DesolateKilling an enemy deals magic damage around them.",
+      "gold": 2800,
+      "stats": {
+        "FlatSpellBlockMod": 40,
+        "FlatHPPoolMod": 400
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Aura",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6664.png"
+    },
+    {
+      "id": "6665",
+      "name": "Jak'Sho, The Protean",
+      "description": "350 Health45 Armor45 Magic ResistVoidborn ResilienceAfter 5 seconds of champion combat, increase your bonus Armor and Magic Resist by 30% until end of combat.",
+      "gold": 3200,
+      "stats": {
+        "FlatSpellBlockMod": 45,
+        "FlatHPPoolMod": 350,
+        "FlatArmorMod": 45
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "MagicResist"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6665.png"
+    },
+    {
+      "id": "667101",
+      "name": "Gambler's Blade",
+      "description": "55 Adaptive Force10 Ability Haste15 Lethality15 Magic Penetration15% Move SpeedPlaying for TimeChampion takedowns while using Gambler's Blade delays Doom-boss Veigar's arrival by an additional 10 seconds. Deaths while carrying the Blade accelerate it by 10 seconds. (Will not lose time past the 14:30 minute mark)Double DownChampion takedowns grant a stack, each granting 10 bonus gold on kill. Also take 5% increased damage per stack. Lose all stacks on death.",
+      "gold": 2500,
+      "stats": {
+        "PercentMovementSpeedMod": 0.15
+      },
+      "tags": [
+        "Damage",
+        "NonbootsMovement",
+        "MagicPenetration",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667101.png"
+    },
+    {
+      "id": "667109",
+      "name": "Cruelty",
+      "description": "60 Ability Power25 Armor25 Magic ResistWatch Them FallOn Immobilize or Grounding an enemy champion, summon a comet above them. The comet lands after 1 second, dealing additional  magic damage in the area. This effect has a 6s cooldown per target per spell cast.",
+      "gold": 2500,
+      "stats": {
+        "FlatSpellBlockMod": 25,
+        "FlatMagicDamageMod": 60,
+        "FlatArmorMod": 25
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "MagicResist"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667109.png"
+    },
+    {
+      "id": "667112",
+      "name": "Flesheater",
+      "description": "55 Adaptive Force500 HealthHack the MeatDealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability.CannibalizeOn Champion Takedown, Heal yourself and your ally for 18% of the Target's Max Health.",
+      "gold": 2500,
+      "stats": {
+        "FlatHPPoolMod": 500
+      },
+      "tags": [
+        "Damage",
+        "SpellDamage",
+        "MagicPenetration",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667112.png"
+    },
+    {
+      "id": "6672",
+      "name": "Kraken Slayer",
+      "description": "45 Attack Damage40% Attack Speed4% Move SpeedBring It DownEvery third Attack deals bonus physical damage On-Hit, increased based on their missing Health.",
+      "gold": 3000,
+      "stats": {
+        "FlatPhysicalDamageMod": 45,
+        "PercentAttackSpeedMod": 0.4,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "OnHit",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6672.png"
+    },
+    {
+      "id": "6673",
+      "name": "Immortal Shieldbow",
+      "description": "55 Attack Damage25% Critical Strike ChanceLifelineTaking damage that would reduce your Health below 30% grants a Shield for 3 seconds.",
+      "gold": 3000,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6673.png"
+    },
+    {
+      "id": "6675",
+      "name": "Navori Flickerblade",
+      "description": "40% Attack Speed25% Critical Strike Chance4% Move SpeedTranscendenceAttacks reduce Basic Ability cooldowns by 15% of their remaining cooldown.",
+      "gold": 2650,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "PercentAttackSpeedMod": 0.4,
+        "PercentMovementSpeedMod": 0.04
+      },
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6675.png"
+    },
+    {
+      "id": "6676",
+      "name": "The Collector",
+      "description": "50 Attack Damage10 Lethality25% Critical Strike ChanceDeathYour damage executes champions that are below 5% Health.TaxesChampion kills grant 25 bonus gold.",
+      "gold": 3000,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 50
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6676.png"
+    },
+    {
+      "id": "667666",
+      "name": "The Collector",
+      "description": "50 Attack Damage10 Lethality25% Critical Strike ChanceDeathYour damage executes champions that are below 5% Health.TaxesChampion kills grant 25 bonus gold.",
+      "gold": 3000,
+      "stats": {
+        "FlatCritChanceMod": 0.25,
+        "FlatPhysicalDamageMod": 50
+      },
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667666.png"
+    },
+    {
+      "id": "6692",
+      "name": "Eclipse",
+      "description": "60 Attack Damage15 Ability HasteEver Rising MoonHitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a Shield for 2 seconds.",
+      "gold": 2900,
+      "stats": {
+        "FlatPhysicalDamageMod": 60
+      },
+      "tags": [
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6692.png"
+    },
+    {
+      "id": "6694",
+      "name": "Serylda's Grudge",
+      "description": "45 Attack Damage35% Armor Penetration15 Ability HasteBitter ColdDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
+      "gold": 3000,
+      "stats": {
+        "FlatPhysicalDamageMod": 45
+      },
+      "tags": [
+        "Damage",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6694.png"
+    },
+    {
+      "id": "6695",
+      "name": "Serpent's Fang",
+      "description": "55 Attack Damage15 LethalityShield ReaverDamaging an enemy champion reduces Shields they gain by % for 3 seconds. If they were not already affected by Shield Reaver, reduce Shields on them by %.",
+      "gold": 2500,
+      "stats": {
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6695.png"
+    },
+    {
+      "id": "6696",
+      "name": "Axiom Arc",
+      "description": "55 Attack Damage18 Lethality20 Ability HasteFluxWhen a champion that you damaged within 3 seconds dies, refund some of your Ultimate Ability's total cooldown.",
+      "gold": 2750,
+      "stats": {
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6696.png"
+    },
+    {
+      "id": "6697",
+      "name": "Hubris",
+      "description": "60 Attack Damage18 Lethality10 Ability HasteEminenceWhen a champion that you damaged within 3 seconds dies, gain 15 Attack Damage plus 2 per champion killed for 90 seconds.",
+      "gold": 2800,
+      "stats": {
+        "FlatPhysicalDamageMod": 60
+      },
+      "tags": [
+        "Damage",
+        "Active",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6697.png"
+    },
+    {
+      "id": "6698",
+      "name": "Profane Hydra",
+      "description": "55 Attack Damage18 Lethality10 Ability HasteCleaveAttacks deal physical damage to nearby enemies.Heretical CleaveDeal physical damage around you.",
+      "gold": 2850,
+      "stats": {
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "Active",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6698.png"
+    },
+    {
+      "id": "6699",
+      "name": "Voltaic Cyclosword",
+      "description": "55 Attack Damage18 Lethality10 Ability HasteGalvanizeDashes and Stealth stack Energized 75% faster.FirmamentYour Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
+      "gold": 3000,
+      "stats": {
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "Active",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6699.png"
+    },
+    {
+      "id": "6701",
+      "name": "Opportunity",
+      "description": "55 Attack Damage18 LethalityPreparationAfter being out of combat with Champions for 8 seconds gain Lethality. This Lethality lasts for 3 seconds after dealing damage to champions.ExtractionWhen a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.",
+      "gold": 2700,
+      "stats": {
+        "FlatPhysicalDamageMod": 55
+      },
+      "tags": [
+        "Damage",
+        "Active",
+        "NonbootsMovement",
+        "ArmorPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6701.png"
+    },
+    {
+      "id": "8010",
+      "name": "Bloodletter's Curse",
+      "description": "65 Ability Power400 Health15 Ability HasteVile DecayDealing magic damage with abilities or passives to champions reduces their Magic Resist by 7.5% for 6 seconds, up to 30%.",
+      "gold": 2900,
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatMagicDamageMod": 65
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "MagicPenetration"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/8010.png"
+    },
+    {
+      "id": "8020",
+      "name": "Abyssal Mask",
+      "description": "350 Health45 Magic Resist15 Ability HasteUnmakeNearby enemy champions take 12% more magic damage.",
+      "gold": 2650,
+      "stats": {
+        "FlatSpellBlockMod": 45,
+        "FlatHPPoolMod": 350
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "CooldownReduction",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "isOrnn": false,
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/8020.png"
+    }
+  ]
+}

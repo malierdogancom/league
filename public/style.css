@@ -1,0 +1,182 @@
+:root {
+  --bg-color: #0a0a0c;
+  --panel-bg: #1e2328;
+  --border-color: #c8aa6e; /* LoL Gold */
+  --text-main: #f0e6d2;
+  --text-muted: #a09b8c;
+  --highlight: #005a82;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+h1 {
+  margin: 0;
+  color: var(--border-color);
+  font-weight: normal;
+}
+.version-text {
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: var(--panel-bg);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.control-group label {
+  font-size: 0.9em;
+  color: var(--border-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.toggle-buttons button {
+  background: #111;
+  border: 1px solid #444;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.toggle-buttons button.active {
+  background: var(--highlight);
+  color: white;
+  border-color: var(--highlight);
+}
+.toggle-buttons button:hover:not(.active) {
+  background: #222;
+}
+
+.search-sort {
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+input,
+select {
+  padding: 10px;
+  background: #111;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus,
+select:focus {
+  border-color: var(--border-color);
+}
+
+/* Grid & Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px;
+}
+
+.item-card {
+  background-color: var(--panel-bg);
+  border: 1px solid #333;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.item-card:hover {
+  border-color: var(--border-color);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  align-items: center;
+}
+.card-header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+.header-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+  color: var(--border-color);
+}
+.gold-text {
+  color: #ffd700;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Expandable Section */
+.card-details {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-out,
+    padding 0.3s ease;
+  background-color: #111;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+/* When clicked, add 'expanded' class via JS */
+.item-card.expanded .card-details {
+  max-height: 500px; /* Arbitrary large number for expansion */
+  padding: 15px;
+  border-top: 1px solid #333;
+}
+
+.stat-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.stat-value {
+  color: #fff;
+}
+.desc-text {
+  margin-top: 10px;
+  font-style: italic;
+  color: #888;
+  border-top: 1px dotted #444;
+  padding-top: 10px;
+}
