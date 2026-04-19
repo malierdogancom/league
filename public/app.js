@@ -20,30 +20,33 @@ const STAT_MAP = {
   PercentCritDamageMod: "Crit Damage",
 };
 
-const CDN_STRAWBERRY = "https://raw.communitydragon.org/latest/game/assets/ux/strawberry/detailview/statsicons/";
-const CDN_MINI = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/fonts/texticons/lol/statsicon/";
-const CDN_STATMODS = "https://raw.communitydragon.org/latest/game/assets/perks/statmods/";
+const CDN_STRAWBERRY =
+  "https://raw.communitydragon.org/latest/game/assets/ux/strawberry/detailview/statsicons/";
+const CDN_MINI =
+  "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/fonts/texticons/lol/statsicon/";
+const CDN_STATMODS =
+  "https://raw.communitydragon.org/latest/game/assets/perks/statmods/";
 
 const STAT_ICON_MAP = {
-  FlatMagicDamageMod:         CDN_MINI       + "miniap.png",
-  FlatPhysicalDamageMod:      CDN_STRAWBERRY + "attackdamage.png",
-  FlatCritChanceMod:          CDN_STRAWBERRY + "criticalstrikechance.png",
-  PercentAttackSpeedMod:      CDN_STATMODS   + "statmodsattackspeedicon.png",
-  FlatMagicPenetrationMod:    CDN_MINI       + "scalempen.png",
-  PercentMagicPenetrationMod: CDN_MINI       + "scalempen.png",
-  FlatPhysicalLethality:      CDN_MINI       + "scaleapen.png",
-  PercentArmorPenetrationMod: CDN_MINI       + "scaleapen.png",
-  FlatHPPoolMod:              CDN_MINI       + "minihealth.png",
-  FlatArmorMod:               CDN_STRAWBERRY + "armor.png",
-  FlatSpellBlockMod:          CDN_MINI       + "minimr.png",
-  FlatMPPoolMod:              CDN_MINI       + "scalemana.png",
-  FlatAbilityHaste:           CDN_STRAWBERRY + "abilityhaste.png",
-  PercentMovementSpeedMod:    CDN_STRAWBERRY + "movementspeed.png",
-  FlatMovementSpeedMod:       CDN_STRAWBERRY + "movementspeed.png",
-  PercentLifeStealMod:        CDN_MINI       + "scalels.png",
-  PercentOmnivampMod:         CDN_MINI       + "scalels.png",
-  PercentTenacityMod:         CDN_MINI       + "scaletenacity.png",
-  PercentCritDamageMod:       CDN_MINI       + "scalecritmult.png",
+  FlatMagicDamageMod: CDN_MINI + "miniap.png",
+  FlatPhysicalDamageMod: CDN_STRAWBERRY + "attackdamage.png",
+  FlatCritChanceMod: CDN_STRAWBERRY + "criticalstrikechance.png",
+  PercentAttackSpeedMod: CDN_STATMODS + "statmodsattackspeedicon.png",
+  FlatMagicPenetrationMod: CDN_MINI + "scalempen.png",
+  PercentMagicPenetrationMod: CDN_MINI + "scalempen.png",
+  FlatPhysicalLethality: CDN_MINI + "scaleapen.png",
+  PercentArmorPenetrationMod: CDN_MINI + "scaleapen.png",
+  FlatHPPoolMod: CDN_MINI + "minihealth.png",
+  FlatArmorMod: CDN_STRAWBERRY + "armor.png",
+  FlatSpellBlockMod: CDN_MINI + "minimr.png",
+  FlatMPPoolMod: CDN_MINI + "scalemana.png",
+  FlatAbilityHaste: CDN_STRAWBERRY + "abilityhaste.png",
+  PercentMovementSpeedMod: CDN_STRAWBERRY + "movementspeed.png",
+  FlatMovementSpeedMod: CDN_STRAWBERRY + "movementspeed.png",
+  PercentLifeStealMod: CDN_MINI + "scalels.png",
+  PercentOmnivampMod: CDN_MINI + "scalels.png",
+  PercentTenacityMod: CDN_MINI + "scaletenacity.png",
+  PercentCritDamageMod: CDN_MINI + "scalecritmult.png",
 };
 
 const TAG_LABELS = {
@@ -74,29 +77,29 @@ const TAG_LABELS = {
 // Gold value per raw unit. Percent stats stored 0–1 (e.g. 0.15 = 15%).
 // Basic refs: wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency
 const GOLD_VALUES = {
-  FlatMagicDamageMod:         20,     // Amplifying Tome 400g / 20 AP
-  FlatPhysicalDamageMod:      35,     // Long Sword 350g / 10 AD
-  FlatCritChanceMod:          4000,   // Cloak of Agility 600g / 15% → 40g/1%
-  PercentAttackSpeedMod:      2500,   // Dagger 250g / 10% → 25g/1%
-  FlatMagicPenetrationMod:    46.67,  // Sorc Shoes: (1100 - 45×12) / 12
-  PercentMagicPenetrationMod: 4615,   // Blighting Jewel: (1100 - 25×20) / 0.13
-  FlatPhysicalLethality:      30,     // Serrated Dirk: (1000 - 20×35) / 10
-  PercentArmorPenetrationMod: 4167,   // Last Whisper: (1450 - 20×35) / 0.18
-  FlatHPPoolMod:              2.67,   // Ruby Crystal 400g / 150 HP
-  FlatArmorMod:               20,     // Cloth Armor 300g / 15 Armor
-  FlatSpellBlockMod:          20,     // Null-Magic Mantle 400g / 20 MR
-  FlatMPPoolMod:              1,      // Sapphire Crystal 300g / 300 Mana
-  FlatAbilityHaste:           50,     // Glowing Mote 250g / 5 AH
-  FlatMovementSpeedMod:       12,     // Boots 300g / 25 MS
-  PercentMovementSpeedMod:    6510.5, // avg of Aether Wisp / Rectrix / Winged Moonplate / Zeal
-  PercentLifeStealMod:        5357,   // Vampiric Scepter: (900 - 15×35) / 0.07
-  PercentOmnivampMod:         5357,   // no official ref, using same as life steal
+  FlatMagicDamageMod: 20, // Amplifying Tome 400g / 20 AP
+  FlatPhysicalDamageMod: 35, // Long Sword 350g / 10 AD
+  FlatCritChanceMod: 4000, // Cloak of Agility 600g / 15% → 40g/1%
+  PercentAttackSpeedMod: 2500, // Dagger 250g / 10% → 25g/1%
+  FlatMagicPenetrationMod: 46.67, // Sorc Shoes: (1100 - 45×12) / 12
+  PercentMagicPenetrationMod: 4615, // Blighting Jewel: (1100 - 25×20) / 0.13
+  FlatPhysicalLethality: 30, // Serrated Dirk: (1000 - 20×35) / 10
+  PercentArmorPenetrationMod: 4167, // Last Whisper: (1450 - 20×35) / 0.18
+  FlatHPPoolMod: 2.67, // Ruby Crystal 400g / 150 HP
+  FlatArmorMod: 20, // Cloth Armor 300g / 15 Armor
+  FlatSpellBlockMod: 20, // Null-Magic Mantle 400g / 20 MR
+  FlatMPPoolMod: 1, // Sapphire Crystal 300g / 300 Mana
+  FlatAbilityHaste: 50, // Glowing Mote 250g / 5 AH
+  FlatMovementSpeedMod: 12, // Boots 300g / 25 MS
+  PercentMovementSpeedMod: 6510.5, // avg of Aether Wisp / Rectrix / Winged Moonplate / Zeal
+  PercentLifeStealMod: 5357, // Vampiric Scepter: (900 - 15×35) / 0.07
+  PercentOmnivampMod: 5357, // no official ref, using same as life steal
 };
 
 function calcGoldEfficiency(item) {
   const rawValue = Object.entries(item.stats || {}).reduce(
     (sum, [k, v]) => sum + (GOLD_VALUES[k] || 0) * v,
-    0
+    0,
   );
   if (!item.gold || rawValue === 0) return null;
   return Math.round((rawValue / item.gold) * 100);
@@ -123,7 +126,7 @@ function initEffTooltip() {
       Crit 40g/1% · AS 25g/1% · MS% 65.1g/1%<br>
       Life Steal 53.57g/1% · Armor Pen% 41.67g/1% · Magic Pen% 46.15g/1%
     </div>
-    <div class="eff-tip-omnivamp">⚠ Omnivamp: resmi referans item yok — Life Steal değeri kullanıldı (tahmin).</div>
+    <div class="eff-tip-omnivamp">⚠ Omnivamp: No official reference — Life Steal value used (estimate).</div>
     <a class="eff-tip-link" href="https://wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency" target="_blank" rel="noopener">→ LoL Wiki: Gold Efficiency</a>
   `;
   document.body.appendChild(tip);
@@ -147,7 +150,9 @@ function initEffTooltip() {
     tip.style.display = "none";
   });
 
-  tip.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+  tip.addEventListener("mouseleave", () => {
+    tip.style.display = "none";
+  });
 }
 
 function statLabel(key) {
@@ -187,7 +192,8 @@ async function init() {
     render();
   } catch (err) {
     console.error("Veri yüklenemedi:", err);
-    document.getElementById("version-display").textContent = "Veri yüklenemedi!";
+    document.getElementById("version-display").textContent =
+      "Veri yüklenemedi!";
   }
 }
 
@@ -202,9 +208,30 @@ function buildSortIcons() {
     return btn;
   };
 
-  container.appendChild(makeBtn("gold-desc",   `<span class="sort-btn-gold">↓</span>`, "Price ↓", true));
-  container.appendChild(makeBtn("gold-asc",    `<span class="sort-btn-gold">↑</span>`, "Price ↑", false));
-  container.appendChild(makeBtn("efficiency",  `<span class="sort-btn-gold">%</span>`,  "Efficiency", false));
+  container.appendChild(
+    makeBtn(
+      "gold-desc",
+      `<span class="sort-btn-gold">↓</span>`,
+      "Price ↓",
+      true,
+    ),
+  );
+  container.appendChild(
+    makeBtn(
+      "gold-asc",
+      `<span class="sort-btn-gold">↑</span>`,
+      "Price ↑",
+      false,
+    ),
+  );
+  container.appendChild(
+    makeBtn(
+      "efficiency",
+      `<span class="sort-btn-gold">%</span>`,
+      "Efficiency",
+      false,
+    ),
+  );
 
   Object.entries(STAT_MAP).forEach(([key, label]) => {
     const iconUrl = STAT_ICON_MAP[key];
@@ -220,7 +247,9 @@ function buildTagFilter() {
   if (!source) return;
 
   const tagSet = new Set();
-  source.items.forEach((item) => (item.tags || []).forEach((t) => tagSet.add(t)));
+  source.items.forEach((item) =>
+    (item.tags || []).forEach((t) => tagSet.add(t)),
+  );
   tagSet.delete("Boots");
 
   const container = document.getElementById("tag-filter");
@@ -228,7 +257,8 @@ function buildTagFilter() {
 
   [...tagSet].sort().forEach((tag) => {
     const btn = document.createElement("button");
-    btn.className = "tag-btn" + (state.selectedTags.includes(tag) ? " active" : "");
+    btn.className =
+      "tag-btn" + (state.selectedTags.includes(tag) ? " active" : "");
     btn.dataset.value = tag;
     btn.textContent = TAG_LABELS[tag] || tag;
     container.appendChild(btn);
@@ -238,7 +268,9 @@ function buildTagFilter() {
 function setupListeners() {
   document.getElementById("map-toggle").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
-    document.querySelectorAll("#map-toggle button").forEach((b) => b.classList.remove("active"));
+    document
+      .querySelectorAll("#map-toggle button")
+      .forEach((b) => b.classList.remove("active"));
     e.target.classList.add("active");
     state.map = e.target.dataset.value;
     state.selectedTags = [];
@@ -248,7 +280,9 @@ function setupListeners() {
 
   document.getElementById("category-toggle").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
-    document.querySelectorAll("#category-toggle button").forEach((b) => b.classList.remove("active"));
+    document
+      .querySelectorAll("#category-toggle button")
+      .forEach((b) => b.classList.remove("active"));
     e.target.classList.add("active");
     state.category = e.target.dataset.value;
     render();
@@ -265,7 +299,10 @@ function setupListeners() {
     const val = btn.dataset.value;
 
     if (val === "gold-desc" || val === "gold-asc" || val === "efficiency") {
-      document.querySelectorAll("#sort-icons .sort-btn[data-value='gold-desc'], #sort-icons .sort-btn[data-value='gold-asc'], #sort-icons .sort-btn[data-value='efficiency']")
+      document
+        .querySelectorAll(
+          "#sort-icons .sort-btn[data-value='gold-desc'], #sort-icons .sort-btn[data-value='gold-asc'], #sort-icons .sort-btn[data-value='efficiency']",
+        )
         .forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       state.goldSort = val;
@@ -312,7 +349,9 @@ function setupListeners() {
 
   document.getElementById("clear-tags").addEventListener("click", () => {
     state.selectedTags = [];
-    document.querySelectorAll("#tag-filter .tag-btn").forEach((b) => b.classList.remove("active"));
+    document
+      .querySelectorAll("#tag-filter .tag-btn")
+      .forEach((b) => b.classList.remove("active"));
     document.getElementById("clear-tags").style.display = "none";
     render();
   });
@@ -323,13 +362,15 @@ function setupListeners() {
     render();
   });
 
-  document.getElementById("build-toggle-stats").addEventListener("click", () => {
-    state.buildStatsOpen = !state.buildStatsOpen;
-    const panel = document.getElementById("build-stats-panel");
-    const btn = document.getElementById("build-toggle-stats");
-    panel.style.display = state.buildStatsOpen ? "flex" : "none";
-    btn.textContent = state.buildStatsOpen ? "Stats ▲" : "Stats ▼";
-  });
+  document
+    .getElementById("build-toggle-stats")
+    .addEventListener("click", () => {
+      state.buildStatsOpen = !state.buildStatsOpen;
+      const panel = document.getElementById("build-stats-panel");
+      const btn = document.getElementById("build-toggle-stats");
+      panel.style.display = state.buildStatsOpen ? "flex" : "none";
+      btn.textContent = state.buildStatsOpen ? "Stats ▲" : "Stats ▼";
+    });
 }
 
 function updateBuildPanel() {
@@ -363,7 +404,8 @@ function updateBuildPanel() {
 
   // Total gold
   const totalGold = state.build.reduce((s, item) => s + (item.gold || 0), 0);
-  document.getElementById("build-total-gold").textContent = totalGold.toLocaleString() + " Gold";
+  document.getElementById("build-total-gold").textContent =
+    totalGold.toLocaleString() + " Gold";
 
   // Combined stats
   const totals = {};
@@ -378,7 +420,9 @@ function updateBuildPanel() {
     .sort(([a], [b]) => (STAT_MAP[a] || a).localeCompare(STAT_MAP[b] || b))
     .map(([k, v]) => {
       const iconUrl = STAT_ICON_MAP[k];
-      const icon = iconUrl ? `<img class="stat-icon" src="${iconUrl}" alt="">` : "";
+      const icon = iconUrl
+        ? `<img class="stat-icon" src="${iconUrl}" alt="">`
+        : "";
       return `<div class="build-stat-row">${icon}<span>${statLabel(k)}</span><span class="stat-value">${statValue(k, v)}</span></div>`;
     })
     .join("");
@@ -408,20 +452,20 @@ function render() {
   // Tag filter (OR — item has at least one selected tag)
   if (state.selectedTags.length > 0) {
     items = items.filter((item) =>
-      (item.tags || []).some((t) => state.selectedTags.includes(t))
+      (item.tags || []).some((t) => state.selectedTags.includes(t)),
     );
   }
 
   // Stat filter (AND — item must have all selected stats)
   if (state.selectedStats.length > 0) {
     items = items.filter((item) =>
-      state.selectedStats.every((stat) => item.stats?.[stat] != null)
+      state.selectedStats.every((stat) => item.stats?.[stat] != null),
     );
   }
 
   if (state.search) {
     items = items.filter((item) =>
-      item.name.toLowerCase().includes(state.search)
+      item.name.toLowerCase().includes(state.search),
     );
   }
 
@@ -430,10 +474,12 @@ function render() {
     const primary = state.selectedStats[0];
     items.sort((a, b) => (b.stats?.[primary] ?? 0) - (a.stats?.[primary] ?? 0));
   } else if (state.goldSort === "efficiency") {
-    items.sort((a, b) => (calcGoldEfficiency(b) ?? -1) - (calcGoldEfficiency(a) ?? -1));
+    items.sort(
+      (a, b) => (calcGoldEfficiency(b) ?? -1) - (calcGoldEfficiency(a) ?? -1),
+    );
   } else {
     items.sort((a, b) =>
-      state.goldSort === "gold-desc" ? b.gold - a.gold : a.gold - b.gold
+      state.goldSort === "gold-desc" ? b.gold - a.gold : a.gold - b.gold,
     );
   }
 
@@ -463,7 +509,9 @@ function render() {
     const toStatLine = ([k, v]) => {
       const hl = k === primary;
       const iconUrl = STAT_ICON_MAP[k];
-      const iconHtml = iconUrl ? `<img class="stat-icon" src="${iconUrl}" alt="">` : "";
+      const iconHtml = iconUrl
+        ? `<img class="stat-icon" src="${iconUrl}" alt="">`
+        : "";
       return `<div class="stat-line${hl ? " stat-highlight" : ""}">
         <span class="stat-name">${iconHtml}${statLabel(k)}</span>
         <span class="stat-value">${statValue(k, v)}</span>
@@ -483,7 +531,8 @@ function render() {
 
     const inBuild = state.build.some((b) => b.id === item.id);
     const buildFull = state.build.length >= 6;
-    const addBtnClass = "add-btn" + (inBuild ? " in-build" : buildFull ? " disabled" : "");
+    const addBtnClass =
+      "add-btn" + (inBuild ? " in-build" : buildFull ? " disabled" : "");
     const addBtnText = inBuild ? "✓" : "+";
 
     const card = document.createElement("div");
