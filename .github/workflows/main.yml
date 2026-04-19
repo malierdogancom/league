@@ -7,6 +7,9 @@ on:
     # Diğer günler herhangi bir acil düzeltme (hotfix) ihtimaline karşı günde 1 kez kontrol et
     - cron: "0 12 * * 0,1,2,5,6"
   workflow_dispatch:
+  push: # ← bunu ekle
+    branches:
+      - main
 
 jobs:
   update-data:
