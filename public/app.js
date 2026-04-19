@@ -1,38 +1,16 @@
 /**
- * LoL Item Explorer - Final Production Logic
- * Fix: Clean Description Overlap & Professional Role Filtering
+ * LoL Item Explorer - app.js
  */
-
-const STAT_MAP = {
-  FlatMagicDamageMod: "Ability Power",
-  FlatPhysicalDamageMod: "Attack Damage",
-  FlatCritChanceMod: "Crit Chance",
-  PercentAttackSpeedMod: "Attack Speed",
-  FlatMagicPenetrationMod: "Magic Penetration",
-  PercentMagicPenetrationMod: "Magic Penetration (%)",
-  FlatPhysicalLethality: "Lethality",
-  PercentArmorPenetrationMod: "Armor Penetration (%)",
-  FlatHPPoolMod: "Health",
-  FlatArmorMod: "Armor",
-  FlatSpellBlockMod: "Magic Resist",
-  FlatMPPoolMod: "Mana",
-  FlatAbilityHaste: "Ability Haste",
-  PercentMovementSpeedMod: "Move Speed",
-  FlatMovementSpeedMod: "Move Speed",
-  PercentLifeStealMod: "Life Steal",
-  PercentOmnivampMod: "Omnivamp",
-};
 
 let appData = { SR: null, ARAM: null };
 let currentState = {
-  map: "ARAM",
-  category: "Legendary",
-  role: "All",
-  stat: "All",
+  map: "SR",
+  category: "Normal",
   search: "",
   sort: "gold-desc",
 };
 
+// ── Init ──────────────────────────────────────────────
 async function init() {
   try {
     const [srRes, aramRes] = await Promise.all([
@@ -41,6 +19,11 @@ async function init() {
     ]);
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
+
+    const version = appData.SR.version || appData.ARAM.version || "";
+    const versionEl = document.getElementById("version-display");
+    if (versionEl && version) versionEl.textContent = "Patch " + version;
+
     setupEventListeners();
     render();
   } catch (e) {
@@ -48,123 +31,172 @@ async function init() {
   }
 }
 
+// ── Description Cleaner ───────────────────────────────
+// Riot description formatı: "75 Attack Damage25% Crit...PassiveName açıklama"
+// Başındaki tüm "rakam + stat ismi" bloklarını silerek sadece passive/active açıklamasını bırakır.
 function cleanDescription(text) {
   if (!text) return "";
 
-  let clean = text.replace(/<stats>.*?<\/stats>/gi, "");
-  clean = clean.replace(/<[^>]*>/g, " ").trim();
+  // HTML tag temizle
+  let clean = text.replace(/<[^>]*>/g, " ").trim();
 
-  // Başındaki tüm "rakam/yüzde + kelime" bloklarını sil
-  // "75 Attack Damage" "25% Critical Strike Chance" "30% Critical Strike Damage" gibi
-  // Bu pattern: rakamla başlayan, harf ve boşluk içeren, bir sonraki rakama kadar olan blok
+  // Başından rakamla başlayan stat bloklarını teker teker soy
+  // Örnek: "75 Attack Damage" | "25% Critical Strike Chance" | "30% Critical Strike Damage"
+  // Passive isimleri rakamla başlamaz, büyük harfle başlar ve rakam içermez
   let prev = "";
   while (prev !== clean) {
     prev = clean;
+    // Başında rakam varsa o stat bloğunu sil (bir sonraki rakama veya passive ismine kadar)
     clean = clean
-      .replace(
-        /^\d+\.?\d*\s*%?\s*[A-Za-z][a-zA-Z ]*?(?=\d|[A-Z][a-z]+[A-Z]|$)/,
-        "",
-      )
+      .replace(/^\d[\d\s%+.]*[A-Za-z][a-zA-Z\s]*?(?=\d|[A-Z][a-z]+[A-Z]|$)/, "")
       .trim();
   }
 
-  return clean.replace(/\s\s+/g, " ").trim();
+  return clean.replace(/\s{2,}/g, " ").trim();
 }
-function setupEventListeners() {
-  document.querySelectorAll(".filter-group").forEach((group) => {
-    group.addEventListener("click", (e) => {
-      if (e.target.tagName === "BUTTON") {
-        const parent = e.target.closest(".filter-group");
-        const type = parent.id;
-        const val = e.target.dataset.value;
-        parent
-          .querySelectorAll("button")
-          .forEach((b) => b.classList.remove("active"));
-        e.target.classList.add("active");
 
-        if (type === "map-toggle") currentState.map = val;
-        if (type === "category-toggle") currentState.category = val;
-        if (type === "role-toggle") currentState.role = val;
-        if (type === "stat-toggle") currentState.stat = val;
-        render();
-      }
+// ── Event Listeners ───────────────────────────────────
+function setupEventListeners() {
+  // Toggle butonları (map, category)
+  document.querySelectorAll(".toggle-buttons").forEach((group) => {
+    group.addEventListener("click", (e) => {
+      if (e.target.tagName !== "BUTTON") return;
+
+      // Aynı grup içindeki aktif butonu kaldır
+      group
+        .querySelectorAll("button")
+        .forEach((b) => b.classList.remove("active"));
+      e.target.classList.add("active");
+
+      const groupId = group.id;
+      const val = e.target.dataset.value;
+
+      if (groupId === "map-toggle") currentState.map = val;
+      if (groupId === "category-toggle") currentState.category = val;
+
+      render();
     });
   });
+
+  // Arama
   document.getElementById("search-input").addEventListener("input", (e) => {
     currentState.search = e.target.value.toLowerCase();
     render();
   });
+
+  // Sıralama
   document.getElementById("sort-select").addEventListener("change", (e) => {
     currentState.sort = e.target.value;
     render();
   });
+
+  // Kart tıklama (expand/collapse) — event delegation
+  document.getElementById("items-grid").addEventListener("click", (e) => {
+    const card = e.target.closest(".item-card");
+    if (card) card.classList.toggle("expanded");
+  });
 }
 
+// ── Render ────────────────────────────────────────────
 function render() {
   const grid = document.getElementById("items-grid");
   grid.innerHTML = "";
-  let items = appData[currentState.map].items;
 
+  const source = appData[currentState.map];
+  if (!source) return;
+  let items = [...source.items];
+
+  // Kategori filtresi
   items = items.filter((item) => {
     const isBoots = item.tags.includes("Boots");
-    const catMatch =
-      currentState.category === "Ornn"
-        ? item.isOrnn
-        : currentState.category === "Boots"
-          ? isBoots
-          : !item.isOrnn && !isBoots;
-
-    // Market Rolü Filtresi (Fighter, Tank, vb.)
-    const roleMatch =
-      currentState.role === "All" || item.tags.includes(currentState.role);
-
-    // Stat Filtresi (Lethality/Pen birleştirildi)
-    let statMatch = currentState.stat === "All";
-    if (!statMatch) {
-      if (currentState.stat === "ArmorPenetration") {
-        statMatch =
-          item.tags.includes("ArmorPenetration") ||
-          item.tags.includes("Lethality");
-      } else {
-        statMatch = item.tags.includes(currentState.stat);
-      }
-    }
-    return (
-      catMatch &&
-      roleMatch &&
-      statMatch &&
-      item.name.toLowerCase().includes(currentState.search)
-    );
+    if (currentState.category === "Ornn") return item.isOrnn;
+    if (currentState.category === "Boots") return isBoots;
+    return !item.isOrnn && !isBoots; // Normal
   });
 
+  // Arama filtresi
+  if (currentState.search) {
+    items = items.filter((item) =>
+      item.name.toLowerCase().includes(currentState.search),
+    );
+  }
+
+  // Sıralama
   items.sort((a, b) => {
-    if (currentState.sort.includes("gold"))
-      return currentState.sort === "gold-desc"
-        ? b.gold - a.gold
-        : a.gold - b.gold;
+    if (currentState.sort === "gold-desc") return b.gold - a.gold;
+    if (currentState.sort === "gold-asc") return a.gold - b.gold;
     return (
       (b.stats[currentState.sort] || 0) - (a.stats[currentState.sort] || 0)
     );
   });
 
+  // Kartları oluştur
   items.forEach((item) => {
     const card = document.createElement("div");
     card.className = "item-card";
 
-    let statsHtml = Object.entries(item.stats)
+    // Stats satırları
+    const statsHtml = Object.entries(item.stats)
       .map(([k, v]) => {
-        const rawKey = k.replace("Flat", "").replace("Mod", "");
-        const val = v < 1 && v > 0 ? `+${(v * 100).toFixed(0)}%` : `+${v}`;
-        return `<div class="stat-line"><span>${rawKey}</span><strong>${val}</strong></div>`;
+        const label = formatStatKey(k);
+        const value = v > 0 && v < 1 ? `+${(v * 100).toFixed(0)}%` : `+${v}`;
+        return `<div class="stat-line"><span>${label}</span><span class="stat-value">${value}</span></div>`;
       })
       .join("");
 
+    const desc = cleanDescription(item.description);
+
     card.innerHTML = `
-            <div class="card-header"><img src="${item.image_url}"><div><h3>${item.name}</h3><div class="gold">${item.gold} Gold</div></div></div>
-            <div class="stats-preview">${statsHtml}</div>
-            <div class="card-description"><p>${cleanDescription(item.description)}</p></div>
-        `;
+      <div class="card-header">
+        <img src="${item.image_url}" alt="${item.name}" onerror="this.style.opacity='0.3'">
+        <div class="header-info">
+          <h3>${item.name}</h3>
+          <div class="gold-text">${item.gold} Gold</div>
+        </div>
+      </div>
+      <div class="card-details">
+        <div class="stats-section">${statsHtml}</div>
+        ${desc ? `<div class="desc-text">${desc}</div>` : ""}
+      </div>
+    `;
+
     grid.appendChild(card);
   });
+
+  // Sonuç sayısı
+  const versionEl = document.getElementById("version-display");
+  const version = source.version || "";
+  if (versionEl) {
+    versionEl.textContent =
+      (version ? "Patch " + version + " · " : "") + items.length + " items";
+  }
 }
+
+// ── Yardımcı: Stat key → okunabilir isim ─────────────
+const STAT_MAP = {
+  FlatMagicDamageMod: "Ability Power",
+  FlatPhysicalDamageMod: "Attack Damage",
+  FlatCritChanceMod: "Crit Chance",
+  PercentAttackSpeedMod: "Attack Speed",
+  FlatMagicPenetrationMod: "Magic Pen",
+  PercentMagicPenetrationMod: "Magic Pen %",
+  FlatPhysicalLethality: "Lethality",
+  PercentArmorPenetrationMod: "Armor Pen %",
+  FlatHPPoolMod: "Health",
+  FlatArmorMod: "Armor",
+  FlatSpellBlockMod: "Magic Resist",
+  FlatMPPoolMod: "Mana",
+  FlatAbilityHaste: "Ability Haste",
+  PercentMovementSpeedMod: "Move Speed %",
+  FlatMovementSpeedMod: "Move Speed",
+  PercentLifeStealMod: "Life Steal",
+  PercentOmnivampMod: "Omnivamp",
+};
+
+function formatStatKey(key) {
+  return (
+    STAT_MAP[key] || key.replace(/^(Flat|Percent)/, "").replace(/Mod$/, "")
+  );
+}
+
 init();
