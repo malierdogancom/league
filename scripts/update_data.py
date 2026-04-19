@@ -20,6 +20,34 @@ def clean_description(text):
     clean_html = re.compile('<.*?>')
     return re.sub(clean_html, '', text)
 
+MISSING_STAT_PATTERNS = [
+    # Ability Haste: "15 Ability Haste" — "Ultimate/Basic Ability Haste" eşleşmez çünkü araya kelime girer
+    (r'(\d+)\s+Ability Haste', 'FlatAbilityHaste', False),
+    # Omnivamp: "10% Omnivamp" — pasif metin ("grants 10% Omnivamp until...") eşleşmesin
+    (r'(\d+)%\s*Omnivamp(?!\s+(?:until|for|while|when|after|during))', 'PercentOmnivampMod', True),
+    # Tenacity: "20% Tenacity"
+    (r'(\d+)%\s*Tenacity(?!\s+(?:until|for|while|when|after|during))', 'PercentTenacityMod', True),
+    # Lethality: "18 Lethality"
+    (r'(\d+)\s+Lethality', 'FlatPhysicalLethality', False),
+    # Magic Pen %: "40% Magic Penetration" — önce % kontrol et
+    (r'(\d+)%\s*Magic Penetration', 'PercentMagicPenetrationMod', True),
+    # Magic Pen flat: "12 Magic Penetration"
+    (r'(\d+)\s+Magic Penetration', 'FlatMagicPenetrationMod', False),
+    # Armor Pen %: "30% Armor Penetration"
+    (r'(\d+)%\s*Armor Penetration', 'PercentArmorPenetrationMod', True),
+]
+
+def extract_missing_stats(description, existing_stats):
+    extra = {}
+    for pattern, key, is_percent in MISSING_STAT_PATTERNS:
+        if key in existing_stats:
+            continue
+        m = re.search(pattern, description)
+        if m:
+            val = int(m.group(1))
+            extra[key] = val / 100 if is_percent else val
+    return extra
+
 def process_items():
     latest_version = get_latest_version()
     print(f"Checking latest patch: {latest_version}")
@@ -58,12 +86,18 @@ def process_items():
         if total_gold < 1500 and not is_boots and not is_ornn:
             continue
 
+        raw_description = item["description"]
+        clean_desc = clean_description(raw_description)
+        base_stats = item.get("stats", {})
+        extra_stats = extract_missing_stats(clean_desc, base_stats)
+        merged_stats = {**base_stats, **extra_stats}
+
         processed_item = {
             "id": item_id,
             "name": item["name"],
-            "description": clean_description(item["description"]),
+            "description": clean_desc,
             "gold": total_gold,
-            "stats": item.get("stats", {}),
+            "stats": merged_stats,
             "tags": tags,
             "image_url": f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/img/item/{item['image']['full']}"
         }

@@ -12,7 +12,6 @@
       "tags": [
         "Boots"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/1001.png"
     },
     {
@@ -23,7 +22,8 @@
       "stats": {
         "FlatMagicDamageMod": 55,
         "FlatCritChanceMod": 0.25,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "CriticalStrike",
@@ -31,7 +31,6 @@
         "CooldownReduction",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/123430.png"
     },
     {
@@ -41,7 +40,8 @@
       "gold": 2350,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatMagicDamageMod": 45
+        "FlatMagicDamageMod": 45,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -50,7 +50,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/124011.png"
     },
     {
@@ -59,7 +58,9 @@
       "description": "60 Attack Damage18 Lethality15 Ability HasteEminenceGain temporary AD based on champion kills on kill.",
       "gold": 2950,
       "stats": {
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -68,7 +69,6 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/126697.png"
     },
     {
@@ -78,7 +78,8 @@
       "gold": 2200,
       "stats": {
         "FlatMagicDamageMod": 50,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -88,7 +89,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2065.png"
     },
     {
@@ -99,7 +99,8 @@
       "stats": {
         "FlatSpellBlockMod": 80,
         "FlatHPPoolMod": 1000,
-        "FlatArmorMod": 100
+        "FlatArmorMod": 100,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "Health",
@@ -111,7 +112,6 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/223069.png"
     },
     {
@@ -121,14 +121,14 @@
       "gold": 6000,
       "stats": {
         "FlatMagicDamageMod": 300,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Armor",
         "SpellDamage",
         "Active"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/228002.png"
     },
     {
@@ -144,7 +144,6 @@
         "Health",
         "Damage"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2501.png"
     },
     {
@@ -154,7 +153,8 @@
       "gold": 2800,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -162,7 +162,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2502.png"
     },
     {
@@ -172,7 +171,8 @@
       "gold": 2800,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 80
+        "FlatMagicDamageMod": 80,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "SpellDamage",
@@ -180,7 +180,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2503.png"
     },
     {
@@ -197,7 +196,6 @@
         "SpellBlock",
         "HealthRegen"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2504.png"
     },
     {
@@ -208,7 +206,8 @@
       "stats": {
         "FlatHPPoolMod": 350,
         "FlatMagicDamageMod": 70,
-        "PercentAttackSpeedMod": 0.25
+        "PercentAttackSpeedMod": 0.25,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -217,7 +216,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2510.png"
     },
     {
@@ -236,7 +234,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2512.png"
     },
     {
@@ -245,7 +242,9 @@
       "description": "65 Attack Damage5% Omnivamp20% TenacityFamineGain  Ability Haste.FeastWhen a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds. ",
       "gold": 3100,
       "stats": {
-        "FlatPhysicalDamageMod": 65
+        "FlatPhysicalDamageMod": 65,
+        "PercentOmnivampMod": 0.05,
+        "PercentTenacityMod": 0.2
       },
       "tags": [
         "Damage",
@@ -254,7 +253,6 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2517.png"
     },
     {
@@ -264,14 +262,14 @@
       "gold": 2800,
       "stats": {
         "FlatMPPoolMod": 300,
-        "FlatMagicDamageMod": 90
+        "FlatMagicDamageMod": 90,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
         "Mana",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2522.png"
     },
     {
@@ -287,7 +285,6 @@
         "Damage",
         "CriticalStrike"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2523.png"
     },
     {
@@ -298,7 +295,8 @@
       "stats": {
         "FlatSpellBlockMod": 20,
         "FlatHPPoolMod": 200,
-        "FlatArmorMod": 20
+        "FlatArmorMod": 20,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -308,7 +306,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2524.png"
     },
     {
@@ -317,7 +314,9 @@
       "description": "600 Health20 Ability HasteLifeline (0s)Taking damage that would reduce your Health below 30% causes you to gain  maximum Health for 5 seconds, then heal  Health over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
       "gold": 2500,
       "stats": {
-        "FlatHPPoolMod": 600
+        "FlatHPPoolMod": 600,
+        "FlatAbilityHaste": 20,
+        "PercentTenacityMod": 0.25
       },
       "tags": [
         "Health",
@@ -325,7 +324,6 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2525.png"
     },
     {
@@ -343,7 +341,6 @@
         "Armor",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3002.png"
     },
     {
@@ -353,14 +350,14 @@
       "gold": 2900,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 70
+        "FlatMagicDamageMod": 70,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "SpellDamage",
         "Mana",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3003.png"
     },
     {
@@ -370,7 +367,8 @@
       "gold": 2900,
       "stats": {
         "FlatMPPoolMod": 500,
-        "FlatPhysicalDamageMod": 35
+        "FlatPhysicalDamageMod": 35,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Damage",
@@ -379,7 +377,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3004.png"
     },
     {
@@ -395,7 +392,6 @@
         "AttackSpeed",
         "Boots"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3006.png"
     },
     {
@@ -409,7 +405,6 @@
       "tags": [
         "Boots"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3009.png"
     },
     {
@@ -418,13 +413,13 @@
       "description": "12 Magic Penetration45 Move Speed",
       "gold": 1100,
       "stats": {
-        "FlatMovementSpeedMod": 45
+        "FlatMovementSpeedMod": 45,
+        "FlatMagicPenetrationMod": 12
       },
       "tags": [
         "Boots",
         "MagicPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3020.png"
     },
     {
@@ -440,7 +435,6 @@
         "CriticalStrike",
         "Damage"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3031.png"
     },
     {
@@ -457,7 +451,6 @@
         "CriticalStrike",
         "AttackSpeed"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3032.png"
     },
     {
@@ -467,14 +460,14 @@
       "gold": 3000,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 35
+        "FlatPhysicalDamageMod": 35,
+        "PercentArmorPenetrationMod": 0.3
       },
       "tags": [
         "Damage",
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3033.png"
     },
     {
@@ -484,14 +477,14 @@
       "gold": 3300,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 35
+        "FlatPhysicalDamageMod": 35,
+        "PercentArmorPenetrationMod": 0.35
       },
       "tags": [
         "Damage",
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3036.png"
     },
     {
@@ -501,13 +494,13 @@
       "gold": 2900,
       "stats": {
         "FlatHPPoolMod": 700,
-        "FlatCritChanceMod": 0.2
+        "FlatCritChanceMod": 0.2,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
         "CriticalStrike"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3039.png"
     },
     {
@@ -525,7 +518,6 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3046.png"
     },
     {
@@ -541,7 +533,6 @@
         "Armor",
         "Boots"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3047.png"
     },
     {
@@ -552,7 +543,8 @@
       "stats": {
         "FlatSpellBlockMod": 25,
         "FlatHPPoolMod": 300,
-        "FlatArmorMod": 25
+        "FlatArmorMod": 25,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -560,7 +552,6 @@
         "Armor",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3050.png"
     },
     {
@@ -569,14 +560,14 @@
       "description": "400 Health20% TenacityThe Claws that CatchGain bonus Attack Damage.LifelineTaking damage that would reduce your Health below 30% grants a decaying Shield for 4.5 seconds.",
       "gold": 3200,
       "stats": {
-        "FlatHPPoolMod": 400
+        "FlatHPPoolMod": 400,
+        "PercentTenacityMod": 0.2
       },
       "tags": [
         "Health",
         "Damage",
         "Tenacity"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3053.png"
     },
     {
@@ -586,7 +577,8 @@
       "gold": 2700,
       "stats": {
         "FlatSpellBlockMod": 50,
-        "FlatHPPoolMod": 400
+        "FlatHPPoolMod": 400,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -595,7 +587,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3065.png"
     },
     {
@@ -605,7 +596,8 @@
       "gold": 2700,
       "stats": {
         "FlatHPPoolMod": 350,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -613,7 +605,6 @@
         "Aura",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3068.png"
     },
     {
@@ -623,7 +614,8 @@
       "gold": 3000,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatPhysicalDamageMod": 40
+        "FlatPhysicalDamageMod": 40,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -634,7 +626,6 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3071.png"
     },
     {
@@ -650,7 +641,6 @@
         "Damage",
         "LifeSteal"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3072.png"
     },
     {
@@ -671,7 +661,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3073.png"
     },
     {
@@ -681,7 +670,8 @@
       "gold": 3300,
       "stats": {
         "FlatPhysicalDamageMod": 65,
-        "PercentLifeStealMod": 0.12
+        "PercentLifeStealMod": 0.12,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Damage",
@@ -690,7 +680,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3074.png"
     },
     {
@@ -706,7 +695,6 @@
         "Health",
         "Armor"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3075.png"
     },
     {
@@ -717,7 +705,8 @@
       "stats": {
         "FlatHPPoolMod": 333,
         "FlatPhysicalDamageMod": 36,
-        "PercentAttackSpeedMod": 0.3
+        "PercentAttackSpeedMod": 0.3,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -728,7 +717,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3078.png"
     },
     {
@@ -743,7 +731,6 @@
         "Health",
         "HealthRegen"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3083.png"
     },
     {
@@ -758,7 +745,6 @@
         "Health",
         "HealthRegen"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3084.png"
     },
     {
@@ -777,7 +763,6 @@
         "OnHit",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3085.png"
     },
     {
@@ -796,7 +781,6 @@
         "OnHit",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3087.png"
     },
     {
@@ -810,7 +794,6 @@
       "tags": [
         "SpellDamage"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3089.png"
     },
     {
@@ -820,7 +803,8 @@
       "gold": 2800,
       "stats": {
         "FlatSpellBlockMod": 45,
-        "PercentAttackSpeedMod": 0.5
+        "PercentAttackSpeedMod": 0.5,
+        "PercentTenacityMod": 0.2
       },
       "tags": [
         "SpellBlock",
@@ -828,7 +812,6 @@
         "OnHit",
         "Tenacity"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3091.png"
     },
     {
@@ -846,7 +829,6 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3094.png"
     },
     {
@@ -865,7 +847,6 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3097.png"
     },
     {
@@ -875,7 +856,8 @@
       "gold": 2900,
       "stats": {
         "FlatMagicDamageMod": 100,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -883,7 +865,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3100.png"
     },
     {
@@ -899,7 +880,6 @@
         "SpellBlock",
         "SpellDamage"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3102.png"
     },
     {
@@ -908,7 +888,8 @@
       "description": "30 Ability Power15 Ability Haste100% Base Mana Regen10% Heal and Shield PowerInterventionRestore 150 - 350 Health to allied units and deal 10% max Health true damage to enemy champions after 2.5 seconds.",
       "gold": 2300,
       "stats": {
-        "FlatMagicDamageMod": 30
+        "FlatMagicDamageMod": 30,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -916,7 +897,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3107.png"
     },
     {
@@ -926,7 +906,8 @@
       "gold": 2300,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatArmorMod": 40
+        "FlatArmorMod": 40,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -937,7 +918,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3109.png"
     },
     {
@@ -947,7 +927,8 @@
       "gold": 2500,
       "stats": {
         "FlatMPPoolMod": 400,
-        "FlatArmorMod": 75
+        "FlatArmorMod": 75,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Armor",
@@ -956,7 +937,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3110.png"
     },
     {
@@ -966,14 +946,14 @@
       "gold": 1250,
       "stats": {
         "FlatSpellBlockMod": 20,
-        "FlatMovementSpeedMod": 45
+        "FlatMovementSpeedMod": 45,
+        "PercentTenacityMod": 0.3
       },
       "tags": [
         "Boots",
         "SpellBlock",
         "Tenacity"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3111.png"
     },
     {
@@ -983,7 +963,8 @@
       "gold": 2900,
       "stats": {
         "FlatMagicDamageMod": 80,
-        "PercentAttackSpeedMod": 0.5
+        "PercentAttackSpeedMod": 0.5,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "AttackSpeed",
@@ -991,7 +972,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3115.png"
     },
     {
@@ -1008,7 +988,6 @@
         "SpellDamage",
         "Slow"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3116.png"
     },
     {
@@ -1018,14 +997,14 @@
       "gold": 2700,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 90
+        "FlatMagicDamageMod": 90,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
         "Mana",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3118.png"
     },
     {
@@ -1035,14 +1014,14 @@
       "gold": 2400,
       "stats": {
         "FlatMPPoolMod": 500,
-        "FlatHPPoolMod": 550
+        "FlatHPPoolMod": 550,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
         "Mana",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3119.png"
     },
     {
@@ -1061,7 +1040,6 @@
         "SpellDamage",
         "OnHit"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3124.png"
     },
     {
@@ -1070,13 +1048,13 @@
       "description": "95 Ability Power40% Magic Penetration",
       "gold": 3000,
       "stats": {
-        "FlatMagicDamageMod": 95
+        "FlatMagicDamageMod": 95,
+        "PercentMagicPenetrationMod": 0.4
       },
       "tags": [
         "MagicPenetration",
         "SpellDamage"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3135.png"
     },
     {
@@ -1085,14 +1063,15 @@
       "description": "75 Ability Power30% Magic Penetration20 Ability HasteLife from DeathWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
       "gold": 3000,
       "stats": {
-        "FlatMagicDamageMod": 75
+        "FlatMagicDamageMod": 75,
+        "FlatAbilityHaste": 20,
+        "PercentMagicPenetrationMod": 0.3
       },
       "tags": [
         "SpellDamage",
         "MagicPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3137.png"
     },
     {
@@ -1113,7 +1092,6 @@
         "NonbootsMovement",
         "Tenacity"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3139.png"
     },
     {
@@ -1123,7 +1101,8 @@
       "gold": 2800,
       "stats": {
         "FlatPhysicalDamageMod": 55,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1131,7 +1110,6 @@
         "NonbootsMovement",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3142.png"
     },
     {
@@ -1149,7 +1127,6 @@
         "Active",
         "Slow"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3143.png"
     },
     {
@@ -1159,7 +1136,8 @@
       "gold": 3000,
       "stats": {
         "FlatMagicDamageMod": 80,
-        "FlatPhysicalDamageMod": 40
+        "FlatPhysicalDamageMod": 40,
+        "PercentOmnivampMod": 0.1
       },
       "tags": [
         "Damage",
@@ -1168,7 +1146,6 @@
         "Active",
         "SpellVamp"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3146.png"
     },
     {
@@ -1178,7 +1155,8 @@
       "gold": 2650,
       "stats": {
         "FlatHPPoolMod": 300,
-        "FlatMagicDamageMod": 70
+        "FlatMagicDamageMod": 70,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -1188,7 +1166,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3152.png"
     },
     {
@@ -1208,7 +1185,6 @@
         "Slow",
         "OnHit"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3153.png"
     },
     {
@@ -1218,7 +1194,8 @@
       "gold": 3100,
       "stats": {
         "FlatSpellBlockMod": 40,
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellBlock",
@@ -1227,7 +1204,6 @@
         "SpellVamp",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3156.png"
     },
     {
@@ -1244,7 +1220,6 @@
         "SpellDamage",
         "Active"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3157.png"
     },
     {
@@ -1253,13 +1228,13 @@
       "description": "10 Ability Haste45 Move SpeedIonian InsightGain 10 Summoner Spell Haste.",
       "gold": 900,
       "stats": {
-        "FlatMovementSpeedMod": 45
+        "FlatMovementSpeedMod": 45,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Boots",
         "CooldownReduction"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3158.png"
     },
     {
@@ -1276,7 +1251,6 @@
         "Damage",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3161.png"
     },
     {
@@ -1286,7 +1260,8 @@
       "gold": 2850,
       "stats": {
         "FlatHPPoolMod": 350,
-        "FlatMagicDamageMod": 75
+        "FlatMagicDamageMod": 75,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1294,7 +1269,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3165.png"
     },
     {
@@ -1303,7 +1277,9 @@
       "description": "60 Attack Damage18 Lethality15 Ability HasteNightstalkerAfter being unseen by enemies briefly, your next attack against a champion deals an additional true damage.BlackoutWhen you are near enemy Stealth Wards and traps, reveal them briefly. While revealing wards, your attacks deal bonus damage to them.",
       "gold": 2800,
       "stats": {
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -1312,7 +1288,6 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3179.png"
     },
     {
@@ -1330,7 +1305,6 @@
         "Damage",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3181.png"
     },
     {
@@ -1341,7 +1315,8 @@
       "stats": {
         "FlatSpellBlockMod": 25,
         "FlatHPPoolMod": 200,
-        "FlatArmorMod": 25
+        "FlatArmorMod": 25,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -1352,7 +1327,6 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3190.png"
     },
     {
@@ -1361,7 +1335,8 @@
       "description": "250 Health100% Base Mana Regen12% Heal and Shield Power15 Ability HastePurifyRemove all crowd control debuffs (excluding Airborne and Suppression) from an ally champion and restore 100 - 250 Health.",
       "gold": 2300,
       "stats": {
-        "FlatHPPoolMod": 250
+        "FlatHPPoolMod": 250,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1371,7 +1346,6 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3222.png"
     },
     {
@@ -1381,7 +1355,8 @@
       "gold": 3000,
       "stats": {
         "FlatPhysicalDamageMod": 30,
-        "PercentAttackSpeedMod": 0.35
+        "PercentAttackSpeedMod": 0.35,
+        "PercentArmorPenetrationMod": 0.1
       },
       "tags": [
         "Damage",
@@ -1390,7 +1365,6 @@
         "MagicPenetration",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3302.png"
     },
     {
@@ -1408,7 +1382,6 @@
         "ManaRegen",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3504.png"
     },
     {
@@ -1418,7 +1391,8 @@
       "gold": 3050,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 50
+        "FlatPhysicalDamageMod": 50,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Damage",
@@ -1428,7 +1402,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3508.png"
     },
     {
@@ -1447,7 +1420,6 @@
         "Slow",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3742.png"
     },
     {
@@ -1465,7 +1437,6 @@
         "Damage",
         "OnHit"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3748.png"
     },
     {
@@ -1475,14 +1446,14 @@
       "gold": 3000,
       "stats": {
         "FlatHPPoolMod": 250,
-        "FlatPhysicalDamageMod": 50
+        "FlatPhysicalDamageMod": 50,
+        "FlatPhysicalLethality": 15
       },
       "tags": [
         "Health",
         "Damage",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3814.png"
     },
     {
@@ -1492,14 +1463,14 @@
       "gold": 2800,
       "stats": {
         "FlatPhysicalDamageMod": 50,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatPhysicalLethality": 15
       },
       "tags": [
         "Damage",
         "NonbootsMovement",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4004.png"
     },
     {
@@ -1508,7 +1479,8 @@
       "description": "60 Ability Power20 Ability Haste125% Base Mana RegenCoordinated Fire (0s) per targetSlowing or Immobilizing an enemy champion marks them for 5 seconds. Ally champion damage detonates the mark, dealing magic damage equal to 10% of current health. ",
       "gold": 2250,
       "stats": {
-        "FlatMagicDamageMod": 60
+        "FlatMagicDamageMod": 60,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "SpellDamage",
@@ -1516,7 +1488,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4005.png"
     },
     {
@@ -1534,7 +1505,6 @@
         "SpellBlock",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4401.png"
     },
     {
@@ -1543,13 +1513,13 @@
       "description": "75 Ability Power25 Ability HasteHypershotDealing Ability damage to champions at 600 range or greater Reveals them for 6 seconds. FocusWhen Hypershot is triggered, Reveal all other enemy champions within 1400 range of them for 3 seconds.",
       "gold": 2700,
       "stats": {
-        "FlatMagicDamageMod": 75
+        "FlatMagicDamageMod": 75,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "SpellDamage",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4628.png"
     },
     {
@@ -1560,7 +1530,8 @@
       "stats": {
         "FlatHPPoolMod": 350,
         "FlatMagicDamageMod": 70,
-        "PercentMovementSpeedMod": 0.04
+        "PercentMovementSpeedMod": 0.04,
+        "FlatAbilityHaste": 25
       },
       "tags": [
         "Health",
@@ -1568,7 +1539,6 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4629.png"
     },
     {
@@ -1578,7 +1548,8 @@
       "gold": 3100,
       "stats": {
         "FlatHPPoolMod": 350,
-        "FlatMagicDamageMod": 70
+        "FlatMagicDamageMod": 70,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1586,7 +1557,6 @@
         "CooldownReduction",
         "SpellVamp"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4633.png"
     },
     {
@@ -1595,13 +1565,13 @@
       "description": "110 Ability Power15 Magic PenetrationCinderbloomMagic and true damage Critically Strikes enemies below 40% Health, dealing 20% increased damage. ",
       "gold": 3200,
       "stats": {
-        "FlatMagicDamageMod": 110
+        "FlatMagicDamageMod": 110,
+        "FlatMagicPenetrationMod": 15
       },
       "tags": [
         "SpellDamage",
         "MagicPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4645.png"
     },
     {
@@ -1611,7 +1581,8 @@
       "gold": 2800,
       "stats": {
         "FlatMagicDamageMod": 90,
-        "PercentMovementSpeedMod": 0.06
+        "PercentMovementSpeedMod": 0.06,
+        "FlatMagicPenetrationMod": 15
       },
       "tags": [
         "SpellDamage",
@@ -1619,7 +1590,6 @@
         "NonbootsMovement",
         "MagicPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4646.png"
     },
     {
@@ -1629,14 +1599,14 @@
       "gold": 3300,
       "stats": {
         "FlatArmorMod": 50,
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Armor",
         "Damage",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6333.png"
     },
     {
@@ -1646,7 +1616,8 @@
       "gold": 3000,
       "stats": {
         "FlatHPPoolMod": 450,
-        "FlatPhysicalDamageMod": 45
+        "FlatPhysicalDamageMod": 45,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1654,7 +1625,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6609.png"
     },
     {
@@ -1664,7 +1634,8 @@
       "gold": 3100,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatPhysicalDamageMod": 45
+        "FlatPhysicalDamageMod": 45,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -1672,7 +1643,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6610.png"
     },
     {
@@ -1681,7 +1651,8 @@
       "description": "35 Ability Power10% Heal and Shield Power125% Base Mana Regen15 Ability HasteRapidsHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
       "gold": 2250,
       "stats": {
-        "FlatMagicDamageMod": 35
+        "FlatMagicDamageMod": 35,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "SpellDamage",
@@ -1689,7 +1660,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6616.png"
     },
     {
@@ -1699,7 +1669,8 @@
       "gold": 2200,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatMagicDamageMod": 25
+        "FlatMagicDamageMod": 25,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -1708,7 +1679,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6617.png"
     },
     {
@@ -1718,7 +1688,8 @@
       "gold": 2200,
       "stats": {
         "FlatHPPoolMod": 200,
-        "FlatMagicDamageMod": 35
+        "FlatMagicDamageMod": 35,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -1727,7 +1698,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6620.png"
     },
     {
@@ -1742,7 +1712,6 @@
         "SpellDamage",
         "ManaRegen"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6621.png"
     },
     {
@@ -1761,7 +1730,6 @@
         "AttackSpeed",
         "Slow"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6631.png"
     },
     {
@@ -1777,7 +1745,6 @@
         "Health",
         "SpellDamage"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6653.png"
     },
     {
@@ -1787,7 +1754,8 @@
       "gold": 2750,
       "stats": {
         "FlatMPPoolMod": 600,
-        "FlatMagicDamageMod": 100
+        "FlatMagicDamageMod": 100,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -1795,7 +1763,6 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6655.png"
     },
     {
@@ -1815,7 +1782,6 @@
         "Mana",
         "ManaRegen"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6657.png"
     },
     {
@@ -1825,7 +1791,8 @@
       "gold": 2900,
       "stats": {
         "FlatHPPoolMod": 300,
-        "FlatArmorMod": 50
+        "FlatArmorMod": 50,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -1835,7 +1802,6 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6662.png"
     },
     {
@@ -1845,7 +1811,8 @@
       "gold": 2800,
       "stats": {
         "FlatSpellBlockMod": 40,
-        "FlatHPPoolMod": 400
+        "FlatHPPoolMod": 400,
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "Health",
@@ -1855,7 +1822,6 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6664.png"
     },
     {
@@ -1874,7 +1840,6 @@
         "Armor",
         "MagicResist"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6665.png"
     },
     {
@@ -1893,7 +1858,6 @@
         "OnHit",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6672.png"
     },
     {
@@ -1909,7 +1873,6 @@
         "Damage",
         "CriticalStrike"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6673.png"
     },
     {
@@ -1927,7 +1890,6 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6675.png"
     },
     {
@@ -1937,14 +1899,14 @@
       "gold": 3000,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 50
+        "FlatPhysicalDamageMod": 50,
+        "FlatPhysicalLethality": 10
       },
       "tags": [
         "Damage",
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6676.png"
     },
     {
@@ -1953,14 +1915,14 @@
       "description": "60 Attack Damage15 Ability HasteEver Rising MoonHitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a Shield for 2 seconds.",
       "gold": 2900,
       "stats": {
-        "FlatPhysicalDamageMod": 60
+        "FlatPhysicalDamageMod": 60,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Damage",
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6692.png"
     },
     {
@@ -1969,7 +1931,9 @@
       "description": "45 Attack Damage35% Armor Penetration15 Ability HasteBitter ColdDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
       "gold": 3000,
       "stats": {
-        "FlatPhysicalDamageMod": 45
+        "FlatPhysicalDamageMod": 45,
+        "FlatAbilityHaste": 15,
+        "PercentArmorPenetrationMod": 0.35
       },
       "tags": [
         "Damage",
@@ -1977,7 +1941,6 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6694.png"
     },
     {
@@ -1986,13 +1949,13 @@
       "description": "55 Attack Damage15 LethalityShield ReaverDamaging an enemy champion reduces Shields they gain by % for 3 seconds. If they were not already affected by Shield Reaver, reduce Shields on them by %.",
       "gold": 2500,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatPhysicalLethality": 15
       },
       "tags": [
         "Damage",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6695.png"
     },
     {
@@ -2001,14 +1964,15 @@
       "description": "55 Attack Damage18 Lethality20 Ability HasteFluxWhen a champion that you damaged within 3 seconds dies, refund some of your Ultimate Ability's total cooldown.",
       "gold": 2750,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatAbilityHaste": 20,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6696.png"
     },
     {
@@ -2017,7 +1981,9 @@
       "description": "55 Attack Damage18 Lethality10 Ability HasteCleaveAttacks deal physical damage to nearby enemies.Heretical CleaveDeal physical damage around you.",
       "gold": 2850,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatAbilityHaste": 10,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -2026,7 +1992,6 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6698.png"
     },
     {
@@ -2035,7 +2000,9 @@
       "description": "55 Attack Damage18 Lethality10 Ability HasteGalvanizeDashes and Stealth stack Energized 75% faster.FirmamentYour Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
       "gold": 3000,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatAbilityHaste": 10,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -2044,7 +2011,6 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6699.png"
     },
     {
@@ -2053,7 +2019,8 @@
       "description": "55 Attack Damage18 LethalityPreparationAfter being out of combat with Champions for 8 seconds gain Lethality. This Lethality lasts for 3 seconds after dealing damage to champions.ExtractionWhen a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.",
       "gold": 2700,
       "stats": {
-        "FlatPhysicalDamageMod": 55
+        "FlatPhysicalDamageMod": 55,
+        "FlatPhysicalLethality": 18
       },
       "tags": [
         "Damage",
@@ -2061,7 +2028,6 @@
         "NonbootsMovement",
         "ArmorPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6701.png"
     },
     {
@@ -2071,7 +2037,8 @@
       "gold": 2900,
       "stats": {
         "FlatHPPoolMod": 400,
-        "FlatMagicDamageMod": 65
+        "FlatMagicDamageMod": 65,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -2079,7 +2046,6 @@
         "CooldownReduction",
         "MagicPenetration"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/8010.png"
     },
     {
@@ -2089,7 +2055,8 @@
       "gold": 2650,
       "stats": {
         "FlatSpellBlockMod": 45,
-        "FlatHPPoolMod": 350
+        "FlatHPPoolMod": 350,
+        "FlatAbilityHaste": 15
       },
       "tags": [
         "Health",
@@ -2098,7 +2065,6 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/8020.png"
     },
     {
@@ -2116,7 +2082,8 @@
         "FlatPhysicalDamageMod": 90,
         "PercentAttackSpeedMod": 0.4,
         "PercentLifeStealMod": 0.1,
-        "PercentMovementSpeedMod": 0.1
+        "PercentMovementSpeedMod": 0.1,
+        "FlatAbilityHaste": 20
       },
       "tags": [
         "Health",
@@ -2133,7 +2100,6 @@
         "CooldownReduction",
         "NonbootsMovement"
       ],
-      "isOrnn": false,
       "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/994403.png"
     }
   ]

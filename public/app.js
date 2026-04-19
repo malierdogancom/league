@@ -16,6 +16,7 @@ const STAT_MAP = {
   FlatMovementSpeedMod: "Move Speed",
   PercentLifeStealMod: "Life Steal",
   PercentOmnivampMod: "Omnivamp",
+  PercentTenacityMod: "Tenacity",
 };
 
 function statLabel(key) {
