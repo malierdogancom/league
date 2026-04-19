@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "league-site",
+    "site": "league-mali",
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
