@@ -52,25 +52,16 @@ async function init() {
 function cleanDescription(text) {
   if (!text) return "";
 
-  // Riot'un stat özetlerini (<stats> bloğu) ve HTML etiketlerini tamamen temizle
+  // HTML temizle
   let clean = text.replace(/<stats>.*?<\/stats>/gi, "");
   clean = clean.replace(/<[^>]*>/g, " ");
 
-  // Infinity Edge örneğindeki gibi metnin içine gömülü stat isimlerini temizle
-  const statsToClean = [
-    "Attack Damage",
-    "Ability Power",
-    "Health",
-    "Armor",
-    "Magic Resist",
-    "Critical Strike Chance",
-    "Ability Haste",
-    "Movement Speed",
-  ];
-  statsToClean.forEach((s) => {
-    const regex = new RegExp(`[0-9%\\.\\+\\s]+${s}`, "gi");
-    clean = clean.replace(regex, "");
-  });
+  // İlk PascalCase kelimeye kadar olan stat bloğunu sil
+  // PascalCase = büyük harf + küçük harf + büyük harf içeren kelime
+  const passiveStart = clean.search(/[A-Z][a-z]+[A-Z]/);
+  if (passiveStart > 0) {
+    clean = clean.substring(passiveStart);
+  }
 
   return clean.replace(/\s\s+/g, " ").trim();
 }
