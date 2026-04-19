@@ -1,3 +1,35 @@
+/**
+ * LoL Item Explorer - Core Logic
+ * Project: league.malierdogan.com
+ */
+
+const STAT_MAP = {
+  // Offensive
+  FlatMagicDamageMod: "Ability Power",
+  FlatPhysicalDamageMod: "Attack Damage",
+  FlatCritChanceMod: "Crit Chance",
+  PercentAttackSpeedMod: "Attack Speed",
+  FlatMagicPenetrationMod: "Magic Penetration",
+  PercentMagicPenetrationMod: "Magic Penetration (%)",
+  FlatPhysicalLethality: "Lethality",
+  PercentArmorPenetrationMod: "Armor Penetration (%)",
+
+  // Defensive
+  FlatHPPoolMod: "Health",
+  FlatArmorMod: "Armor",
+  FlatSpellBlockMod: "Magic Resist",
+
+  // Resource & Utility
+  FlatMPPoolMod: "Mana",
+  FlatAbilityHaste: "Ability Haste",
+  PercentMovementSpeedMod: "Move Speed",
+  FlatMovementSpeedMod: "Move Speed",
+  PercentLifeStealMod: "Life Steal",
+  PercentOmnivampMod: "Omnivamp",
+  FlatHPRegenMod: "Health Regen",
+  PercentBaseHPRegenMod: "Base Health Regen (%)",
+};
+
 let appData = {
   SR: null,
   ARAM: null,
@@ -13,7 +45,6 @@ let currentState = {
 
 async function init() {
   try {
-    // Python'un oluşturduğu verileri çek (Yerel sunucudan veya Firebase'den okuyacak)
     const [srRes, aramRes] = await Promise.all([
       fetch("./data/sr_data.json"),
       fetch("./data/aram_data.json"),
@@ -29,14 +60,14 @@ async function init() {
     setupEventListeners();
     render();
   } catch (error) {
-    console.error("Failed to load data. Did you run the Python script?", error);
+    console.error("Data load error:", error);
     document.getElementById("items-grid").innerHTML =
-      '<p style="color:red;">Error loading data. Make sure sr_data.json and aram_data.json exist in the data folder.</p>';
+      '<p style="color:red;">JSON files not found. Run the Python script first.</p>';
   }
 }
 
 function setupEventListeners() {
-  // Map Toggle
+  // Map Toggle (SR vs ARAM)
   document.getElementById("map-toggle").addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
       document
@@ -48,7 +79,7 @@ function setupEventListeners() {
     }
   });
 
-  // Category Toggle
+  // Category Toggle (Legendary vs Boots vs Ornn)
   document.getElementById("category-toggle").addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
       document
@@ -60,13 +91,13 @@ function setupEventListeners() {
     }
   });
 
-  // Search
+  // Search Input
   document.getElementById("search-input").addEventListener("input", (e) => {
     currentState.search = e.target.value.toLowerCase();
     render();
   });
 
-  // Sort
+  // Sort Selection
   document.getElementById("sort-select").addEventListener("change", (e) => {
     currentState.sort = e.target.value;
     render();
@@ -77,10 +108,10 @@ function render() {
   const grid = document.getElementById("items-grid");
   grid.innerHTML = "";
 
-  // 1. Veri Kaynağını Seç
+  // 1. Get Data Source
   let items = appData[currentState.map].items;
 
-  // 2. Kategoriye Göre Filtrele
+  // 2. Filter by Category
   items = items.filter((item) => {
     const isBoots = item.tags.includes("Boots");
     if (currentState.category === "Ornn") return item.isOrnn;
@@ -89,27 +120,27 @@ function render() {
     return true;
   });
 
-  // 3. Aramaya Göre Filtrele
+  // 3. Filter by Search
   if (currentState.search) {
     items = items.filter((item) =>
       item.name.toLowerCase().includes(currentState.search),
     );
   }
 
-  // 4. Sırala
+  // 4. Sorting Logic
   items.sort((a, b) => {
     if (currentState.sort === "gold-desc") return b.gold - a.gold;
     if (currentState.sort === "gold-asc") return a.gold - b.gold;
 
-    // Stat bazlı sıralama (Örn: AP, AD)
+    // Stat based sorting
     const statA = a.stats[currentState.sort] || 0;
     const statB = b.stats[currentState.sort] || 0;
-    return statB - statA; // Default to Descending for stats
+    return statB - statA;
   });
 
-  // 5. Ekrana Çiz
+  // 5. Build UI Cards
   items.forEach((item) => {
-    // Eğer stat'a göre sıralıyorsak ve o itemde o stat yoksa, ekrana basma (Sıfır olanları gizle)
+    // If sorting by a specific stat, hide items that don't have that stat
     if (currentState.sort !== "gold-desc" && currentState.sort !== "gold-asc") {
       if ((item.stats[currentState.sort] || 0) === 0) return;
     }
@@ -117,15 +148,26 @@ function render() {
     const card = document.createElement("div");
     card.className = "item-card";
 
-    // Statları güzel bir formatta listeleyelim
+    // Process Stats for Display
     let statsHtml = "";
     for (const [key, value] of Object.entries(item.stats)) {
-      // Basit isim eşleştirmesi (Mapping) - Bunu ileride daha da geliştirebiliriz
-      let statName = key
-        .replace("Flat", "")
-        .replace("Mod", "")
-        .replace("Percent", "% ");
-      statsHtml += `<div class="stat-line"><span>${statName}</span> <span class="stat-value">+${value}</span></div>`;
+      let displayName =
+        STAT_MAP[key] || key.replace("Flat", "").replace("Mod", "");
+      let displayValue = "";
+
+      if (
+        key.includes("Percent") ||
+        key.includes("AttackSpeed") ||
+        key.includes("MovementSpeed")
+      ) {
+        // Formatting decimals (e.g., 0.04 to 4%)
+        let val = value < 1 && value > 0 ? (value * 100).toFixed(0) : value;
+        displayValue = `${val}%`;
+      } else {
+        displayValue = `+${value}`;
+      }
+
+      statsHtml += `<div class="stat-line"><span>${displayName}</span> <span class="stat-value">${displayValue}</span></div>`;
     }
 
     card.innerHTML = `
@@ -137,12 +179,11 @@ function render() {
                 </div>
             </div>
             <div class="card-details">
-                ${statsHtml}
+                <div class="stats-container">${statsHtml}</div>
                 <div class="desc-text">${item.description}</div>
             </div>
         `;
 
-    // Kart açılma animasyonu (Tıklama Eventi)
     card.addEventListener("click", () => {
       card.classList.toggle("expanded");
     });
@@ -151,5 +192,4 @@ function render() {
   });
 }
 
-// Uygulamayı Başlat
 init();
