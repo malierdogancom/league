@@ -106,7 +106,8 @@ const EFF_TOOLTIP =
   "  Ability Haste 26.67g · Move Speed 31.25g\n" +
   "  Lethality 31.25g · Magic Pen 31.25g\n" +
   "  Crit Chance 40g/1% · Atk Speed 33.3g/1%\n" +
-  "  Life Steal 37.5g/1% · Omnivamp 30g/1%";
+  "  Life Steal 37.5g/1% · Omnivamp 30g/1%\n" +
+  "Source: wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency";
 
 function effBadge(item) {
   const eff = calcGoldEfficiency(item);
@@ -166,8 +167,9 @@ function buildSortIcons() {
     return btn;
   };
 
-  container.appendChild(makeBtn("gold-desc", `<span class="sort-btn-gold">↓</span>`, "Price ↓", true));
-  container.appendChild(makeBtn("gold-asc",  `<span class="sort-btn-gold">↑</span>`, "Price ↑", false));
+  container.appendChild(makeBtn("gold-desc",   `<span class="sort-btn-gold">↓</span>`, "Price ↓", true));
+  container.appendChild(makeBtn("gold-asc",    `<span class="sort-btn-gold">↑</span>`, "Price ↑", false));
+  container.appendChild(makeBtn("efficiency",  `<span class="sort-btn-gold">%</span>`,  "Efficiency", false));
 
   Object.entries(STAT_MAP).forEach(([key, label]) => {
     const iconUrl = STAT_ICON_MAP[key];
@@ -227,8 +229,8 @@ function setupListeners() {
     if (!btn) return;
     const val = btn.dataset.value;
 
-    if (val === "gold-desc" || val === "gold-asc") {
-      document.querySelectorAll("#sort-icons .sort-btn[data-value='gold-desc'], #sort-icons .sort-btn[data-value='gold-asc']")
+    if (val === "gold-desc" || val === "gold-asc" || val === "efficiency") {
+      document.querySelectorAll("#sort-icons .sort-btn[data-value='gold-desc'], #sort-icons .sort-btn[data-value='gold-asc'], #sort-icons .sort-btn[data-value='efficiency']")
         .forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       state.goldSort = val;
@@ -392,6 +394,8 @@ function render() {
   if (state.selectedStats.length > 0) {
     const primary = state.selectedStats[0];
     items.sort((a, b) => (b.stats?.[primary] ?? 0) - (a.stats?.[primary] ?? 0));
+  } else if (state.goldSort === "efficiency") {
+    items.sort((a, b) => (calcGoldEfficiency(b) ?? -1) - (calcGoldEfficiency(a) ?? -1));
   } else {
     items.sort((a, b) =>
       state.goldSort === "gold-desc" ? b.gold - a.gold : a.gold - b.gold
