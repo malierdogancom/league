@@ -20,27 +20,30 @@ const STAT_MAP = {
   PercentCritDamageMod: "Crit Damage",
 };
 
-const CDN = "https://raw.communitydragon.org/latest/game/assets/perks/statmods/";
+const CDN_STRAWBERRY = "https://raw.communitydragon.org/latest/game/assets/ux/strawberry/detailview/statsicons/";
+const CDN_MINI = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/fonts/texticons/lol/statsicon/";
+const CDN_STATMODS = "https://raw.communitydragon.org/latest/game/assets/perks/statmods/";
+
 const STAT_ICON_MAP = {
-  FlatMagicDamageMod:        CDN + "statmodsabilitypowericon.png",
-  FlatPhysicalDamageMod:     CDN + "statmodsattackdamageicon.png",
-  FlatCritChanceMod:         CDN + "statmodsattackdamageicon.png",
-  PercentAttackSpeedMod:     CDN + "statmodsattackspeedicon.png",
-  FlatMagicPenetrationMod:   CDN + "statmodsabilitypowericon.png",
-  PercentMagicPenetrationMod:CDN + "statmodsabilitypowericon.png",
-  FlatPhysicalLethality:     CDN + "statmodsattackdamageicon.png",
-  PercentArmorPenetrationMod:CDN + "statmodsattackdamageicon.png",
-  FlatHPPoolMod:             CDN + "statmodshealthplusicon.png",
-  FlatArmorMod:              CDN + "statmodsarmoricon.png",
-  FlatSpellBlockMod:         CDN + "statmodsmagicresicon.png",
-  FlatMPPoolMod:             CDN + "statmodscdrscalingicon.png",
-  FlatAbilityHaste:          CDN + "statmodscdrscalingicon.png",
-  PercentMovementSpeedMod:   CDN + "statmodsmovementspeedicon.png",
-  FlatMovementSpeedMod:      CDN + "statmodsmovementspeedicon.png",
-  PercentLifeStealMod:       CDN + "statmodsadaptiveforceicon.png",
-  PercentOmnivampMod:        CDN + "statmodsadaptiveforceicon.png",
-  PercentTenacityMod:        CDN + "statmodstenacityicon.png",
-  PercentCritDamageMod:      CDN + "statmodsattackdamageicon.png",
+  FlatMagicDamageMod:         CDN_MINI       + "miniap.png",
+  FlatPhysicalDamageMod:      CDN_STRAWBERRY + "attackdamage.png",
+  FlatCritChanceMod:          CDN_STRAWBERRY + "criticalstrikechance.png",
+  PercentAttackSpeedMod:      CDN_STATMODS   + "statmodsattackspeedicon.png",
+  FlatMagicPenetrationMod:    CDN_MINI       + "scalempen.png",
+  PercentMagicPenetrationMod: CDN_MINI       + "scalempen.png",
+  FlatPhysicalLethality:      CDN_MINI       + "scaleapen.png",
+  PercentArmorPenetrationMod: CDN_MINI       + "scaleapen.png",
+  FlatHPPoolMod:              CDN_MINI       + "minihealth.png",
+  FlatArmorMod:               CDN_STRAWBERRY + "armor.png",
+  FlatSpellBlockMod:          CDN_MINI       + "minimr.png",
+  FlatMPPoolMod:              CDN_MINI       + "scalemana.png",
+  FlatAbilityHaste:           CDN_STRAWBERRY + "abilityhaste.png",
+  PercentMovementSpeedMod:    CDN_STRAWBERRY + "movementspeed.png",
+  FlatMovementSpeedMod:       CDN_STRAWBERRY + "movementspeed.png",
+  PercentLifeStealMod:        CDN_MINI       + "scalels.png",
+  PercentOmnivampMod:         CDN_MINI       + "scalels.png",
+  PercentTenacityMod:         CDN_MINI       + "scaletenacity.png",
+  PercentCritDamageMod:       CDN_MINI       + "scalecritmult.png",
 };
 
 function statLabel(key) {
