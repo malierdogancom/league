@@ -364,7 +364,8 @@
       "gold": 3500,
       "stats": {
         "FlatCritChanceMod": 0.25,
-        "FlatPhysicalDamageMod": 75
+        "FlatPhysicalDamageMod": 75,
+        "PercentCritDamageMod": 0.3
       },
       "tags": [
         "CriticalStrike",

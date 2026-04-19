@@ -35,6 +35,8 @@ MISSING_STAT_PATTERNS = [
     (r'(\d+)\s+Magic Penetration', 'FlatMagicPenetrationMod', False),
     # Armor Pen %: "30% Armor Penetration"
     (r'(\d+)%\s*Armor Penetration', 'PercentArmorPenetrationMod', True),
+    # Crit Damage: "30% Critical Strike Damage"
+    (r'(\d+)%\s*Critical Strike Damage', 'PercentCritDamageMod', True),
 ]
 
 def extract_missing_stats(description, existing_stats):

@@ -161,17 +161,40 @@ select:focus {
 .stats-section {
   width: 100%;
 }
-.stat-empty {
-  height: 21px;
-}
 .item-card {
   align-self: start;
 }
-/* When clicked, add 'expanded' class via JS */
-.item-card.expanded .card-details {
-  max-height: 500px; /* Arbitrary large number for expansion */
-  padding: 15px;
-  border-top: 1px solid #333;
+
+.stats-extra {
+  display: none;
+}
+.item-card.expanded .stats-extra {
+  display: block;
+}
+
+.desc-text {
+  display: none;
+  margin-top: 10px;
+  font-style: italic;
+  color: #888;
+  border-top: 1px dotted #444;
+  padding-top: 10px;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+.item-card.expanded .desc-text {
+  display: block;
+}
+
+.expand-hint {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.8em;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.item-card.expanded .expand-hint {
+  transform: rotate(180deg);
 }
 
 .stat-line {

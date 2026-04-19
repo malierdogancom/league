@@ -17,6 +17,7 @@ const STAT_MAP = {
   PercentLifeStealMod: "Life Steal",
   PercentOmnivampMod: "Omnivamp",
   PercentTenacityMod: "Tenacity",
+  PercentCritDamageMod: "Crit Damage",
 };
 
 function statLabel(key) {
@@ -138,10 +139,8 @@ function render() {
     grid.innerHTML = `<p style="color:#a09b8c;padding:20px">Eşleşen item bulunamadı.</p>`;
     return;
   }
-  // Sıralama sonrası, items.forEach'tan önce ekle:
-  const MAX_STATS = Math.max(
-    ...items.map((item) => Object.keys(item.stats || {}).length),
-  );
+  const PREVIEW_COUNT = 4;
+
   items.forEach((item) => {
     const stats = item.stats || {};
     const entries = Object.entries(stats).sort(([a], [b]) => {
@@ -150,18 +149,17 @@ function render() {
       return 0;
     });
 
-    const statsHtml = [
-      ...entries.map(([k, v]) => {
-        const hl = k === state.sort && !state.sort.includes("gold");
-        return `<div class="stat-line${hl ? " stat-highlight" : ""}">
-      <span>${statLabel(k)}</span>
-      <span class="stat-value">${statValue(k, v)}</span>
-    </div>`;
-      }),
-      ...Array(Math.max(0, MAX_STATS - entries.length)).fill(
-        `<div class="stat-line stat-empty"></div>`,
-      ),
-    ].join("");
+    const toStatLine = ([k, v]) => {
+      const hl = k === state.sort && !state.sort.includes("gold");
+      return `<div class="stat-line${hl ? " stat-highlight" : ""}">
+        <span>${statLabel(k)}</span>
+        <span class="stat-value">${statValue(k, v)}</span>
+      </div>`;
+    };
+
+    const previewHtml = entries.slice(0, PREVIEW_COUNT).map(toStatLine).join("");
+    const extraHtml = entries.slice(PREVIEW_COUNT).map(toStatLine).join("");
+    const hasMore = entries.length > PREVIEW_COUNT || !!item.description;
 
     const card = document.createElement("div");
     card.className = "item-card";
@@ -172,11 +170,21 @@ function render() {
           <h3>${item.name}</h3>
           <div class="gold-text">${item.gold} Gold</div>
         </div>
+        ${hasMore ? `<span class="expand-hint">▼</span>` : ""}
       </div>
       <div class="card-details">
-        <div class="stats-section">${statsHtml}</div>
+        <div class="stats-section">
+          ${previewHtml}
+          ${extraHtml ? `<div class="stats-extra">${extraHtml}</div>` : ""}
+        </div>
+        ${item.description ? `<div class="desc-text">${item.description}</div>` : ""}
       </div>
     `;
+
+    if (hasMore) {
+      card.addEventListener("click", () => card.classList.toggle("expanded"));
+    }
+
     grid.appendChild(card);
   });
 }
