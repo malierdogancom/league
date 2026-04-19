@@ -48,24 +48,28 @@ async function init() {
   }
 }
 
-// BU FONKSİYON SADECE PASİFLERİ BIRAKIR, TEKRAR EDEN STATLARI SİLER
 function cleanDescription(text) {
   if (!text) return "";
 
-  // HTML temizle
   let clean = text.replace(/<stats>.*?<\/stats>/gi, "");
-  clean = clean.replace(/<[^>]*>/g, " ");
+  clean = clean.replace(/<[^>]*>/g, " ").trim();
 
-  // İlk PascalCase kelimeye kadar olan stat bloğunu sil
-  // PascalCase = büyük harf + küçük harf + büyük harf içeren kelime
-  const passiveStart = clean.search(/[A-Z][a-z]+[A-Z]/);
-  if (passiveStart > 0) {
-    clean = clean.substring(passiveStart);
+  // Başındaki tüm "rakam/yüzde + kelime" bloklarını sil
+  // "75 Attack Damage" "25% Critical Strike Chance" "30% Critical Strike Damage" gibi
+  // Bu pattern: rakamla başlayan, harf ve boşluk içeren, bir sonraki rakama kadar olan blok
+  let prev = "";
+  while (prev !== clean) {
+    prev = clean;
+    clean = clean
+      .replace(
+        /^\d+\.?\d*\s*%?\s*[A-Za-z][a-zA-Z ]*?(?=\d|[A-Z][a-z]+[A-Z]|$)/,
+        "",
+      )
+      .trim();
   }
 
   return clean.replace(/\s\s+/g, " ").trim();
 }
-
 function setupEventListeners() {
   document.querySelectorAll(".filter-group").forEach((group) => {
     group.addEventListener("click", (e) => {
