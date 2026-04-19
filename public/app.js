@@ -20,6 +20,29 @@ const STAT_MAP = {
   PercentCritDamageMod: "Crit Damage",
 };
 
+const CDN = "https://raw.communitydragon.org/latest/game/assets/perks/statmods/";
+const STAT_ICON_MAP = {
+  FlatMagicDamageMod:        CDN + "statmodsabilitypowericon.png",
+  FlatPhysicalDamageMod:     CDN + "statmodsattackdamageicon.png",
+  FlatCritChanceMod:         CDN + "statmodsattackdamageicon.png",
+  PercentAttackSpeedMod:     CDN + "statmodsattackspeedicon.png",
+  FlatMagicPenetrationMod:   CDN + "statmodsabilitypowericon.png",
+  PercentMagicPenetrationMod:CDN + "statmodsabilitypowericon.png",
+  FlatPhysicalLethality:     CDN + "statmodsattackdamageicon.png",
+  PercentArmorPenetrationMod:CDN + "statmodsattackdamageicon.png",
+  FlatHPPoolMod:             CDN + "statmodshealthplusicon.png",
+  FlatArmorMod:              CDN + "statmodsarmoricon.png",
+  FlatSpellBlockMod:         CDN + "statmodsmagicresicon.png",
+  FlatMPPoolMod:             CDN + "statmodscdrscalingicon.png",
+  FlatAbilityHaste:          CDN + "statmodscdrscalingicon.png",
+  PercentMovementSpeedMod:   CDN + "statmodsmovementspeedicon.png",
+  FlatMovementSpeedMod:      CDN + "statmodsmovementspeedicon.png",
+  PercentLifeStealMod:       CDN + "statmodsadaptiveforceicon.png",
+  PercentOmnivampMod:        CDN + "statmodsadaptiveforceicon.png",
+  PercentTenacityMod:        CDN + "statmodstenacityicon.png",
+  PercentCritDamageMod:      CDN + "statmodsattackdamageicon.png",
+};
+
 function statLabel(key) {
   return STAT_MAP[key] || key;
 }
@@ -41,7 +64,7 @@ async function init() {
     ]);
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
-    buildSortOptions();
+    buildSortIcons();
     setupListeners();
     render();
   } catch (err) {
@@ -51,17 +74,26 @@ async function init() {
   }
 }
 
-function buildSortOptions() {
-  const sel = document.getElementById("sort-select");
-  sel.innerHTML = `
-    <option value="gold-desc">Price: High to Low</option>
-    <option value="gold-asc">Price: Low to High</option>
-  `;
+function buildSortIcons() {
+  const container = document.getElementById("sort-icons");
+
+  const makeBtn = (value, iconHtml, label, isActive) => {
+    const btn = document.createElement("button");
+    btn.className = "sort-btn" + (isActive ? " active" : "");
+    btn.dataset.value = value;
+    btn.innerHTML = `${iconHtml}<span class="sort-btn-label">${label}</span>`;
+    return btn;
+  };
+
+  container.appendChild(makeBtn("gold-desc", `<span class="sort-btn-gold">↓</span>`, "Price ↓", true));
+  container.appendChild(makeBtn("gold-asc",  `<span class="sort-btn-gold">↑</span>`, "Price ↑", false));
+
   Object.entries(STAT_MAP).forEach(([key, label]) => {
-    const opt = document.createElement("option");
-    opt.value = key;
-    opt.textContent = label + ": High to Low";
-    sel.appendChild(opt);
+    const iconUrl = STAT_ICON_MAP[key];
+    const iconHtml = iconUrl
+      ? `<img class="sort-btn-icon" src="${iconUrl}" alt="${label}">`
+      : `<span class="sort-btn-icon">?</span>`;
+    container.appendChild(makeBtn(key, iconHtml, label, false));
   });
 }
 
@@ -91,8 +123,14 @@ function setupListeners() {
     render();
   });
 
-  document.getElementById("sort-select").addEventListener("change", (e) => {
-    state.sort = e.target.value;
+  document.getElementById("sort-icons").addEventListener("click", (e) => {
+    const btn = e.target.closest(".sort-btn");
+    if (!btn) return;
+    document
+      .querySelectorAll("#sort-icons .sort-btn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.sort = btn.dataset.value;
     render();
   });
 }
@@ -115,6 +153,11 @@ function render() {
     if (state.category === "Boots") return isBoots;
     return !isBoots;
   });
+
+  // Filter out items that don't have the selected stat
+  if (!state.sort.startsWith("gold")) {
+    items = items.filter((item) => item.stats?.[state.sort] != null);
+  }
 
   if (state.search) {
     items = items.filter((item) =>
@@ -151,8 +194,10 @@ function render() {
 
     const toStatLine = ([k, v]) => {
       const hl = k === state.sort && !state.sort.includes("gold");
+      const iconUrl = STAT_ICON_MAP[k];
+      const iconHtml = iconUrl ? `<img class="stat-icon" src="${iconUrl}" alt="">` : "";
       return `<div class="stat-line${hl ? " stat-highlight" : ""}">
-        <span>${statLabel(k)}</span>
+        <span class="stat-name">${iconHtml}${statLabel(k)}</span>
         <span class="stat-value">${statValue(k, v)}</span>
       </div>`;
     };
@@ -160,7 +205,6 @@ function render() {
     const previewEntries = entries.slice(0, PREVIEW_COUNT);
     const extraEntries = entries.slice(PREVIEW_COUNT);
 
-    // Her zaman 4 satır göster — eksik olanları boş placeholder ile doldur
     const emptyLines = Array(Math.max(0, PREVIEW_COUNT - previewEntries.length))
       .fill(`<div class="stat-line stat-empty"></div>`)
       .join("");

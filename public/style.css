@@ -83,8 +83,7 @@ h1 {
   align-items: flex-end;
   justify-content: flex-end;
 }
-input,
-select {
+input {
   padding: 10px;
   background: #111;
   border: 1px solid #444;
@@ -92,9 +91,71 @@ select {
   border-radius: 4px;
   outline: none;
 }
-input:focus,
-select:focus {
+input:focus {
   border-color: var(--border-color);
+}
+
+.sort-group {
+  flex-basis: 100%;
+}
+
+.sort-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sort-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 8px;
+  background: #111;
+  border: 1px solid #444;
+  color: var(--text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 50px;
+}
+.sort-btn:hover:not(.active) {
+  background: #222;
+  border-color: #666;
+}
+.sort-btn.active {
+  background: var(--highlight);
+  border-color: var(--highlight);
+  color: white;
+}
+.sort-btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.sort-btn-gold {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffd700;
+}
+.sort-btn-label {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.stat-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  margin-right: 4px;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+.stat-name {
+  display: flex;
+  align-items: center;
 }
 
 /* Grid & Cards */
