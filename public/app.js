@@ -109,11 +109,9 @@ function render() {
 
   items = items.filter((item) => {
     const tags = Array.isArray(item.tags) ? item.tags : [];
-    const isOrnn = item.isOrnn === true;
     const isBoots = tags.includes("Boots");
-    if (state.category === "Ornn") return isOrnn;
-    if (state.category === "Boots") return isBoots && !isOrnn;
-    return !isOrnn && !isBoots;
+    if (state.category === "Boots") return isBoots;
+    return !isBoots;
   });
 
   if (state.search) {

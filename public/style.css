@@ -149,13 +149,15 @@ select:focus {
 /* Expandable Section */
 .card-details {
   overflow: hidden;
-  background-color: #111;
+  background-color: var(--panel-bg);
   font-size: 0.9em;
   color: var(--text-muted);
   padding: 15px;
   border-top: 1px solid #333;
 }
-
+.item-card {
+  align-self: start;
+}
 /* When clicked, add 'expanded' class via JS */
 .item-card.expanded .card-details {
   max-height: 500px; /* Arbitrary large number for expansion */

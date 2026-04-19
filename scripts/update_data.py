@@ -29,6 +29,14 @@ def process_items():
     response.raise_for_status()
     raw_data = response.json()["data"]
 
+    for item_id, item in raw_data.items():
+        name = item.get("name", "")
+        if "Ornn" in str(item) or "ornn" in name.lower():
+            print(f"ID: {item_id} | {name}")
+            print(json.dumps(item, indent=2)[:500])
+            print("---")
+
+
     aram_items = []
     sr_items = []
 
@@ -57,7 +65,6 @@ def process_items():
             "gold": total_gold,
             "stats": item.get("stats", {}),
             "tags": tags,
-            "isOrnn": is_ornn,
             "image_url": f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/img/item/{item['image']['full']}"
         }
 
