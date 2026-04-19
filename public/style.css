@@ -264,6 +264,64 @@ input:focus {
 .eff-high { background: #1a3a1a; color: #4caf50; border: 1px solid #4caf50; }
 .eff-mid  { background: #3a3010; color: #ffc107; border: 1px solid #ffc107; }
 .eff-low  { background: #3a1010; color: #f44336; border: 1px solid #f44336; }
+.eff-info-icon {
+  cursor: pointer;
+  opacity: 0.7;
+  font-style: normal;
+  font-size: 0.9em;
+}
+.eff-info-icon:hover { opacity: 1; }
+
+#eff-tooltip {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  width: 300px;
+  background: #1e2328;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: var(--text-main);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  pointer-events: auto;
+}
+.eff-tip-title {
+  color: var(--border-color);
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1.05em;
+}
+.eff-tip-formula {
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+.eff-tip-note {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+.eff-tip-stats {
+  color: var(--text-muted);
+  border-top: 1px dotted #444;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+.eff-tip-omnivamp {
+  color: #ffc107;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+}
+.eff-tip-link {
+  display: block;
+  color: #4fc3f7;
+  text-decoration: none;
+  border-top: 1px dotted #444;
+  padding-top: 6px;
+}
+.eff-tip-link:hover { text-decoration: underline; }
 
 /* Add to build button */
 .add-btn {

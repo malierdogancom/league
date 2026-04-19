@@ -102,21 +102,52 @@ function calcGoldEfficiency(item) {
   return Math.round((rawValue / item.gold) * 100);
 }
 
-const EFF_TOOLTIP =
-  "Base stat efficiency only — passives not counted.\n" +
-  "Gold values (from LoL Wiki reference items):\n" +
-  "  AP 20g · AD 35g · Health 2.67g · Mana 1g\n" +
-  "  Armor 20g · Magic Resist 20g · Ability Haste 50g\n" +
-  "  Move Speed 12g · Lethality 30g · Magic Pen 46.67g\n" +
-  "  Crit 40g/1% · Atk Speed 25g/1% · Move Speed% 65.1g/1%\n" +
-  "  Life Steal 53.57g/1% · Armor Pen% 41.67g/1% · Magic Pen% 46.15g/1%\n" +
-  "Source: wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency";
-
 function effBadge(item) {
   const eff = calcGoldEfficiency(item);
   if (eff === null) return "";
   const cls = eff >= 85 ? "eff-high" : eff >= 60 ? "eff-mid" : "eff-low";
-  return `<span class="efficiency ${cls}" title="${EFF_TOOLTIP}">${eff}%</span>`;
+  return `<span class="efficiency ${cls}">${eff}% <span class="eff-info-icon">ⓘ</span></span>`;
+}
+
+function initEffTooltip() {
+  const tip = document.createElement("div");
+  tip.id = "eff-tooltip";
+  tip.innerHTML = `
+    <div class="eff-tip-title">Gold Efficiency</div>
+    <div class="eff-tip-formula">Formula: Σ(stat × gold/unit) ÷ item cost × 100%</div>
+    <div class="eff-tip-note">Base stats only — passives & actives excluded.</div>
+    <div class="eff-tip-stats">
+      AP 20g · AD 35g · HP 2.67g · Mana 1g<br>
+      Armor 20g · MR 20g · AH 50g · Flat MS 12g<br>
+      Lethality 30g · Magic Pen 46.67g<br>
+      Crit 40g/1% · AS 25g/1% · MS% 65.1g/1%<br>
+      Life Steal 53.57g/1% · Armor Pen% 41.67g/1% · Magic Pen% 46.15g/1%
+    </div>
+    <div class="eff-tip-omnivamp">⚠ Omnivamp: resmi referans item yok — Life Steal değeri kullanıldı (tahmin).</div>
+    <a class="eff-tip-link" href="https://wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency" target="_blank" rel="noopener">→ LoL Wiki: Gold Efficiency</a>
+  `;
+  document.body.appendChild(tip);
+
+  document.addEventListener("mouseover", (e) => {
+    if (!e.target.closest(".eff-info-icon")) return;
+    const badge = e.target.closest(".efficiency");
+    const rect = badge.getBoundingClientRect();
+    tip.style.display = "block";
+    const tipW = tip.offsetWidth || 300;
+    const tipH = tip.offsetHeight || 220;
+    const left = Math.max(8, Math.min(rect.left, window.innerWidth - tipW - 8));
+    const top = rect.top - tipH - 8;
+    tip.style.left = left + "px";
+    tip.style.top = (top < 8 ? rect.bottom + 8 : top) + "px";
+  });
+
+  document.addEventListener("mouseout", (e) => {
+    if (!e.target.closest(".eff-info-icon")) return;
+    if (tip.contains(e.relatedTarget)) return;
+    tip.style.display = "none";
+  });
+
+  tip.addEventListener("mouseleave", () => { tip.style.display = "none"; });
 }
 
 function statLabel(key) {
@@ -151,6 +182,7 @@ async function init() {
     appData.ARAM = await aramRes.json();
     buildSortIcons();
     buildTagFilter();
+    initEffTooltip();
     setupListeners();
     render();
   } catch (err) {
