@@ -131,9 +131,10 @@ function initEffTooltip() {
   `;
   document.body.appendChild(tip);
 
-  document.addEventListener("mouseover", (e) => {
-    if (!e.target.closest(".eff-info-icon")) return;
-    const badge = e.target.closest(".efficiency");
+  let hideTimer = null;
+
+  const showTip = (badge) => {
+    clearTimeout(hideTimer);
     const rect = badge.getBoundingClientRect();
     tip.style.display = "block";
     const tipW = tip.offsetWidth || 300;
@@ -142,16 +143,24 @@ function initEffTooltip() {
     const top = rect.top - tipH - 8;
     tip.style.left = left + "px";
     tip.style.top = (top < 8 ? rect.bottom + 8 : top) + "px";
+  };
+
+  const scheduledHide = () => {
+    hideTimer = setTimeout(() => { tip.style.display = "none"; }, 150);
+  };
+
+  document.addEventListener("mouseover", (e) => {
+    if (e.target.closest(".eff-info-icon")) {
+      showTip(e.target.closest(".efficiency"));
+    } else if (e.target.closest("#eff-tooltip")) {
+      clearTimeout(hideTimer);
+    }
   });
 
   document.addEventListener("mouseout", (e) => {
-    if (!e.target.closest(".eff-info-icon")) return;
-    if (tip.contains(e.relatedTarget)) return;
-    tip.style.display = "none";
-  });
-
-  tip.addEventListener("mouseleave", () => {
-    tip.style.display = "none";
+    if (e.target.closest(".eff-info-icon") || e.target.closest("#eff-tooltip")) {
+      scheduledHide();
+    }
   });
 }
 
