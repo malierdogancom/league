@@ -148,14 +148,12 @@ select:focus {
 
 /* Expandable Section */
 .card-details {
-  max-height: 0;
   overflow: hidden;
-  transition:
-    max-height 0.3s ease-out,
-    padding 0.3s ease;
   background-color: #111;
   font-size: 0.9em;
   color: var(--text-muted);
+  padding: 15px;
+  border-top: 1px solid #333;
 }
 
 /* When clicked, add 'expanded' class via JS */
