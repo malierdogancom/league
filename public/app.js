@@ -1,50 +1,48 @@
 /**
- * LoL Item Explorer - Stat Focused
+ * LoL Item Explorer
+ * HTML ile tam uyumlu — description yok, sadece statlar
  */
 
+// Tüm stat key → okunabilir isim eşleştirmesi
 const STAT_MAP = {
-  FlatMagicDamageMod: { label: "Ability Power", short: "AP" },
-  FlatPhysicalDamageMod: { label: "Attack Damage", short: "AD" },
-  FlatCritChanceMod: { label: "Crit Chance", short: "Crit" },
-  PercentAttackSpeedMod: { label: "Attack Speed", short: "AS" },
-  FlatMagicPenetrationMod: { label: "Magic Pen", short: "MPen" },
-  PercentMagicPenetrationMod: { label: "Magic Pen %", short: "MPen%" },
-  FlatPhysicalLethality: { label: "Lethality", short: "Leth" },
-  PercentArmorPenetrationMod: { label: "Armor Pen %", short: "APen%" },
-  FlatHPPoolMod: { label: "Health", short: "HP" },
-  FlatArmorMod: { label: "Armor", short: "Armor" },
-  FlatSpellBlockMod: { label: "Magic Resist", short: "MR" },
-  FlatMPPoolMod: { label: "Mana", short: "Mana" },
-  FlatAbilityHaste: { label: "Ability Haste", short: "AH" },
-  PercentMovementSpeedMod: { label: "Move Speed %", short: "MS%" },
-  FlatMovementSpeedMod: { label: "Move Speed", short: "MS" },
-  PercentLifeStealMod: { label: "Life Steal", short: "LS" },
-  PercentOmnivampMod: { label: "Omnivamp", short: "OV" },
+  FlatMagicDamageMod: "Ability Power",
+  FlatPhysicalDamageMod: "Attack Damage",
+  FlatCritChanceMod: "Crit Chance",
+  PercentAttackSpeedMod: "Attack Speed",
+  FlatMagicPenetrationMod: "Magic Pen",
+  PercentMagicPenetrationMod: "Magic Pen %",
+  FlatPhysicalLethality: "Lethality",
+  PercentArmorPenetrationMod: "Armor Pen %",
+  FlatHPPoolMod: "Health",
+  FlatArmorMod: "Armor",
+  FlatSpellBlockMod: "Magic Resist",
+  FlatMPPoolMod: "Mana",
+  FlatAbilityHaste: "Ability Haste",
+  PercentMovementSpeedMod: "Move Speed %",
+  FlatMovementSpeedMod: "Move Speed",
+  PercentLifeStealMod: "Life Steal",
+  PercentOmnivampMod: "Omnivamp",
 };
 
-function formatStatKey(key) {
-  return STAT_MAP[key]
-    ? STAT_MAP[key].label
-    : key.replace(/^(Flat|Percent)/, "").replace(/Mod$/, "");
+function statLabel(key) {
+  return STAT_MAP[key] || key;
 }
 
-function formatStatValue(key, v) {
-  if (key.startsWith("Percent") || key === "FlatCritChanceMod") {
-    return `+${(v * 100).toFixed(0)}%`;
-  }
-  return `+${v}`;
+function statValue(key, v) {
+  const isPercent = key.startsWith("Percent") || key === "FlatCritChanceMod";
+  return isPercent ? `+${(v * 100).toFixed(0)}%` : `+${v}`;
 }
 
-// ── State ─────────────────────────────────────────────
+// ── Uygulama durumu ───────────────────────────────────
 let appData = { SR: null, ARAM: null };
-let currentState = {
+let state = {
   map: "SR",
   category: "Normal",
   search: "",
   sort: "gold-desc",
 };
 
-// ── Init ──────────────────────────────────────────────
+// ── Başlangıç ────────────────────────────────────────
 async function init() {
   try {
     const [srRes, aramRes] = await Promise.all([
@@ -54,74 +52,74 @@ async function init() {
     appData.SR = await srRes.json();
     appData.ARAM = await aramRes.json();
 
+    // Sort dropdown'ı tüm stat'larla doldur
     buildSortOptions();
-    setupEventListeners();
+    setupListeners();
     render();
-  } catch (e) {
-    console.error("Data Load Fail:", e);
-    const el = document.getElementById("version-display");
-    if (el) el.textContent = "Veri yüklenemedi!";
+  } catch (err) {
+    console.error("Veri yüklenemedi:", err);
+    document.getElementById("version-display").textContent =
+      "Veri yüklenemedi!";
   }
 }
 
-// ── Sort Options — tüm stat'lar için dinamik oluştur ──
+// Sort seçeneklerini dinamik oluştur (HTML'deki hardcoded olanları değiştir)
 function buildSortOptions() {
-  const select = document.getElementById("sort-select");
-  select.innerHTML = `
-    <option value="gold-desc">💰 Price: High → Low</option>
-    <option value="gold-asc">💰 Price: Low → High</option>
-    <option disabled>──────────────</option>
+  const sel = document.getElementById("sort-select");
+  sel.innerHTML = `
+    <option value="gold-desc">Price: High → Low</option>
+    <option value="gold-asc">Price: Low → High</option>
   `;
-
-  Object.entries(STAT_MAP).forEach(([key, { label }]) => {
+  Object.entries(STAT_MAP).forEach(([key, label]) => {
     const opt = document.createElement("option");
     opt.value = key;
-    opt.textContent = `${label}: High → Low`;
-    select.appendChild(opt);
+    opt.textContent = label + ": High → Low";
+    sel.appendChild(opt);
   });
 }
 
-// ── Events ────────────────────────────────────────────
-function setupEventListeners() {
-  document.querySelectorAll(".toggle-buttons").forEach((group) => {
-    group.addEventListener("click", (e) => {
-      if (e.target.tagName !== "BUTTON") return;
-      group
-        .querySelectorAll("button")
-        .forEach((b) => b.classList.remove("active"));
-      e.target.classList.add("active");
-
-      const val = e.target.dataset.value;
-      if (group.id === "map-toggle") {
-        currentState.map = val;
-        // Harita değişince Ornn seçiliyse Normal'e dön (ARAM'da Ornn yok olabilir)
-        if (val === "ARAM" && currentState.category === "Ornn") {
-          currentState.category = "Normal";
-          document.querySelectorAll("#category-toggle button").forEach((b) => {
-            b.classList.toggle("active", b.dataset.value === "Normal");
-          });
-        }
-      }
-      if (group.id === "category-toggle") currentState.category = val;
-      render();
-    });
+// ── Event Listener'lar ────────────────────────────────
+function setupListeners() {
+  // Map toggle — id="map-toggle"
+  document.getElementById("map-toggle").addEventListener("click", (e) => {
+    if (e.target.tagName !== "BUTTON") return;
+    setActiveButton("map-toggle", e.target);
+    state.map = e.target.dataset.value;
+    render();
   });
 
+  // Category toggle — id="category-toggle"
+  document.getElementById("category-toggle").addEventListener("click", (e) => {
+    if (e.target.tagName !== "BUTTON") return;
+    setActiveButton("category-toggle", e.target);
+    state.category = e.target.dataset.value;
+    render();
+  });
+
+  // Arama — id="search-input"
   document.getElementById("search-input").addEventListener("input", (e) => {
-    currentState.search = e.target.value.toLowerCase();
+    state.search = e.target.value.toLowerCase().trim();
     render();
   });
 
+  // Sıralama — id="sort-select"
   document.getElementById("sort-select").addEventListener("change", (e) => {
-    currentState.sort = e.target.value;
+    state.sort = e.target.value;
     render();
   });
 
-  // Kart expand/collapse
+  // Kart tıklama (expand/collapse) — id="items-grid"
   document.getElementById("items-grid").addEventListener("click", (e) => {
     const card = e.target.closest(".item-card");
     if (card) card.classList.toggle("expanded");
   });
+}
+
+function setActiveButton(groupId, clickedBtn) {
+  document
+    .querySelectorAll(`#${groupId} button`)
+    .forEach((b) => b.classList.remove("active"));
+  clickedBtn.classList.add("active");
 }
 
 // ── Render ────────────────────────────────────────────
@@ -129,94 +127,88 @@ function render() {
   const grid = document.getElementById("items-grid");
   grid.innerHTML = "";
 
-  const source = appData[currentState.map];
-  if (!source || !source.items) {
+  const source = appData[state.map];
+  if (!source || !Array.isArray(source.items)) {
     grid.innerHTML = `<p style="color:#e74c3c;padding:20px">
-      Veri yüklenemedi: <strong>${currentState.map}</strong>
+      "${state.map}" verisi bulunamadı.
     </p>`;
     return;
   }
 
   let items = [...source.items];
 
-  // ── Kategori filtresi ──
+  // 1. Kategori filtresi
   items = items.filter((item) => {
-    const tags = item.tags || [];
-    const isBoots = tags.includes("Boots");
+    const tags = Array.isArray(item.tags) ? item.tags : [];
     const isOrnn = item.isOrnn === true;
+    const isBoots = tags.includes("Boots");
 
-    if (currentState.category === "Ornn") return isOrnn;
-    if (currentState.category === "Boots") return isBoots && !isOrnn;
-    // Normal: ne Ornn ne Boots
-    return !isOrnn && !isBoots;
+    if (state.category === "Ornn") return isOrnn;
+    if (state.category === "Boots") return isBoots && !isOrnn;
+    return !isOrnn && !isBoots; // Normal
   });
 
-  // ── Arama filtresi ──
-  if (currentState.search) {
+  // 2. Arama filtresi
+  if (state.search) {
     items = items.filter((item) =>
-      item.name.toLowerCase().includes(currentState.search),
+      item.name.toLowerCase().includes(state.search),
     );
   }
 
-  // ── Sıralama ──
+  // 3. Sıralama
   items.sort((a, b) => {
-    if (currentState.sort === "gold-desc") return b.gold - a.gold;
-    if (currentState.sort === "gold-asc") return a.gold - b.gold;
-    const aVal = a.stats?.[currentState.sort] ?? 0;
-    const bVal = b.stats?.[currentState.sort] ?? 0;
-    return bVal - aVal;
+    if (state.sort === "gold-desc") return b.gold - a.gold;
+    if (state.sort === "gold-asc") return a.gold - b.gold;
+    return (b.stats?.[state.sort] ?? 0) - (a.stats?.[state.sort] ?? 0);
   });
 
-  // ── Versiyon + sayı ──
+  // 4. Versiyon + sayı güncelle
   const version = source.version || "";
-  const versionEl = document.getElementById("version-display");
-  if (versionEl) {
-    const mapLabel = currentState.map === "ARAM" ? "ARAM" : "SR";
-    versionEl.textContent =
-      (version ? "Patch " + version + " · " : "") +
-      items.length +
-      " items · " +
-      mapLabel;
-  }
+  document.getElementById("version-display").textContent =
+    (version ? "Patch " + version + "  ·  " : "") +
+    items.length +
+    " items  ·  " +
+    (state.map === "ARAM" ? "ARAM" : "Summoner's Rift");
 
-  // ── Kartlar ──
+  // 5. Sonuç yoksa mesaj
   if (items.length === 0) {
-    grid.innerHTML = `<p style="color:#a09b8c;padding:20px">Bu filtreyle eşleşen item bulunamadı.</p>`;
+    grid.innerHTML = `<p style="color:#a09b8c;padding:20px">
+      Eşleşen item bulunamadı.
+    </p>`;
     return;
   }
 
+  // 6. Kartları oluştur
   items.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "item-card";
-
-    // Hangi stat sıralama yapılıyorsa onu öne çıkar
-    const sortKey = currentState.sort;
     const stats = item.stats || {};
 
-    // Sıralama statını öne al, geri kalanları alfabetik sırala
-    const statEntries = Object.entries(stats).sort(([a], [b]) => {
-      if (a === sortKey) return -1;
-      if (b === sortKey) return 1;
+    // Sıralama statını en üste al
+    const entries = Object.entries(stats).sort(([a], [b]) => {
+      if (a === state.sort) return -1;
+      if (b === state.sort) return 1;
       return 0;
     });
 
-    const statsHtml = statEntries
+    const statsHtml = entries
       .map(([k, v]) => {
-        const isActive = k === sortKey && !sortKey.includes("gold");
-        return `<div class="stat-line${isActive ? " stat-highlight" : ""}">
-          <span>${formatStatKey(k)}</span>
-          <span class="stat-value">${formatStatValue(k, v)}</span>
+        const highlight = k === state.sort && !state.sort.includes("gold");
+        return `
+        <div class="stat-line${highlight ? " stat-highlight" : ""}">
+          <span>${statLabel(k)}</span>
+          <span class="stat-value">${statValue(k, v)}</span>
         </div>`;
       })
       .join("");
 
+    const card = document.createElement("div");
+    card.className = "item-card";
     card.innerHTML = `
       <div class="card-header">
         <img src="${item.image_url}" alt="${item.name}"
              onerror="this.style.opacity='0.3'">
         <div class="header-info">
           <h3>${item.name}</h3>
-          <div class="gold-text">💰 ${item.gold} Gold</div>
+          <div class="gold-text">${item.gold} Gold</div>
         </div>
       </div>
       <div class="card-details">
