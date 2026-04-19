@@ -71,22 +71,26 @@ const TAG_LABELS = {
   Stealth: "Stealth",
 };
 
-// Gold value per raw unit (Percent stats stored 0–1, so 1% crit = 0.01 * 4000 = 40g)
+// Gold value per raw unit. Percent stats stored 0–1 (e.g. 0.15 = 15%).
+// Basic refs: wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency
 const GOLD_VALUES = {
-  FlatMagicDamageMod:    21.3,
-  FlatPhysicalDamageMod: 35,
-  FlatCritChanceMod:     4000,
-  PercentAttackSpeedMod: 3330,
-  FlatMagicPenetrationMod:  31.25,
-  FlatPhysicalLethality:    31.25,
-  FlatHPPoolMod:   2.67,
-  FlatArmorMod:    20,
-  FlatSpellBlockMod: 18,
-  FlatMPPoolMod:   1.5,
-  FlatAbilityHaste: 26.67,
-  FlatMovementSpeedMod: 31.25,
-  PercentLifeStealMod:  3750,
-  PercentOmnivampMod:   3000,
+  FlatMagicDamageMod:         20,     // Amplifying Tome 400g / 20 AP
+  FlatPhysicalDamageMod:      35,     // Long Sword 350g / 10 AD
+  FlatCritChanceMod:          4000,   // Cloak of Agility 600g / 15% → 40g/1%
+  PercentAttackSpeedMod:      2500,   // Dagger 250g / 10% → 25g/1%
+  FlatMagicPenetrationMod:    46.67,  // Sorc Shoes: (1100 - 45×12) / 12
+  PercentMagicPenetrationMod: 4615,   // Blighting Jewel: (1100 - 25×20) / 0.13
+  FlatPhysicalLethality:      30,     // Serrated Dirk: (1000 - 20×35) / 10
+  PercentArmorPenetrationMod: 4167,   // Last Whisper: (1450 - 20×35) / 0.18
+  FlatHPPoolMod:              2.67,   // Ruby Crystal 400g / 150 HP
+  FlatArmorMod:               20,     // Cloth Armor 300g / 15 Armor
+  FlatSpellBlockMod:          20,     // Null-Magic Mantle 400g / 20 MR
+  FlatMPPoolMod:              1,      // Sapphire Crystal 300g / 300 Mana
+  FlatAbilityHaste:           50,     // Glowing Mote 250g / 5 AH
+  FlatMovementSpeedMod:       12,     // Boots 300g / 25 MS
+  PercentMovementSpeedMod:    6510.5, // avg of Aether Wisp / Rectrix / Winged Moonplate / Zeal
+  PercentLifeStealMod:        5357,   // Vampiric Scepter: (900 - 15×35) / 0.07
+  PercentOmnivampMod:         5357,   // no official ref, using same as life steal
 };
 
 function calcGoldEfficiency(item) {
@@ -100,13 +104,12 @@ function calcGoldEfficiency(item) {
 
 const EFF_TOOLTIP =
   "Base stat efficiency only — passives not counted.\n" +
-  "Gold values used:\n" +
-  "  AP 21.3g · AD 35g · Health 2.67g\n" +
-  "  Armor 20g · Magic Res 18g · Mana 1.5g\n" +
-  "  Ability Haste 26.67g · Move Speed 31.25g\n" +
-  "  Lethality 31.25g · Magic Pen 31.25g\n" +
-  "  Crit Chance 40g/1% · Atk Speed 33.3g/1%\n" +
-  "  Life Steal 37.5g/1% · Omnivamp 30g/1%\n" +
+  "Gold values (from LoL Wiki reference items):\n" +
+  "  AP 20g · AD 35g · Health 2.67g · Mana 1g\n" +
+  "  Armor 20g · Magic Resist 20g · Ability Haste 50g\n" +
+  "  Move Speed 12g · Lethality 30g · Magic Pen 46.67g\n" +
+  "  Crit 40g/1% · Atk Speed 25g/1% · Move Speed% 65.1g/1%\n" +
+  "  Life Steal 53.57g/1% · Armor Pen% 41.67g/1% · Magic Pen% 46.15g/1%\n" +
   "Source: wiki.leagueoflegends.com/en-us/wiki/Gold_efficiency";
 
 function effBadge(item) {
