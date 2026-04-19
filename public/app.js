@@ -98,11 +98,21 @@ function calcGoldEfficiency(item) {
   return Math.round((rawValue / item.gold) * 100);
 }
 
+const EFF_TOOLTIP =
+  "Base stat efficiency only — passives not counted.\n" +
+  "Gold values used:\n" +
+  "  AP 21.3g · AD 35g · Health 2.67g\n" +
+  "  Armor 20g · Magic Res 18g · Mana 1.5g\n" +
+  "  Ability Haste 26.67g · Move Speed 31.25g\n" +
+  "  Lethality 31.25g · Magic Pen 31.25g\n" +
+  "  Crit Chance 40g/1% · Atk Speed 33.3g/1%\n" +
+  "  Life Steal 37.5g/1% · Omnivamp 30g/1%";
+
 function effBadge(item) {
   const eff = calcGoldEfficiency(item);
   if (eff === null) return "";
   const cls = eff >= 85 ? "eff-high" : eff >= 60 ? "eff-mid" : "eff-low";
-  return `<span class="efficiency ${cls}">${eff}%</span>`;
+  return `<span class="efficiency ${cls}" title="${EFF_TOOLTIP}">${eff}%</span>`;
 }
 
 function statLabel(key) {
