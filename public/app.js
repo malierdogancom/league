@@ -57,7 +57,7 @@ function statValue(key, v) {
 }
 
 let appData = { SR: null, ARAM: null };
-let state = { map: "SR", category: "Normal", search: "", sort: "gold-desc" };
+let state = { map: "SR", category: "Normal", search: "", goldSort: "gold-desc", selectedStats: [] };
 
 async function init() {
   try {
@@ -129,11 +129,22 @@ function setupListeners() {
   document.getElementById("sort-icons").addEventListener("click", (e) => {
     const btn = e.target.closest(".sort-btn");
     if (!btn) return;
-    document
-      .querySelectorAll("#sort-icons .sort-btn")
-      .forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-    state.sort = btn.dataset.value;
+    const val = btn.dataset.value;
+
+    if (val === "gold-desc" || val === "gold-asc") {
+      document.querySelectorAll("#sort-icons .sort-btn[data-value='gold-desc'], #sort-icons .sort-btn[data-value='gold-asc']")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      state.goldSort = val;
+    } else {
+      if (state.selectedStats.includes(val)) {
+        state.selectedStats = state.selectedStats.filter((s) => s !== val);
+        btn.classList.remove("active");
+      } else {
+        state.selectedStats.push(val);
+        btn.classList.add("active");
+      }
+    }
     render();
   });
 }
@@ -157,9 +168,11 @@ function render() {
     return !isBoots;
   });
 
-  // Filter out items that don't have the selected stat
-  if (!state.sort.startsWith("gold")) {
-    items = items.filter((item) => item.stats?.[state.sort] != null);
+  // Filter: item must have ALL selected stats
+  if (state.selectedStats.length > 0) {
+    items = items.filter((item) =>
+      state.selectedStats.every((stat) => item.stats?.[stat] != null)
+    );
   }
 
   if (state.search) {
@@ -168,11 +181,15 @@ function render() {
     );
   }
 
-  items.sort((a, b) => {
-    if (state.sort === "gold-desc") return b.gold - a.gold;
-    if (state.sort === "gold-asc") return a.gold - b.gold;
-    return (b.stats?.[state.sort] ?? 0) - (a.stats?.[state.sort] ?? 0);
-  });
+  // Sort: by first selected stat, or by gold if none selected
+  if (state.selectedStats.length > 0) {
+    const primary = state.selectedStats[0];
+    items.sort((a, b) => (b.stats?.[primary] ?? 0) - (a.stats?.[primary] ?? 0));
+  } else {
+    items.sort((a, b) =>
+      state.goldSort === "gold-desc" ? b.gold - a.gold : a.gold - b.gold
+    );
+  }
 
   const version = source.version || "";
   document.getElementById("version-display").textContent =
@@ -189,14 +206,15 @@ function render() {
 
   items.forEach((item) => {
     const stats = item.stats || {};
+    const primary = state.selectedStats[0];
     const entries = Object.entries(stats).sort(([a], [b]) => {
-      if (a === state.sort) return -1;
-      if (b === state.sort) return 1;
+      if (a === primary) return -1;
+      if (b === primary) return 1;
       return 0;
     });
 
     const toStatLine = ([k, v]) => {
-      const hl = k === state.sort && !state.sort.includes("gold");
+      const hl = k === primary;
       const iconUrl = STAT_ICON_MAP[k];
       const iconHtml = iconUrl ? `<img class="stat-icon" src="${iconUrl}" alt="">` : "";
       return `<div class="stat-line${hl ? " stat-highlight" : ""}">
