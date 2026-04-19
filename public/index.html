@@ -12,6 +12,7 @@
       <header>
         <h1>LoL Item Explorer</h1>
         <p id="version-display" class="version-text">Loading patch data...</p>
+        <button id="info-btn" class="clear-btn">About / Info</button>
       </header>
 
       <div class="controls">
@@ -40,12 +41,22 @@
         </div>
 
         <div class="control-group tag-group">
-          <label>Tags: <button id="clear-tags" class="clear-btn" style="display:none">× Clear</button></label>
+          <label
+            >Tags:
+            <button id="clear-tags" class="clear-btn" style="display: none">
+              × Clear
+            </button></label
+          >
           <div id="tag-filter" class="tag-filter"></div>
         </div>
 
         <div class="control-group sort-group">
-          <label>Sort by stat: <button id="clear-stats" class="clear-btn" style="display:none">× Clear</button></label>
+          <label
+            >Sort by stat:
+            <button id="clear-stats" class="clear-btn" style="display: none">
+              × Clear
+            </button></label
+          >
           <div id="sort-icons" class="sort-icons"></div>
         </div>
       </div>
@@ -55,13 +66,44 @@
 
     <div id="build-panel" class="build-panel">
       <div class="build-header">
-        <span class="build-title">Build (<span id="build-count">0</span>/6)</span>
+        <span class="build-title"
+          >Build (<span id="build-count">0</span>/6)</span
+        >
         <div id="build-slots" class="build-slots"></div>
         <span id="build-total-gold" class="build-total-gold"></span>
         <button id="build-toggle-stats" class="clear-btn">Stats ▼</button>
         <button id="clear-build" class="clear-btn">× Clear</button>
       </div>
       <div id="build-stats-panel" class="build-stats-panel"></div>
+    </div>
+
+    <div id="about-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>About LoL Item Explorer</h2>
+          <button id="close-modal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>Purpose of the Site</h3>
+          <p>
+            This site allows you to filter and sort League of Legends items
+            based on their stats, gold efficiency, and tags. You can create your
+            own custom builds to see total stats and overall costs.
+          </p>
+
+          <h3>About the Developer</h3>
+          <p>Developed by <strong>Mali Erdoğan</strong>.</p>
+          <p>[You can add your brief description here...]</p>
+
+          <div class="social-links">
+            <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener">GitHub</a>
+            <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="YOUR_X_LINK" target="_blank" rel="noopener">X (Twitter)</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="app.js"></script>

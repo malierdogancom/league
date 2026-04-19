@@ -374,6 +374,24 @@ function setupListeners() {
       panel.style.display = state.buildStatsOpen ? "flex" : "none";
       btn.textContent = state.buildStatsOpen ? "Stats ▲" : "Stats ▼";
     });
+
+  // Modal Listeners
+  const aboutModal = document.getElementById("about-modal");
+
+  document.getElementById("info-btn").addEventListener("click", () => {
+    aboutModal.style.display = "flex";
+  });
+
+  document.getElementById("close-modal").addEventListener("click", () => {
+    aboutModal.style.display = "none";
+  });
+
+  // Modal disina tiklayinca kapatma
+  aboutModal.addEventListener("click", (e) => {
+    if (e.target === aboutModal) {
+      aboutModal.style.display = "none";
+    }
+  });
 }
 
 function updateBuildPanel() {
