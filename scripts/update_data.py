@@ -2,6 +2,7 @@ import json
 import requests
 import os
 import re
+from datetime import datetime, timezone
 
 VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json"
 DATA_URL_TEMPLATE = "https://ddragon.leagueoflegends.com/cdn/{}/data/en_US/item.json"
@@ -120,8 +121,9 @@ def process_items():
     os.makedirs(DATA_DIR, exist_ok=True)
     
     # Veriyi versiyon etiketiyle sar
-    aram_output = {"version": latest_version, "items": aram_items}
-    sr_output = {"version": latest_version, "items": sr_items}
+    updated_at = datetime.now(timezone.utc).strftime("%d %B %Y")
+    aram_output = {"version": latest_version, "updatedAt": updated_at, "items": aram_items}
+    sr_output = {"version": latest_version, "updatedAt": updated_at, "items": sr_items}
 
     with open(ARAM_FILE, "w", encoding="utf-8") as f:
         json.dump(aram_output, f, ensure_ascii=False, indent=2)

@@ -505,11 +505,13 @@ function render() {
   }
 
   const version = source.version || "";
+  const updatedAt = source.updatedAt ? " · Son güncelleme: " + source.updatedAt : "";
   document.getElementById("version-display").textContent =
     (version ? "Patch " + version + " · " : "") +
     items.length +
     " items · " +
-    (state.map === "ARAM" ? "ARAM" : "Summoner's Rift");
+    (state.map === "ARAM" ? "ARAM" : "Summoner's Rift") +
+    updatedAt;
 
   if (items.length === 0) {
     grid.innerHTML = `<p style="color:#a09b8c;padding:20px">Eşleşen item bulunamadı.</p>`;
