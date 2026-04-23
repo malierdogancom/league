@@ -505,7 +505,7 @@ function render() {
   }
 
   const version = source.version || "";
-  const updatedAt = source.updatedAt ? " · Son güncelleme: " + source.updatedAt : "";
+  const updatedAt = source.updatedAt ? " · Updated: " + source.updatedAt : "";
   document.getElementById("version-display").textContent =
     (version ? "Patch " + version + " · " : "") +
     items.length +
