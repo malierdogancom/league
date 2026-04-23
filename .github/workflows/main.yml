@@ -7,9 +7,12 @@ on:
     # Diğer günler herhangi bir acil düzeltme (hotfix) ihtimaline karşı günde 1 kez kontrol et
     - cron: "0 12 * * 0,1,2,5,6"
   workflow_dispatch:
-  push: # ← bunu ekle
+  push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   update-data:
@@ -44,16 +47,6 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         env:
-          FIREBASE_KEY: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_MALI_ERDOGAN }}"
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          # Service Account JSON verisini gecici bir dosyaya yaziyoruz
-          echo "$FIREBASE_KEY" > firebase_credentials.json
-
-          # Google'in kimlik dogrulama sistemine bu dosyanin yolunu gosteriyoruz
-          export GOOGLE_APPLICATION_CREDENTIALS="${{ github.workspace }}/firebase_credentials.json"
-
-          # Dogrudan deploy islemi (sadece hosting'i ve dogru projeyi secerek)
           firebase deploy --only hosting --project portfolio-mali-erdogan --non-interactive
-
-          # Guvenlik icin gecici anahtar dosyasini siliyoruz
-          rm firebase_credentials.json
