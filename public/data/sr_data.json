@@ -1,6 +1,6 @@
 {
-  "version": "16.8.1",
-  "updatedAt": "27 April 2026",
+  "version": "16.9.1",
+  "updatedAt": "29 April 2026",
   "items": [
     {
       "id": "1001",
@@ -13,7 +13,7 @@
       "tags": [
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/1001.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/1001.png"
     },
     {
       "id": "2065",
@@ -33,7 +33,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2065.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2065.png"
     },
     {
       "id": "2501",
@@ -48,7 +48,7 @@
         "Health",
         "Damage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2501.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2501.png"
     },
     {
       "id": "2502",
@@ -66,7 +66,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2502.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2502.png"
     },
     {
       "id": "2503",
@@ -84,7 +84,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2503.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2503.png"
     },
     {
       "id": "2504",
@@ -100,17 +100,17 @@
         "SpellBlock",
         "HealthRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2504.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2504.png"
     },
     {
       "id": "2510",
       "name": "Dusk and Dawn",
-      "description": "Spellblade (0s) After using an Ability, your next Attack deals bonus magic damage On-Hit and applies On-Hit effects an additional time.",
+      "description": "Spellblade (0s) After using an Ability, your next Attack deals bonus magic damage and heals you for On-Hit and then applies On-Hit effects an additional time.",
       "gold": 3100,
       "stats": {
-        "FlatHPPoolMod": 350,
-        "FlatMagicDamageMod": 70,
-        "PercentAttackSpeedMod": 0.25,
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 60,
+        "PercentAttackSpeedMod": 0.2,
         "FlatAbilityHaste": 20
       },
       "tags": [
@@ -120,7 +120,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2510.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2510.png"
     },
     {
       "id": "2512",
@@ -138,7 +138,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2512.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2512.png"
     },
     {
       "id": "2517",
@@ -157,7 +157,7 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2517.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2517.png"
     },
     {
       "id": "2520",
@@ -174,7 +174,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2520.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2520.png"
     },
     {
       "id": "2522",
@@ -191,7 +191,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2522.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2522.png"
     },
     {
       "id": "2523",
@@ -206,7 +206,7 @@
         "Damage",
         "CriticalStrike"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2523.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2523.png"
     },
     {
       "id": "2524",
@@ -227,7 +227,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2524.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2524.png"
     },
     {
       "id": "2525",
@@ -245,24 +245,7 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/2525.png"
-    },
-    {
-      "id": "3002",
-      "name": "Trailblazer",
-      "description": "Lead the Way While moving, build up to 20 bonus Move Speed . At max speed: Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.",
-      "gold": 2400,
-      "stats": {
-        "FlatHPPoolMod": 250,
-        "FlatArmorMod": 40,
-        "PercentMovementSpeedMod": 0.04
-      },
-      "tags": [
-        "Health",
-        "Armor",
-        "NonbootsMovement"
-      ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3002.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/2525.png"
     },
     {
       "id": "3003",
@@ -279,7 +262,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3003.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3003.png"
     },
     {
       "id": "3004",
@@ -298,7 +281,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3004.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3004.png"
     },
     {
       "id": "3006",
@@ -313,7 +296,23 @@
         "AttackSpeed",
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3006.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3006.png"
+    },
+    {
+      "id": "3008",
+      "name": "Gluttonous Greaves",
+      "description": "Slay Gain 1% Omnivamp on Champion takedown, stacking up to 6 times.",
+      "gold": 950,
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "PercentOmnivampMod": 0.04
+      },
+      "tags": [
+        "LifeSteal",
+        "SpellVamp",
+        "Boots"
+      ],
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3008.png"
     },
     {
       "id": "3009",
@@ -326,7 +325,7 @@
       "tags": [
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3009.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3009.png"
     },
     {
       "id": "3020",
@@ -341,7 +340,7 @@
         "Boots",
         "MagicPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3020.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3020.png"
     },
     {
       "id": "3026",
@@ -356,7 +355,7 @@
         "Armor",
         "Damage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3026.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3026.png"
     },
     {
       "id": "3031",
@@ -372,7 +371,7 @@
         "CriticalStrike",
         "Damage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3031.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3031.png"
     },
     {
       "id": "3032",
@@ -388,7 +387,7 @@
         "CriticalStrike",
         "AttackSpeed"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3032.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3032.png"
     },
     {
       "id": "3033",
@@ -405,7 +404,7 @@
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3033.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3033.png"
     },
     {
       "id": "3036",
@@ -422,7 +421,7 @@
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3036.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3036.png"
     },
     {
       "id": "3041",
@@ -438,7 +437,7 @@
         "SpellDamage",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3041.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3041.png"
     },
     {
       "id": "3046",
@@ -455,7 +454,7 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3046.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3046.png"
     },
     {
       "id": "3047",
@@ -470,7 +469,7 @@
         "Armor",
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3047.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3047.png"
     },
     {
       "id": "3050",
@@ -489,7 +488,7 @@
         "Armor",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3050.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3050.png"
     },
     {
       "id": "3053",
@@ -505,7 +504,7 @@
         "Damage",
         "Tenacity"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3053.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3053.png"
     },
     {
       "id": "3065",
@@ -524,7 +523,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3065.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3065.png"
     },
     {
       "id": "3068",
@@ -542,7 +541,7 @@
         "Aura",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3068.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3068.png"
     },
     {
       "id": "3071",
@@ -563,7 +562,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3071.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3071.png"
     },
     {
       "id": "3072",
@@ -578,7 +577,7 @@
         "Damage",
         "LifeSteal"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3072.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3072.png"
     },
     {
       "id": "3073",
@@ -598,7 +597,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3073.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3073.png"
     },
     {
       "id": "3074",
@@ -617,7 +616,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3074.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3074.png"
     },
     {
       "id": "3075",
@@ -632,7 +631,7 @@
         "Health",
         "Armor"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3075.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3075.png"
     },
     {
       "id": "3078",
@@ -654,7 +653,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3078.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3078.png"
     },
     {
       "id": "3083",
@@ -668,7 +667,7 @@
         "Health",
         "HealthRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3083.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3083.png"
     },
     {
       "id": "3084",
@@ -682,7 +681,7 @@
         "Health",
         "HealthRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3084.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3084.png"
     },
     {
       "id": "3085",
@@ -700,25 +699,27 @@
         "OnHit",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3085.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3085.png"
     },
     {
       "id": "3087",
       "name": "Statikk Shiv",
-      "description": "Electrospark Attacks trigger chain lightning On-Hit , dealing magic damage with a cooldown. Electroshock Takedowns within 3 seconds of damaging the target reset Electrospark's cooldown.",
-      "gold": 2700,
+      "description": "Electrospark Your Energized Attacks fire chain lightning, applying On-Hit effects and dealing magic damage to nearby targets. Electroshock Basic Attacks grant extra Energized stacks.",
+      "gold": 3000,
       "stats": {
-        "FlatPhysicalDamageMod": 45,
+        "FlatMagicDamageMod": 45,
+        "FlatPhysicalDamageMod": 40,
         "PercentAttackSpeedMod": 0.3,
         "PercentMovementSpeedMod": 0.04
       },
       "tags": [
         "Damage",
         "AttackSpeed",
+        "SpellDamage",
         "OnHit",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3087.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3087.png"
     },
     {
       "id": "3089",
@@ -731,7 +732,7 @@
       "tags": [
         "SpellDamage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3089.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3089.png"
     },
     {
       "id": "3091",
@@ -749,7 +750,7 @@
         "OnHit",
         "Tenacity"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3091.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3091.png"
     },
     {
       "id": "3094",
@@ -766,7 +767,7 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3094.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3094.png"
     },
     {
       "id": "3097",
@@ -784,7 +785,7 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3097.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3097.png"
     },
     {
       "id": "3100",
@@ -802,7 +803,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3100.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3100.png"
     },
     {
       "id": "3102",
@@ -817,7 +818,7 @@
         "SpellBlock",
         "SpellDamage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3102.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3102.png"
     },
     {
       "id": "3107",
@@ -834,7 +835,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3107.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3107.png"
     },
     {
       "id": "3109",
@@ -855,7 +856,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3109.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3109.png"
     },
     {
       "id": "3110",
@@ -874,7 +875,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3110.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3110.png"
     },
     {
       "id": "3111",
@@ -891,7 +892,7 @@
         "SpellBlock",
         "Tenacity"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3111.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3111.png"
     },
     {
       "id": "3115",
@@ -909,7 +910,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3115.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3115.png"
     },
     {
       "id": "3116",
@@ -925,7 +926,7 @@
         "SpellDamage",
         "Slow"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3116.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3116.png"
     },
     {
       "id": "3118",
@@ -942,7 +943,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3118.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3118.png"
     },
     {
       "id": "3119",
@@ -959,7 +960,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3119.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3119.png"
     },
     {
       "id": "3124",
@@ -977,7 +978,7 @@
         "SpellDamage",
         "OnHit"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3124.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3124.png"
     },
     {
       "id": "3135",
@@ -992,7 +993,7 @@
         "MagicPenetration",
         "SpellDamage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3135.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3135.png"
     },
     {
       "id": "3137",
@@ -1009,7 +1010,7 @@
         "MagicPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3137.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3137.png"
     },
     {
       "id": "3139",
@@ -1029,7 +1030,7 @@
         "NonbootsMovement",
         "Tenacity"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3139.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3139.png"
     },
     {
       "id": "3142",
@@ -1047,7 +1048,7 @@
         "NonbootsMovement",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3142.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3142.png"
     },
     {
       "id": "3143",
@@ -1064,7 +1065,7 @@
         "Active",
         "Slow"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3143.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3143.png"
     },
     {
       "id": "3146",
@@ -1083,7 +1084,7 @@
         "Active",
         "SpellVamp"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3146.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3146.png"
     },
     {
       "id": "3152",
@@ -1103,7 +1104,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3152.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3152.png"
     },
     {
       "id": "3153",
@@ -1122,7 +1123,7 @@
         "Slow",
         "OnHit"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3153.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3153.png"
     },
     {
       "id": "3156",
@@ -1141,7 +1142,7 @@
         "SpellVamp",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3156.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3156.png"
     },
     {
       "id": "3157",
@@ -1157,7 +1158,7 @@
         "SpellDamage",
         "Active"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3157.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3157.png"
     },
     {
       "id": "3158",
@@ -1172,7 +1173,7 @@
         "Boots",
         "CooldownReduction"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3158.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3158.png"
     },
     {
       "id": "3161",
@@ -1188,7 +1189,7 @@
         "Damage",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3161.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3161.png"
     },
     {
       "id": "3165",
@@ -1206,7 +1207,23 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3165.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3165.png"
+    },
+    {
+      "id": "3168",
+      "name": "Immortal Path",
+      "description": "Slay Gain 1% Omnivamp on Champion takedown, stacking up to 6 times. Now and Forever While above half Health, deal 5% increased damage. While below half Health, gain 15% increased healing, shielding, and regeneration.",
+      "gold": 950,
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "PercentOmnivampMod": 0.04
+      },
+      "tags": [
+        "LifeSteal",
+        "SpellVamp",
+        "Boots"
+      ],
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3168.png"
     },
     {
       "id": "3170",
@@ -1219,7 +1236,7 @@
       "tags": [
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3170.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3170.png"
     },
     {
       "id": "3171",
@@ -1234,7 +1251,7 @@
         "CooldownReduction",
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3171.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3171.png"
     },
     {
       "id": "3173",
@@ -1252,7 +1269,7 @@
         "Tenacity",
         "MagicResist"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3173.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3173.png"
     },
     {
       "id": "3174",
@@ -1267,7 +1284,7 @@
         "Armor",
         "Boots"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3174.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3174.png"
     },
     {
       "id": "3175",
@@ -1283,7 +1300,7 @@
         "Boots",
         "MagicPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3175.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3175.png"
     },
     {
       "id": "3179",
@@ -1302,7 +1319,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3179.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3179.png"
     },
     {
       "id": "3181",
@@ -1319,7 +1336,7 @@
         "Damage",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3181.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3181.png"
     },
     {
       "id": "3190",
@@ -1341,7 +1358,7 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3190.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3190.png"
     },
     {
       "id": "322065",
@@ -1361,7 +1378,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/322065.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/322065.png"
     },
     {
       "id": "3222",
@@ -1380,24 +1397,7 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3222.png"
-    },
-    {
-      "id": "323002",
-      "name": "Trailblazer",
-      "description": "Lead the Way While moving, build up to 20 bonus Move Speed . At max speed: Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.",
-      "gold": 2600,
-      "stats": {
-        "FlatHPPoolMod": 300,
-        "FlatArmorMod": 45,
-        "PercentMovementSpeedMod": 0.06
-      },
-      "tags": [
-        "Health",
-        "Armor",
-        "NonbootsMovement"
-      ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323002.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3222.png"
     },
     {
       "id": "323003",
@@ -1414,7 +1414,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323003.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323003.png"
     },
     {
       "id": "323004",
@@ -1433,7 +1433,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323004.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323004.png"
     },
     {
       "id": "323050",
@@ -1452,7 +1452,7 @@
         "Armor",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323050.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323050.png"
     },
     {
       "id": "323075",
@@ -1467,7 +1467,7 @@
         "Health",
         "Armor"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323075.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323075.png"
     },
     {
       "id": "323107",
@@ -1485,7 +1485,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323107.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323107.png"
     },
     {
       "id": "323109",
@@ -1506,7 +1506,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323109.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323109.png"
     },
     {
       "id": "323110",
@@ -1525,7 +1525,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323110.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323110.png"
     },
     {
       "id": "323119",
@@ -1542,7 +1542,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323119.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323119.png"
     },
     {
       "id": "323190",
@@ -1564,7 +1564,7 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323190.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323190.png"
     },
     {
       "id": "323222",
@@ -1583,7 +1583,7 @@
         "Tenacity",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323222.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323222.png"
     },
     {
       "id": "323504",
@@ -1600,7 +1600,7 @@
         "ManaRegen",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/323504.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/323504.png"
     },
     {
       "id": "324005",
@@ -1617,16 +1617,16 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/324005.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/324005.png"
     },
     {
       "id": "326616",
       "name": "Staff of Flowing Water",
-      "description": "Rapids Healing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
+      "description": "Rapids Healing or Shielding an ally grants you both 40 Ability Power and 15 Ability Haste for 6 seconds.",
       "gold": 2600,
       "stats": {
         "FlatMagicDamageMod": 45,
-        "FlatAbilityHaste": 15
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -1634,7 +1634,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326616.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/326616.png"
     },
     {
       "id": "326617",
@@ -1653,7 +1653,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326617.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/326617.png"
     },
     {
       "id": "326620",
@@ -1672,7 +1672,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326620.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/326620.png"
     },
     {
       "id": "326621",
@@ -1686,7 +1686,7 @@
         "SpellDamage",
         "ManaRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326621.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/326621.png"
     },
     {
       "id": "326657",
@@ -1705,7 +1705,7 @@
         "Mana",
         "ManaRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/326657.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/326657.png"
     },
     {
       "id": "328020",
@@ -1724,7 +1724,7 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/328020.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/328020.png"
     },
     {
       "id": "3302",
@@ -1743,7 +1743,7 @@
         "MagicPenetration",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3302.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3302.png"
     },
     {
       "id": "3504",
@@ -1760,7 +1760,7 @@
         "ManaRegen",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3504.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3504.png"
     },
     {
       "id": "3508",
@@ -1780,7 +1780,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3508.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3508.png"
     },
     {
       "id": "3742",
@@ -1798,7 +1798,7 @@
         "Slow",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3742.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3742.png"
     },
     {
       "id": "3748",
@@ -1815,7 +1815,7 @@
         "Damage",
         "OnHit"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3748.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3748.png"
     },
     {
       "id": "3814",
@@ -1832,7 +1832,7 @@
         "Damage",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/3814.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/3814.png"
     },
     {
       "id": "4005",
@@ -1849,7 +1849,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4005.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4005.png"
     },
     {
       "id": "4401",
@@ -1866,7 +1866,7 @@
         "SpellBlock",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4401.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4401.png"
     },
     {
       "id": "4628",
@@ -1881,7 +1881,7 @@
         "SpellDamage",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4628.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4628.png"
     },
     {
       "id": "4629",
@@ -1900,7 +1900,7 @@
         "NonbootsMovement",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4629.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4629.png"
     },
     {
       "id": "4633",
@@ -1918,7 +1918,7 @@
         "CooldownReduction",
         "SpellVamp"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4633.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4633.png"
     },
     {
       "id": "4645",
@@ -1933,7 +1933,7 @@
         "SpellDamage",
         "MagicPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4645.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4645.png"
     },
     {
       "id": "4646",
@@ -1951,7 +1951,7 @@
         "NonbootsMovement",
         "MagicPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/4646.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/4646.png"
     },
     {
       "id": "6333",
@@ -1968,7 +1968,7 @@
         "Damage",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6333.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6333.png"
     },
     {
       "id": "6609",
@@ -1986,7 +1986,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6609.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6609.png"
     },
     {
       "id": "6610",
@@ -2004,16 +2004,16 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6610.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6610.png"
     },
     {
       "id": "6616",
       "name": "Staff of Flowing Water",
-      "description": "Rapids Healing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
+      "description": "Rapids Healing or Shielding an ally grants you both 40 Ability Power and 15 Ability Haste for 6 seconds.",
       "gold": 2250,
       "stats": {
         "FlatMagicDamageMod": 35,
-        "FlatAbilityHaste": 15
+        "FlatAbilityHaste": 10
       },
       "tags": [
         "SpellDamage",
@@ -2021,7 +2021,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6616.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6616.png"
     },
     {
       "id": "6617",
@@ -2040,7 +2040,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6617.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6617.png"
     },
     {
       "id": "6620",
@@ -2059,7 +2059,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6620.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6620.png"
     },
     {
       "id": "6621",
@@ -2073,7 +2073,7 @@
         "SpellDamage",
         "ManaRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6621.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6621.png"
     },
     {
       "id": "663039",
@@ -2089,7 +2089,7 @@
         "CriticalStrike",
         "Lane"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663039.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663039.png"
     },
     {
       "id": "663056",
@@ -2106,7 +2106,7 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663056.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663056.png"
     },
     {
       "id": "663058",
@@ -2121,7 +2121,7 @@
         "Health",
         "Armor"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663058.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663058.png"
     },
     {
       "id": "663059",
@@ -2136,7 +2136,7 @@
         "Health",
         "SpellBlock"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663059.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663059.png"
     },
     {
       "id": "663060",
@@ -2151,7 +2151,7 @@
         "CriticalStrike",
         "SpellDamage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663060.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663060.png"
     },
     {
       "id": "6631",
@@ -2169,12 +2169,12 @@
         "AttackSpeed",
         "Slow"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6631.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6631.png"
     },
     {
       "id": "663146",
       "name": "Hextech Gunblade",
-      "description": "ACTIVE (0s) Lightning Bolt Shocks the target enemy champion, dealing magic damage and slowing them by 40% for 2 seconds.",
+      "description": "ACTIVE (0s) Lightning Bolt Shocks the target enemy champion, dealing magic damage and Slowing them by 40% for 2 seconds.",
       "gold": 2500,
       "stats": {
         "FlatMagicDamageMod": 90,
@@ -2188,12 +2188,12 @@
         "Active",
         "SpellVamp"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663146.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663146.png"
     },
     {
       "id": "663172",
       "name": "Zephyr",
-      "description": "Like the Wind Gain 5% Move Speed On-Hit for 6 seconds, stacking up to 25% Move Speed. Tenacity reduces the duration of Stun , Slow , Taunt , Fear , Silence , Blind , Polymorph and Immobilizing effects. It has no effect on Airborne or Suppression .",
+      "description": "Like the Wind Gain 5% Move Speed On-Hit for 6 seconds, stacking up to 25% Move Speed.",
       "gold": 2500,
       "stats": {
         "PercentAttackSpeedMod": 0.4,
@@ -2208,7 +2208,7 @@
         "NonbootsMovement",
         "Tenacity"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663172.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663172.png"
     },
     {
       "id": "663193",
@@ -2228,12 +2228,12 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/663193.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/663193.png"
     },
     {
       "id": "664011",
       "name": "Sword of Blossoming Dawn",
-      "description": "Effervescence Gain +1% Attack Speed for every 1% Heal and Shield Power you have. Peppermint On-Hit , heal the lowest health ally champion near you for , prioritizing lower health allies.",
+      "description": "Effervescence Gain + 1% Attack Speed for every 1% Heal and Shield Power you have. Peppermint On-Hit , heal the lowest health ally champion near you for , prioritizing lower health allies.",
       "gold": 2500,
       "stats": {
         "FlatHPPoolMod": 150,
@@ -2247,7 +2247,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/664011.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/664011.png"
     },
     {
       "id": "664644",
@@ -2266,7 +2266,7 @@
         "Mana",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/664644.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/664644.png"
     },
     {
       "id": "6653",
@@ -2281,7 +2281,7 @@
         "Health",
         "SpellDamage"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6653.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6653.png"
     },
     {
       "id": "6655",
@@ -2299,7 +2299,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6655.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6655.png"
     },
     {
       "id": "6657",
@@ -2318,7 +2318,7 @@
         "Mana",
         "ManaRegen"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6657.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6657.png"
     },
     {
       "id": "6662",
@@ -2338,7 +2338,7 @@
         "OnHit",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6662.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6662.png"
     },
     {
       "id": "6664",
@@ -2358,7 +2358,7 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6664.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6664.png"
     },
     {
       "id": "6665",
@@ -2376,7 +2376,7 @@
         "Armor",
         "MagicResist"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6665.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6665.png"
     },
     {
       "id": "667101",
@@ -2396,7 +2396,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667101.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/667101.png"
     },
     {
       "id": "667109",
@@ -2413,12 +2413,12 @@
         "SpellDamage",
         "MagicResist"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667109.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/667109.png"
     },
     {
       "id": "667112",
       "name": "Flesheater",
-      "description": "Hack the Meat Dealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability. Cannibalize On Champion Takedown, Heal yourself and your ally for 18% of the Target's Max Health .",
+      "description": "Hack the Meat Dealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 second cooldown per Ability. Cannibalize On Champion Takedown, steal 10% of their stats and size for the rest of the round.",
       "gold": 2500,
       "stats": {
         "FlatHPPoolMod": 500
@@ -2429,7 +2429,7 @@
         "MagicPenetration",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667112.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/667112.png"
     },
     {
       "id": "6672",
@@ -2447,7 +2447,7 @@
         "OnHit",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6672.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6672.png"
     },
     {
       "id": "6673",
@@ -2462,7 +2462,7 @@
         "Damage",
         "CriticalStrike"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6673.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6673.png"
     },
     {
       "id": "6675",
@@ -2479,7 +2479,7 @@
         "AttackSpeed",
         "NonbootsMovement"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6675.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6675.png"
     },
     {
       "id": "6676",
@@ -2496,7 +2496,7 @@
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6676.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6676.png"
     },
     {
       "id": "667666",
@@ -2513,7 +2513,7 @@
         "CriticalStrike",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/667666.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/667666.png"
     },
     {
       "id": "6692",
@@ -2529,7 +2529,7 @@
         "CooldownReduction",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6692.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6692.png"
     },
     {
       "id": "6694",
@@ -2547,7 +2547,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6694.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6694.png"
     },
     {
       "id": "6695",
@@ -2562,7 +2562,7 @@
         "Damage",
         "ArmorPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6695.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6695.png"
     },
     {
       "id": "6696",
@@ -2579,15 +2579,15 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6696.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6696.png"
     },
     {
       "id": "6697",
       "name": "Hubris",
-      "description": "Eminence When a champion that you damaged within 3 seconds dies, gain 15 Attack Damage plus 2 per champion killed for 90 seconds.",
+      "description": "Eminence When a champion that you damaged within 3 seconds dies, gain 12 Attack Damage plus 3 per champion killed for 90 seconds.",
       "gold": 2800,
       "stats": {
-        "FlatPhysicalDamageMod": 60,
+        "FlatPhysicalDamageMod": 55,
         "FlatAbilityHaste": 10,
         "FlatPhysicalLethality": 18
       },
@@ -2598,7 +2598,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6697.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6697.png"
     },
     {
       "id": "6698",
@@ -2617,17 +2617,17 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6698.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6698.png"
     },
     {
       "id": "6699",
       "name": "Voltaic Cyclosword",
-      "description": "Galvanize Dashes and Stealth stack Energized 75% faster. Firmament Your Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
-      "gold": 3000,
+      "description": "Galvanize Damaging an Enemy Champions with an ability triggers Energized if it is ready. Firmament Your Energized Attack deals % target's Current Health as bonus physical damage and grants you bonus Lethality for 4 seconds.",
+      "gold": 2900,
       "stats": {
         "FlatPhysicalDamageMod": 55,
         "FlatAbilityHaste": 10,
-        "FlatPhysicalLethality": 18
+        "FlatPhysicalLethality": 10
       },
       "tags": [
         "Damage",
@@ -2636,24 +2636,7 @@
         "ArmorPenetration",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6699.png"
-    },
-    {
-      "id": "6701",
-      "name": "Opportunity",
-      "description": "Preparation After being out of combat with Champions for 8 seconds gain Lethality . This Lethality lasts for 3 seconds after dealing damage to champions. Extraction When a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.",
-      "gold": 2700,
-      "stats": {
-        "FlatPhysicalDamageMod": 55,
-        "FlatPhysicalLethality": 18
-      },
-      "tags": [
-        "Damage",
-        "Active",
-        "NonbootsMovement",
-        "ArmorPenetration"
-      ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/6701.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/6699.png"
     },
     {
       "id": "8010",
@@ -2671,7 +2654,7 @@
         "CooldownReduction",
         "MagicPenetration"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/8010.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/8010.png"
     },
     {
       "id": "8020",
@@ -2690,7 +2673,7 @@
         "MagicResist",
         "AbilityHaste"
       ],
-      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.8.1/img/item/8020.png"
+      "image_url": "https://ddragon.leagueoflegends.com/cdn/16.9.1/img/item/8020.png"
     }
   ]
 }
